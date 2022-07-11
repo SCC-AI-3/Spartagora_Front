@@ -56,7 +56,11 @@
 
 ### 8) 취업후기 작성 페이지
 ![취업후기작성](https://user-images.githubusercontent.com/102138834/178218431-47d6d893-d6da-407b-b033-0b02a8eee459.png)
+---
+# 2. ERD Diagram
+![erd](https://user-images.githubusercontent.com/102138834/178230084-f397e32e-71fa-4b63-ae21-17aeab6322f7.png)
 
+---
 # 백엔드 GitHub
 https://github.com/SCC-AI-3/Spartagora_Back
 
