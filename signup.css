@@ -1,0 +1,203 @@
+/* CSS 변수지정 */
+:root {
+    --text-color: rgb(100, 100, 100);
+    --background-color: rgb(245, 245, 245);
+    --accent-color: rgb(251, 105, 105);
+    --button-color: rgb(255, 130, 130);
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--background-color);
+    font-family: 'Gothic A1', sans-serif;
+    margin: auto;
+    height: 100vh;
+}
+
+.wrap {
+    background-color: var(--background-color);
+    margin: auto;
+    align-items: center;
+    vertical-align: middle;
+}
+
+/* 회원가입화면 로고 */
+.signup_logo {
+    font-size: 60px;
+    display: flex;
+    justify-content: center;
+}
+
+.signup_logo a {
+    text-decoration: none;
+    color: var(--accent-color);
+}
+
+.signup_logo a:hover {
+    color: rgb(251, 135, 135);
+}
+
+/* assignment select */
+.select {
+    width: 340px;
+    display: flex;
+    padding: 15px;
+    margin-top: 10px;
+    height: 60px;
+    border-radius: 10px;
+    font-size: 22px;
+    color: var(--text-color);
+}
+
+/* 회원가입화면 form */
+.form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.signup_input {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 30px;
+    align-items: center;
+}
+
+.input_form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+}
+
+.label {
+    color: var(--text-color);
+    text-align: center;
+    font-size: 24px;
+}
+
+.signup_input input {
+    width: 310px;
+    padding: 15px;
+    margin-top: 10px;
+    height: 40px;
+    border-radius: 10px;
+    font-size: 25px;
+    color: var(--text-color);
+}
+
+/* 로그인 회원가입 버튼 */
+.btn {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-left: 0;
+    align-items: center;
+}
+
+.btn li {
+    padding: 20px 5px;
+    list-style: none;
+}
+
+.signup_btn {
+    width: 330px;
+    height: 60px;
+    color: rgb(245, 245, 245);
+    border-radius: 10px;
+    background-color: var(--background-color);
+    font-size: 20px;
+    border-style: none;
+    background-color: rgb(245, 100, 100);
+}
+
+.signup_btn:hover {
+    background-color: var(--button-color);
+    color: rgb(255, 255, 255);
+}
+
+.btn a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 20px;
+}
+
+.btn a:hover {
+    color: var(--accent-color);
+}
+
+/* footer */
+.footer {
+    background-color: var(--text-color);
+    width: 100%;
+    height: 7vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.copyright {
+    padding-left: 50px;
+}
+
+.members {
+    margin-top: 30px;
+    padding-right: 50px;
+}
+
+.members a {
+    padding-right: 30px;
+    text-decoration: none;
+    color: var(--accent-color);
+}
+
+.members a:hover {
+    color: rgb(245, 245, 245);
+}
+
+.caution-form {
+    margin-top: 20px;
+    align-items: center;
+    border: 1px solid var(--accent-color);
+    width: 345px;
+    border-radius: 10px;
+}
+
+.cautions {
+    padding: 8px 8px;
+}
+
+.cautions P, h2 {
+    color: var(--text-color);
+}
+
+.caution-text {
+    overflow-y: scroll;
+    text-align: start;
+    height: 250px;
+    color: var(--text-color);
+}
+
+.agree-btn {
+    width: 20px;
+    height:20px;
+}
+
+
+/* 반응형 footer */
+@media screen and (max-width:810px) {
+    .wrap {
+        top: 30px;
+    }
+
+    .footer {
+        flex-direction: column;
+        height: 7vh;
+    }
+
+    /*.members {*/
+    /*    margin: auto;*/
+    /*    padding-right: 0;*/
+    /*}*/
+}

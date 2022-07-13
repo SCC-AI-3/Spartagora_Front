@@ -1,0 +1,156 @@
+:root {
+    --text-color: rgb(100, 100, 100);
+    --background-color: rgb(245, 245, 245);
+    --accent-color: rgb(251, 105, 105);
+    --button-color: rgb(255, 130, 130);
+}
+
+body {
+    background-color: var(--background-color);
+    font-family: 'Gothic A1', sans-serif;
+    flex-direction: column;
+    margin: auto;
+    display: flex;
+    height: 100vh;
+}
+
+.wrap {
+    background-color: var(--background-color);
+    margin: auto;
+    align-items: center;
+    vertical-align: middle;
+}
+
+/* 로그인화면 로고 */
+.login_logo {
+    font-size: 60px;
+    display: flex;
+    justify-content: center;
+}
+
+.login_logo a {
+    text-decoration: none;
+    color: var(--accent-color);
+}
+
+.login_logo a:hover {
+    color: rgb(251, 135, 135);
+}
+
+/* 로그인화면 form */
+.form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.login_input {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 30px;
+    align-items: center;
+}
+
+.input_form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+}
+
+.label {
+    color: var(--text-color);
+    text-align: center;
+    font-size: 24px;
+}
+
+.login_input input {
+    width: 300px;
+    padding: 15px;
+    margin-top: 10px;
+    height: 40px;
+    border-radius: 10px;
+    font-size: 25px;
+    color: var(--text-color);
+}
+
+/* 로그인 회원가입 버튼 */
+.btn {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-left: 0;
+    align-items: center;
+}
+
+.btn li {
+    padding: 20px 5px;
+    list-style: none;
+}
+
+.login_btn {
+    width: 330px;
+    height: 60px;
+    color: rgb(245, 245, 245);
+    border-radius: 10px;
+    background-color: var(--background-color);
+    font-size: 20px;
+    border-style: none;
+    background-color: rgb(245, 100, 100);
+}
+
+.login_btn:hover {
+    background-color: var(--button-color);
+    color: rgb(255, 255, 255);
+}
+
+.btn a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 20px;
+}
+
+.btn a:hover {
+    color: var(--accent-color);
+}
+
+/* footer */
+.footer {
+    background-color: var(--text-color);
+    width: 100%;
+    height: 7vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.copyright {
+    padding-left: 50px;
+}
+
+.members {
+    margin-top: 30px;
+    padding-right: 50px;
+}
+
+.members a {
+    padding-right: 30px;
+    text-decoration: none;
+    color: var(--accent-color);
+}
+
+.members a:hover {
+    color: rgb(245, 245, 245);
+}
+
+@media screen and (max-width:810px) {
+    .footer {
+        flex-direction: column;
+        height: 7vh;
+    }
+
+    /*.members {*/
+    /*    margin: auto;*/
+    /*    padding-right: 0;*/
+    /*}*/
+}
