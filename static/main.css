@@ -1,0 +1,238 @@
+:root {
+    /* Color */
+    --background-color: rgb(245, 245, 245);
+    --black-color : rgb(50, 50, 50);
+    --gray-dark-color : rgb(100, 100, 100);
+    --gray-light-color : rgb(160, 160, 160);
+    --accent-color: rgb(251, 105, 105);
+    --button-color: rgb(255, 130, 130);
+    --test-color: rgb(0, 50, 250);
+    
+    /* Size */
+    --padding: 20px;
+    --avartar-size: 36px;
+    
+    /* Fort Size */
+    --font-title: 20px;
+    --font-large: 18px;
+    --font-medium: 14px;
+    --font-small: 12px;
+    --font-micro: 10px;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: var(--background-color);
+    font-family: 'Gothic A1', sans-serif;
+}
+
+ul {
+    list-style: none;
+}
+
+button,
+button:focus {
+    border: none;
+    cursor: pointer;
+    outline: none;
+    background-color: transparent; /* 얘 중요 */
+}
+
+.header {
+    max-width: 1200px;
+    width: 100%;
+    height: 70px;
+    margin: auto;
+    background-color: var(--background-color);
+}
+
+/* 네비게이션바 */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    max-width: 942px;
+    width: 100%;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    background-color: var(--background-color);
+}
+
+.navbar a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+.navbar_logo {
+    font-size: 24px;
+    color: var(--text-color);
+}
+
+.navbar_logo li {
+    padding: 8px 12px;
+}
+
+.navbar_logo a:hover {
+    color: var(--accent-color);
+}
+
+.navbar_upper {
+    display: flex;
+    list-style: none;
+    padding-left: 0;
+}
+
+.navbar_upper li {
+    padding: 8px 30px;
+}
+
+.navbar_upper a:hover {
+    color: var(--accent-color);
+}
+
+.navbar_icons {
+    display: flex;
+    list-style: none;
+    color: var(--text-color);
+    padding-left: 0;
+    font-size: 20px;
+}
+
+.navbar_icons a:hover {
+    color: var(--accent-color);
+}
+
+.navbar_icons li {
+    padding: 8px 12px;
+}
+
+.navbar_toogleBtn {
+    display: none;
+    position: absolute;
+    right: 32px;
+    padding-top: 5px;
+    font-size: 24px;
+}
+
+.navbar_toogleBtn:hover {
+    color:var(--accent-color);
+}
+
+/* 게시판 페이지 */
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    padding: var(--padding);
+    max-width: 942px;
+    width: 100%;
+}
+
+.BoardTitle {
+    font-size: var(--font-title);
+}
+
+.List {
+    padding: calc(var(--padding) / 4);
+    font-size: var(--font-medium);
+}
+
+/* 토픽베스트, 공백 */
+.BoardBlock1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: var(--padding);
+    margin: var(--padding);
+}
+
+.CategoryTitle {
+    padding: var(--padding);
+}
+
+.nothing {
+    width: 300px;
+    height: 350px;
+    max-height: 100%;
+    background-color: var(--test-color);
+}
+
+/* footer */
+.footer {
+    background-color: var(--gray-dark-color);
+    width: 100%;
+    height: 7vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.copyright {
+    color: var(--gray-light-color);
+    padding-left: 50px;
+    padding-top: 10px;
+}
+
+@media screen and (max-width: 942px) {
+    body {
+        
+    }
+    /* 네비게이션바 반응형 */
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 8px 24px;
+    }
+
+    .navbar_upper {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .navbar_upper li {
+        width: 100%;
+        text-align: right;
+        background-color: var(--accent-color);
+    }
+
+    .navbar_icons {
+        display: none;
+        justify-content: right;
+        width: 100%;
+        background-color: var(--accent-color);
+    }
+    
+    .navbar_toogleBtn {
+        display: block;
+    }
+    
+    .navbar_upper.active,
+    .navbar_icons.active {
+        display: flex;
+    }
+    
+    .main {
+        align-items: center;
+    }
+
+    .nothing {
+        display: none;
+    }
+
+    /* 게시판 반응형 */
+    .BoardBlock1 {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
