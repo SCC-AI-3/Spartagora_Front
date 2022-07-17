@@ -3,7 +3,7 @@
     --background-color: rgb(245, 245, 245);
     --black-color : rgb(50, 50, 50);
     --gray-dark-color : rgb(100, 100, 100);
-    --gray-light-color : rgb(160, 160, 160);
+    --gray-light-color : rgb(180, 180, 180);
     --accent-color: rgb(251, 105, 105);
     --button-color: rgb(255, 130, 130);
     --test-color: rgb(0, 50, 250);
@@ -13,7 +13,7 @@
     --avartar-size: 36px;
     
     /* Fort Size */
-    --font-title: 20px;
+    --font-title: 28px;
     --font-large: 18px;
     --font-medium: 14px;
     --font-small: 12px;
@@ -27,6 +27,7 @@
 }
 
 body {
+    padding: 0;
     margin: 0;
     background-color: var(--background-color);
     font-family: 'Gothic A1', sans-serif;
@@ -44,60 +45,73 @@ button:focus {
     background-color: transparent; /* 얘 중요 */
 }
 
-.header {
-    max-width: 1200px;
-    width: 100%;
-    height: 70px;
-    margin: auto;
-    background-color: var(--background-color);
+a {
+    text-decoration: none;
+    color: var(--text-color);
 }
 
 /* 네비게이션바 */
-.navbar {
+.Header {
+    max-width: 1200px;
+    width: 100%;
+    height: 60px;
+    margin: auto;
+    background-color: var(--background-color);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: cetner;
+}
+
+.Navbar {
     display: flex;
     justify-content: space-between;
     max-width: 942px;
     width: 100%;
-    margin-top: 20px;
     margin-left: auto;
     margin-right: auto;
     align-items: center;
     background-color: var(--background-color);
 }
 
-.navbar a {
+.Navbar a {
     text-decoration: none;
     color: var(--text-color);
 }
 
-.navbar_logo {
-    font-size: 24px;
+.Navbar_logo {
+    font-size: var(--font-title);
     color: var(--text-color);
 }
 
-.navbar_logo li {
+.Navbar_logo li {
     padding: 8px 12px;
 }
 
-.navbar_logo a:hover {
+.Navbar_logo a:hover {
     color: var(--accent-color);
 }
 
-.navbar_upper {
+.Navbar_upper {
     display: flex;
     list-style: none;
     padding-left: 0;
 }
 
-.navbar_upper li {
+.Navbar_upper li {
     padding: 8px 30px;
 }
 
-.navbar_upper a:hover {
+.Navbar_upper .active {
+    color: var(--accent-color);
+    font-size: var(--font-title);
+}
+
+.Navbar_upper a:hover {
     color: var(--accent-color);
 }
 
-.navbar_icons {
+.Navbar_icons {
     display: flex;
     list-style: none;
     color: var(--text-color);
@@ -105,15 +119,15 @@ button:focus {
     font-size: 20px;
 }
 
-.navbar_icons a:hover {
+.Navbar_icons a:hover {
     color: var(--accent-color);
 }
 
-.navbar_icons li {
+.Navbar_icons li {
     padding: 8px 12px;
 }
 
-.navbar_toogleBtn {
+.Navbar_toogleBtn {
     display: none;
     position: absolute;
     right: 32px;
@@ -121,118 +135,238 @@ button:focus {
     font-size: 24px;
 }
 
-.navbar_toogleBtn:hover {
+.Navbar_toogleBtn:hover {
     color:var(--accent-color);
 }
 
 /* 게시판 페이지 */
-.main {
+.Container {
+    max-width: 1137px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    padding: var(--padding);
+    margin: auto;
+}
+
+.Main {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin: auto;
-    padding: var(--padding);
-    max-width: 942px;
+    padding: calc(var(--padding) / 2);
+    max-width: 1130px;
     width: 100%;
 }
 
-.BoardTitle {
+.Main .BoardBlock {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1135px;
+    padding: var(--padding) 0;
+}
+
+.Main .CategoryTitle {
+    width: 100%;
+    max-width: 1135px;
+}
+
+.Main .BoardTitle {
     font-size: var(--font-title);
+    padding: var(--padding);
+    color: var(--accent-color);
+    border-bottom: 1px solid var(--gray-light-color);
 }
 
-.List {
-    padding: calc(var(--padding) / 4);
+.Main .BestList {
+    display: flex;
+    flex-direction: column;
+}
+
+.Main .List {
     font-size: var(--font-medium);
+    width: 100%;
+    max-width: 1135px;
+    border-bottom: 1px solid var(--gray-light-color);
+    /* display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden; */
 }
 
-/* 토픽베스트, 공백 */
-.BoardBlock1 {
+.Main .List .Article {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    padding-left: var(--padding);
+    padding-bottom: calc(var(--padding) / 2);
+}
+
+.Main .List .ArticleCategory {
+    font-size: var(--font-micro);
+    color: var(--gray-light-color);
+}
+
+.Main .List .tit {
+    font-size: var(--font-medium);
+    padding-left: var(--padding);
+    padding-bottom: calc(var(--padding) / 3);
+}
+
+.Main .List .ArticleInfo {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    padding: var(--padding);
-    margin: var(--padding);
+    padding-left: var(--padding);
+    color: var(--gray-dark-color);
 }
 
-.CategoryTitle {
+.Main .List .ArticleInfo .like {
+    padding-right: var(--padding);
+}
+
+.Main .List .ArticleInfo .cmt {
+    padding-right: var(--padding);
+}
+
+.Main .List .ArticleInfo i {
+    font-size: var(--font-small);
+    padding-right: 5px;
+}
+
+/* 사이드바 */
+.Side {
+    display: flex;
+    flex-direction: column;
     padding: var(--padding);
 }
 
-.nothing {
-    width: 300px;
-    height: 350px;
-    max-height: 100%;
-    background-color: var(--test-color);
+.Side .ad1 {
+    border: 1px solid var(--gray-light-color);
+    padding: calc(var(--padding) / 2);
+    width: 250px;
+    height: 60px;
+}
+
+.Side .blank {
+    border: 1px solid var(--gray-light-color);
+    padding: calc(var(--padding) / 2);
+    width: 250px;
+    height: 400px;
+}
+
+.Side .ad2 {
+    border: 1px solid var(--gray-light-color);
+    padding: calc(var(--padding) / 2);
+    width: 250px;
+    height: 250px;
 }
 
 /* footer */
-.footer {
+.Footer {
     background-color: var(--gray-dark-color);
     width: 100%;
-    height: 7vh;
-    display: flex;
-    flex-direction: row;
     justify-content: space-between;
+    padding-bottom: 100px;
 }
 
-.copyright {
+.Copyright {
     color: var(--gray-light-color);
     padding-left: 50px;
-    padding-top: 10px;
+    padding-top: 30px;
 }
 
-@media screen and (max-width: 942px) {
-    body {
-        
-    }
+/* 미디어 쿼리 반응형 */
+@media screen and (max-width: 1130px) {
     /* 네비게이션바 반응형 */
-    .navbar {
+    .Header {
+        background-color: var(--background-color);
+    }
+
+    .Navbar {
         flex-direction: column;
         align-items: flex-start;
-        padding: 8px 24px;
+        padding: 8px;
     }
 
-    .navbar_upper {
+    .Navbar_upper.active {
+        display: flex;
+    }
+
+    .Navbar_upper {
         display: none;
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
         width: 100%;
+        margin-top: 20px;
     }
 
-    .navbar_upper li {
+    .Navbar_upper li {
         width: 100%;
-        text-align: right;
-        background-color: var(--accent-color);
+        text-align: row;
+        background-color: var(--background-color);
     }
 
-    .navbar_icons {
+    .Navbar_icons {
         display: none;
-        justify-content: right;
+        justify-content: center;
         width: 100%;
-        background-color: var(--accent-color);
+        background-color: var(--background-color);
+        border-bottom: 1px solid var(--gray-light-color);
     }
     
-    .navbar_toogleBtn {
+    .Navbar_toogleBtn {
         display: block;
     }
-    
-    .navbar_upper.active,
-    .navbar_icons.active {
-        display: flex;
+
+    /* 게시판 페이지 반응형 */
+    .Container {
+        display: block;
+        flex-direction: column;
+        padding-left: 0;
+        padding-right: 0;
     }
-    
-    .main {
+
+    .Main {
+        align-items: flex-start;
+        padding-left: 0;
+        padding-right: 0;
+        margin-right: 0;
+    }
+
+    .BoardBlock {
+        flex-direction: column;
+        max-width: 1130px;
+        width: 100%;
+    }
+
+    .CategoryTitle {
+        padding-left: 0;
+        padding-right: 0;
+        margin-right: 0;
+    }
+
+    .BestList .List {
+        padding-left: 0;
+        padding-right: 0;
+        margin-right: 0;
+    }
+
+    /* 사이드바 반응형 */
+    .Side {
+        padding: 100px 5px;
         align-items: center;
     }
 
-    .nothing {
-        display: none;
+    .Side .ad1 {
+        width: 50%;
     }
 
-    /* 게시판 반응형 */
-    .BoardBlock1 {
-        display: flex;
-        flex-direction: column;
+    .Side .blank {
+        width: 50%;
+    }
+
+    .Side .ad2 {
+        width: 50%;
     }
 }
-
