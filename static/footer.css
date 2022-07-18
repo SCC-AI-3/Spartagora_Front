@@ -1,0 +1,104 @@
+/* footer */
+.Footer {
+    background-color: var(--black-color);
+    width: 100%;
+    justify-content: space-between;
+    padding-bottom: 100px;
+}
+
+.Copyright {
+    color: var(--white-color);
+    padding-left: 50px;
+    padding-top: 30px;
+    padding-bottom: var(--padding);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--gray-light-color);
+}
+
+/* Name Footer */
+.SpartaName {
+    display: flex;
+    flex-direction: column;
+}
+
+.SpartaName .SpartaLink {
+    display: flex;
+    flex-direction: row;
+    padding-top: var(--padding);
+    font-size: var(--font-small);
+    font-weight: bold;
+}
+
+.SpartaName .SpartaLink li {
+    padding-right: var(--padding);
+    font-weight: normal;
+}
+
+/* ETC Footer */
+.Etc {
+    display: flex;
+    flex-direction: column;
+}
+
+.Etc ul {
+    display: flex;
+    flex-direction: row;
+    font-weight: bold;
+}
+
+.Etc li {
+    padding-top: var(--padding);
+    padding-right: var(--padding);
+    font-size: var(--font-small);
+    font-weight: normal;
+}
+
+/* Footer Icons */
+.FooterIcons {
+    padding-right: var(--padding);
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.FooterIcons a {
+    padding-right: var(--padding);
+}
+
+/* 개인정보처리방침 */
+.PerInfo ul {
+    display: flex;
+    flex-direction: row;
+    padding-left: 50px;
+    margin: 30px 0;
+    font-size: var(--font-medium);
+    color: var(--gray-light-color);
+}
+
+.PerInfo li {
+    padding-right: var(--padding);
+}
+
+/* 팀스파르타 사업자 정보 */
+.Company {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 50px;
+    font-size: var(--font-small);
+    color: var(--gray-dark-color);
+}
+
+.Company .Info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.Company .TEAMSPARTA {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding-right: var(--padding);
+}

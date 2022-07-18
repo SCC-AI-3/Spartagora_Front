@@ -1,0 +1,53 @@
+:root {
+    /* Color */
+    --background-color: rgb(235, 235, 235);
+    --black-color : rgb(50, 50, 50);
+    --white-color : rgb(245, 245, 245);
+    --gray-dark-color : rgb(100, 100, 100);
+    --gray-light-color : rgb(180, 180, 180);
+    --accent-color: rgb(232, 52, 78);
+    --pink-light-color: rgb(255, 122, 141);
+    --test-color: rgb(0, 50, 250);
+    
+    /* Size */
+    --padding: 20px;
+    --avartar-size: 36px;
+    
+    /* Fort Size */
+    --font-title: 28px;
+    --font-large: 18px;
+    --font-medium: 14px;
+    --font-small: 12px;
+    --font-micro: 10px;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background-color: var(--white-color);
+    font-family: Pretendard;
+    background-color: var(--background-color);
+}
+
+ul {
+    list-style: none;
+}
+
+button,
+button:focus {
+    border: none;
+    cursor: pointer;
+    outline: none;
+    background-color: transparent; /* 얘 중요 */
+}
+
+a {
+    text-decoration: none;
+    color: var(--text-color);
+}

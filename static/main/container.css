@@ -1,0 +1,134 @@
+/* 게시판 페이지 */
+.Container {
+    max-width: 1137px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    padding: var(--padding);
+    margin: auto;
+}
+
+.Main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: calc(var(--padding) / 2);
+    max-width: 1130px;
+    width: 100%;
+    background-color: var(--white-color);
+}
+
+.Main .BoardBlock {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1135px;
+    padding: var(--padding) 0;
+}
+
+.Main .BoardTitle {
+    font-size: var(--font-large);
+    padding: calc(var(--padding) / 2);
+    color: var(--white-color);
+    background-color: var(--accent-color);
+    border-radius: var(--padding);
+    margin-bottom: calc(var(--padding) / 2);
+    font-weight: bold;
+}
+
+.Main .BestList {
+    display: flex;
+    flex-direction: column;
+    border-top: 1px solid var(--gray-light-color);
+}
+
+.Main .List {
+    font-size: var(--font-medium);
+    width: 100%;
+    max-width: 1135px;
+    border-bottom: 1px solid var(--gray-light-color);
+    /* display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden; */
+}
+
+.Main .List .Article {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    padding-left: var(--padding);
+    padding-bottom: calc(var(--padding) / 2);
+}
+
+.Main .List .ArticleCategory {
+    font-size: var(--font-micro);
+    color: var(--gray-light-color);
+}
+
+.Main .List .tit {
+    font-size: var(--font-medium);
+    padding-left: var(--padding);
+    padding-bottom: calc(var(--padding) / 3);
+}
+
+.Main .List .ArticleInfo {
+    display: flex;
+    flex-direction: row;
+    padding-left: var(--padding);
+    color: var(--gray-dark-color);
+}
+
+.Main .List .ArticleInfo .like {
+    padding-right: var(--padding);
+}
+
+.Main .List .ArticleInfo .cmt {
+    padding-right: var(--padding);
+}
+
+.Main .List .ArticleInfo i {
+    font-size: var(--font-small);
+    padding-right: 5px;
+}
+
+.Main-List-ArticleInfo {
+    display : flex;
+}
+
+.MoreArticle {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-size:var(--font-large);
+}
+
+/* 사이드바 */
+.Side {
+    display: flex;
+    flex-direction: column;
+    padding: var(--padding);
+    background-color: var(--white-color);
+}
+
+.Side .ad1 {
+    border: 1px solid var(--gray-light-color);
+    padding: calc(var(--padding) / 2);
+    width: 250px;
+    height: 60px;
+}
+
+.Side .blank {
+    border: 1px solid var(--gray-light-color);
+    padding: calc(var(--padding) / 2);
+    width: 250px;
+    height: 400px;
+}
+
+.Side .ad2 {
+    border: 1px solid var(--gray-light-color);
+    padding: calc(var(--padding) / 2);
+    width: 250px;
+    height: 250px;
+}
