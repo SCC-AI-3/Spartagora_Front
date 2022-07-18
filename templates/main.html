@@ -5,11 +5,17 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-        <!-- stylesheet -->
-        <link rel="stylesheet" href="/static/main.css"/>
+        <!-- Stylesheet -->
+        <link rel="stylesheet" href="/static/root.css"/>
+        <link rel="stylesheet" href="/static/main/main_navbar.css"/>
+        <link rel="stylesheet" href="/static/main/container.css"/>
+        <link rel="stylesheet" href="/static/footer.css"/>
+
+        <!-- Media Query -->
+        <link rel="stylesheet" href="/static/main/media.css"/>
 
         <!-- Javascript -->
-        <script src="../js/base.js" defer="defer"></script>
+        <script src="../js/navbar.js" defer="defer"></script>
 
         <!-- Google Font -->
         <link rel="preconnect" href="https://fonts.googleapis.com"/>
@@ -202,13 +208,6 @@
                                     </div>
                                 </div>
                             </li>
-                            <li class="List">
-                                <div class="Article">
-                                    <button href="#" class="moreBtn">
-                                        <i class="fa-solid fa-angles-down"></i>
-                                    </button>
-                                </div>
-                            </li>
                         </ul>
                     </div>
                 </div>
@@ -294,6 +293,34 @@
                                             <i class="fa-solid fa-arrow-pointer"></i>39
                                         </a>
                                     </div>
+                                </div>
+                            </li>
+                            <li class="List">
+                                <div class="Article">
+                                    <span >
+                                        <a href="" class="ArticleCategory">[왕초보] 비개발자를 위한, 웹개발 종합반(프로그래밍 실무, 풀스택)</a >
+                                    </span >
+                                    <a href="" class="tit">이거 무슨 에러일까요?</a>
+                                    <div class="ArticleInfo">
+                                        <a href="" class="like">
+                                            <i class="fa-regular fa-thumbs-up"></i>
+                                            7
+                                        </a>
+                                        <a href="" class="cmt">
+                                            <i class="fa-regular fa-comments"></i>
+                                            9
+                                        </a>
+                                        <a href="" class="views">
+                                            <i class="fa-solid fa-arrow-pointer"></i>14
+                                        </a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="MoreArticle">
+                                <div class="Article">
+                                    <button href="#">
+                                        <i class="fa-solid fa-angles-down"></i>
+                                    </button>
                                 </div>
                             </li>
                         </ul>
@@ -415,6 +442,13 @@
                                     </div>
                                 </div>
                             </li>
+                            <li class="MoreArticle">
+                                <div class="Article">
+                                    <button href="#">
+                                        <i class="fa-solid fa-angles-down"></i>
+                                    </button>
+                                </div>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -532,6 +566,13 @@
                                             0
                                         </a>
                                     </div>
+                                </div>
+                            </li>
+                            <li class="MoreArticle">
+                                <div class="Article">
+                                    <button href="#">
+                                        <i class="fa-solid fa-angles-down"></i>
+                                    </button>
                                 </div>
                             </li>
                         </ul>
@@ -653,6 +694,13 @@
                                     </div>
                                 </div>
                             </li>
+                            <li class="MoreArticle">
+                                <div class="Article">
+                                    <button href="#">
+                                        <i class="fa-solid fa-angles-down"></i>
+                                    </button>
+                                </div>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -770,6 +818,13 @@
                                             0
                                         </a>
                                     </div>
+                                </div>
+                            </li>
+                            <li class="MoreArticle">
+                                <div class="Article">
+                                    <button href="#">
+                                        <i class="fa-solid fa-angles-down"></i>
+                                    </button>
                                 </div>
                             </li>
                         </ul>
@@ -891,6 +946,13 @@
                                     </div>
                                 </div>
                             </li>
+                            <li class="MoreArticle">
+                                <div class="Article">
+                                    <button href="#">
+                                        <i class="fa-solid fa-angles-down"></i>
+                                    </button>
+                                </div>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -911,11 +973,12 @@
                 <div class="SpartaName">
                     <p>스파르타 코딩클럽</p>
                     <ul class="SpartaLink">
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
+                        <li>스파르타 온라인</li>
+                        <li>항해 99</li>
+                        <li>{창}</li>
+                        <li>띵똥코딩</li>
+                        <li>국비지원교육</li>
+                        <li>기업교육</li>
                     </ul>
                 </div>
 
@@ -923,32 +986,41 @@
                 <div class="Etc">
                     <p>ETC</p>
                     <ul>
-                        <li></li>
-                        <li></li>
-                        <li></li>
+                        <li>튜터</li>
+                        <li>채용</li>
+                        <li>SW사관학교 정글</li>
                     </ul>
                 </div>
 
                 <!-- Footer Icons -->
                 <div class="FooterIcons">
-                    <a href=""></a>
-                    <a href=""></a>
-                    <a href=""></a>
-                    <a href=""></a>
+                    <a href="" target="_blank">blog</a>
+                    <a href="" target="_blank">Tstory</a>
+                    <a href="" target="_blank">Insta</a>
+                    <a href="" target="_blank">YouTube</a>
                 </div>
             </section>
 
             <!-- 개인정보처리방침 -->
             <section class="PerInfo">
                 <ul>
-                    <li></li>
-                    <li></li>
-                    <li></li>
+                    <li>개인정보처리방침</li>
+                    <li>환불규정</li>
+                    <li>자주묻는질문</li>
                 </ul>
             </section>
-
-            <!-- 팀스파르타 사업자 정보 -->
-            <section></section>
+        <!-- 팀스파르타 사업자 정보 -->
+            <section class="Company">
+                <div class="Info">
+                    <h4>팀스파르타(주) 사업자 정보
+                    </h4>
+                    <p>대표자: 이범규 사업자 등록번호: 783-86-01715 통신판매업 신고번호: 2020-서울강남-02300 평생교육시설<br>신고번호: 제
+                    661호 주소: 서울특별시 강남구 테헤란로44길 8 12층 이메일: contact@teamsparta.co 전화 1522-8016</p>
+                </div>
+                <div class="TEAMSPARTA">
+                    <p>Copyright ©2022 TEAMSPARTA. All rights reserved.</p>
+                </div>
+            </section>
         </footer>
     </body>
 </html>
