@@ -1,16 +1,31 @@
-/* CSS 변수지정 */
 :root {
-    --text-color: rgb(100, 100, 100);
+    /* Color */
     --background-color: rgb(245, 245, 245);
+    --black-color : rgb(50, 50, 50);
+    --gray-dark-color : rgb(100, 100, 100);
+    --gray-light-color : rgb(160, 160, 160);
     --accent-color: rgb(251, 105, 105);
     --button-color: rgb(255, 130, 130);
+    --test-color: rgb(0, 50, 250);
+    --text-color: rgb(100, 100, 100);
+    
+    /* Size */
+    --padding: 20px;
+    --avartar-size: 36px;
+    
+    /* Fort Size */
+    --font-title: 20px;
+    --font-large: 18px;
+    --font-medium: 14px;
+    --font-small: 12px;
+    --font-micro: 10px;
 }
 
 body {
-    display: flex;
-    flex-direction: column;
     background-color: var(--background-color);
     font-family: 'Gothic A1', sans-serif;
+    display: flex;
+    flex-direction: column;
     margin: auto;
     height: 100vh;
 }
@@ -20,6 +35,7 @@ body {
     margin: auto;
     align-items: center;
     vertical-align: middle;
+    padding-top: 40px;
 }
 
 /* 회원가입화면 로고 */
@@ -65,6 +81,10 @@ body {
     align-items: center;
 }
 
+.signup_input p {
+    color: var(--accent-color);
+}
+
 .input_form {
     display: flex;
     flex-direction: column;
@@ -87,6 +107,35 @@ body {
     color: var(--text-color);
 }
 
+/* 필독사항  */
+.caution-form {
+    margin-top: 20px;
+    align-items: center;
+    border: 1px solid var(--accent-color);
+    width: 345px;
+    border-radius: 10px;
+}
+
+.cautions {
+    padding: 8px 8px;
+}
+
+.cautions P, h2 {
+    color: var(--text-color);
+}
+
+.caution-text {
+    overflow-y: scroll;
+    text-align: start;
+    height: 250px;
+    color: var(--text-color);
+}
+
+.agree-btn {
+    width: 20px;
+    height:20px;
+}
+
 /* 로그인 회원가입 버튼 */
 .btn {
     display: flex;
@@ -94,6 +143,7 @@ body {
     flex-direction: column;
     padding-left: 0;
     align-items: center;
+    padding-bottom: 70px;
 }
 
 .btn li {
@@ -129,75 +179,15 @@ body {
 
 /* footer */
 .footer {
-    background-color: var(--text-color);
+    background-color: var(--gray-dark-color);
     width: 100%;
-    height: 7vh;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
 
 .copyright {
+    color: var(--gray-light-color);
     padding-left: 50px;
-}
-
-.members {
-    margin-top: 30px;
-    padding-right: 50px;
-}
-
-.members a {
-    padding-right: 30px;
-    text-decoration: none;
-    color: var(--accent-color);
-}
-
-.members a:hover {
-    color: rgb(245, 245, 245);
-}
-
-.caution-form {
-    margin-top: 20px;
-    align-items: center;
-    border: 1px solid var(--accent-color);
-    width: 345px;
-    border-radius: 10px;
-}
-
-.cautions {
-    padding: 8px 8px;
-}
-
-.cautions P, h2 {
-    color: var(--text-color);
-}
-
-.caution-text {
-    overflow-y: scroll;
-    text-align: start;
-    height: 250px;
-    color: var(--text-color);
-}
-
-.agree-btn {
-    width: 20px;
-    height:20px;
-}
-
-
-/* 반응형 footer */
-@media screen and (max-width:810px) {
-    .wrap {
-        top: 30px;
-    }
-
-    .footer {
-        flex-direction: column;
-        height: 7vh;
-    }
-
-    /*.members {*/
-    /*    margin: auto;*/
-    /*    padding-right: 0;*/
-    /*}*/
+    padding-top: 10px;
 }
