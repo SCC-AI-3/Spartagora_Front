@@ -88,21 +88,22 @@ body {
     color:var(--accent-color);
 }
 
-@media screen and (max-width:940px) {
+
+@media screen and (max-width:768px) {
     .navbar {
         flex-direction: column;
         align-items: flex-start;
         padding: 8px 24px;
     }
 
-    .navbar_upper {
+    .navbar_lower {
         display: none;
         flex-direction: column;
         align-items: center;
         width: 100%;
     }
 
-    .navbar_upper li {
+    .navbar_lower li {
         width: 100%;
         text-align: center;
     }
@@ -112,7 +113,7 @@ body {
         justify-content: center;
         width: 100%;
     }
-
+    
     .navbar_toogleBtn {
         display: block;
     }
@@ -138,6 +139,8 @@ body {
     -ms-flex-direction: column;
     flex-direction: column;
     -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     -webkit-box-pack: center;
     -ms-flex-pack: center;
@@ -145,6 +148,7 @@ body {
     justify-content: center;
 }
 
+<<<<<<< HEAD
 .filtering {
     margin: auto;
     max-width: 942px;
@@ -180,6 +184,76 @@ body {
     font-size: 11px;
     font-weight: bold;
     line-height: 1.5;
+=======
+
+@media (min-width: 1024px){
+    .filtering  {
+    padding: 28px 0px 20px;
+    }
+
+    .filtering {
+        margin: auto;
+        max-width: 942px;
+        width: 100%;
+        display: flex;
+        -webkit-box-align: center;
+        align-items: center;
+        padding: 12px 12px 12px 20px;
+        background-color: rgb(244, 245, 246);
+        -webkit-box-pack: end !important;
+        justify-content: end !important;
+    }
+
+    .filtering .box {
+        flex-direction: row;
+        -webkit-box-pack: start;
+        justify-content: flex-start;
+        -webkit-box-align: center;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .filtering .icon {
+        position: relative;
+    }
+
+    .filtering .name {
+        cursor: pointer;
+        gap: 5px;
+        font-family: Pretendard;
+        font-size: 15px;
+        font-weight: bold;
+        line-height: 1.5;
+    }
+
+}
+
+@media (min-width: 1024px){
+
+    .articlebox {
+    padding: 32px 40px;
+    }
+
+    .articlebox .contentbox {
+        margin: 0;
+    }
+
+    .articlebox .contents {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow-wrap: break-word;
+        word-break: break-all;
+        text-decoration: none;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 1.5;
+        text-align: left;
+        color: rgb(107, 110, 114);
+    }
+>>>>>>> e0f9998c3416c0fedc0e4b61c415491f4037464e
 }
 
 .articlebox {
@@ -193,10 +267,19 @@ body {
     background-color: #fff;
 }
 
+<<<<<<< HEAD
 .articlebox .header {
     display: -webkit-box;
+=======
+.articlebox .sector {
+    
+    /*각 브라우저마다 다르게 동작*/
+    display: -webkit-box;    
+>>>>>>> e0f9998c3416c0fedc0e4b61c415491f4037464e
     display: -webkit-flex;
     display: -ms-flexbox;
+
+    
     display: flex;
     -webkit-align-items: center;
     -webkit-box-align: center;
@@ -207,7 +290,7 @@ body {
     justify-content: space-between;
 }
 
-.articlebox-headerbox {
+.articlebox .box {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -223,7 +306,17 @@ body {
     gap: 12px;
 }
 
-.articlebox-headernamebox {
+.articlebox .image {
+    width: 36px;
+    height: 36px;
+    border: 1px solid rgb(173, 181, 189);
+    background-color: rgb(241, 241, 241);
+    border-radius: 100px;
+    overflow: hidden;
+}
+
+
+.articlebox .namebox {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -241,34 +334,36 @@ body {
     flex-direction: column;
 }
 
-.articlebox-headername {
+.articlebox .name {
     font-size: 14px;
     font-weight: 600;
     line-height: 1.5;
     color: rgb(28, 29, 30);
 }
 
-.articlebox-headertime {
+.articlebox .time {
     font-size: 12px;
     font-weight: 500;
     line-height: 1.3;
     color: rgb(131, 134, 137);
 }
 
-.articlebox-bookmark {
+.articlebox .bookmark {
     cursor: pointer;
 }
 
-.articlebox-contents {
+/*
+.articlebox .contentbox {
     margin: 0;
 }
+*/
 
-.articlebox-contents-titlebox {
+.articlebox .titlebox {
     margin-top: 16px;
     margin-bottom: 4px;
 }
 
-.articlebox-contents-title {
+.articlebox .title {
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
@@ -284,7 +379,8 @@ body {
     text-decoration: none;
 }
 
-.articlebox-contents-content {
+/*
+.articlebox .contents {
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
@@ -299,13 +395,14 @@ body {
     text-align: left;
     color: rgb(107, 110, 114);
 }
+*/
 
-.articlebox-categorybox {
+.articlebox .categorybox {
     margin-top: 6.5px;
     margin-bottom: 25px;
 }
 
-.articlebox-category {
+.articlebox .category {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -326,35 +423,135 @@ body {
     color: #a4a6a9;
 }
 
-.articlebox-countbox {
-    display: flex;
-    -webkit-box-align: center;
-    align-items: center;
-    -webkit-box-pack: justify;
-    justify-content: space-between;
+@media (min-width: 1024px){
+    .articlebox .countbox {
+        display: flex;
+        -webkit-box-align: center;
+        align-items: center;
+        -webkit-box-pack: justify;
+        justify-content: space-between;
+    }
+
+    .articlebox .countboxs {
+        display: flex;
+        -webkit-box-align: center;
+        align-items: center;
+        -webkit-box-pack: start;
+        justify-content: start;
+        gap: 16px;
+        padding-left: 0px;
+    }
+
+    .articlebox .counts {
+        display: flex;
+        -webkit-box-align: center;
+        align-items: center;
+        -webkit-box-pack: start;
+        justify-content: start;
+        gap: 4px;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 1.5;
+        text-align: left;
+        color: rgb(131, 134, 137);
+    }
+
 }
 
-.articlebox-countbox2 {
+
+
+.pagemove {
     display: flex;
     -webkit-box-align: center;
     align-items: center;
-    -webkit-box-pack: start;
-    justify-content: start;
-    gap: 16px;
-    padding-left: 0px;
+    -webkit-box-pack: center;
+    justify-content: center;
+    gap: 36px;
+    padding: 40px 0px 80px;
+    background-color: rgb(244, 245, 246);
 }
 
-.articlebox-counts {
+.pagemove .leftarrow {
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    border-radius: 40px;
     display: flex;
     -webkit-box-align: center;
     align-items: center;
-    -webkit-box-pack: start;
-    justify-content: start;
-    gap: 4px;
+    -webkit-box-pack: center;
+    justify-content: center;
+    opacity: 0.3;
+    border: 1px solid rgb(234, 235, 237);
+    background-color: rgb(255, 255, 255);
+}
+
+.pagemove .number {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    gap: 14px;
+}
+
+.pagemove .pointer {
+    cursor: pointer;
+    width: 20px;
+    font-family: Pretendard;
     font-size: 14px;
     font-weight: 500;
     line-height: 1.5;
-    text-align: left;
+    text-align: center;
+    color: rgb(232, 52, 78);
+}
+
+.pagemove .actpointer  {
+    cursor: pointer;
+    width: 20px;
+    font-family: Pretendard;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.5;
+    text-align: center;
     color: rgb(131, 134, 137);
 }
+
+.pagemove .rightarrow {
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    border-radius: 40px;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    border: 1px solid rgb(234, 235, 237);
+    background-color: rgb(255, 255, 255);
+}
+
+
+
+.writing {
+    padding: 0;
+}
+
+.writing .box {
+    margin: auto;
+    max-width: 942px;
+    width: 100%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+}
+
 
