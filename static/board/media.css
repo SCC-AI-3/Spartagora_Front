@@ -1,0 +1,47 @@
+@media screen and (max-width : 1130px) {
+    .LowerCategory {
+        display: none;
+    }
+
+    .Topic {
+        display: flex;
+        width: 100%;
+    }
+
+    .Topic select {
+        padding: var(--padding);
+        max-width: 1130px;
+        width: 100%;
+        border-style: 1px solid var(--gray-light-color);
+        border-bottom: 1px solid;
+        border-top: 1px solid;
+        background-color: var(--white-color);
+        margin-top: calc(var(--padding) * 2);
+    }
+
+    .Post {
+        flex-direction: column;
+    }
+
+    .Post .Editer {
+        padding-right: 0;
+    }
+
+    .Post button {
+        padding-top: var(--padding);
+    }
+
+    .Sharelike {
+        display: flex;
+        align-items: center;
+        max-width: 1130px;
+        width: 100%;
+    }
+
+    .ReCategory {
+        display: flex;
+        justify-content: center;
+        max-width: 1130px;
+        width: 100%;
+    }
+}

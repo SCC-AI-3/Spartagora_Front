@@ -102,3 +102,9 @@
     justify-content: flex-end;
     padding-right: var(--padding);
 }
+
+.Footer a:hover {
+    cursor: pointer;
+    font-weight: bold;
+    color: var(--pink-light-color);
+}

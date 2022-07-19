@@ -29,12 +29,19 @@
 
 .Main .BoardTitle {
     font-size: var(--font-large);
-    padding: calc(var(--padding) / 2);
+    padding: calc(var(--padding)/2);
     color: var(--white-color);
     background-color: var(--accent-color);
     border-radius: var(--padding);
     margin-bottom: calc(var(--padding) / 2);
     font-weight: bold;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.Main .BoardTitle .MoreArticle {
+    font-size: var(--font-medium);
 }
 
 .Main .BestList {
@@ -95,13 +102,6 @@
 
 .Main-List-ArticleInfo {
     display : flex;
-}
-
-.MoreArticle {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    font-size:var(--font-large);
 }
 
 /* 사이드바 */

@@ -1,0 +1,25 @@
+@media screen and (max-width : 1130px) {
+    .Copyright {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .SpartaName {
+        padding-bottom: calc(var(--padding)*2);
+    }
+
+    .Etc {
+        padding-bottom: calc(var(--padding)*2);
+    }
+
+    .Company {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .TEAMSPARTA {
+        display: flex;
+        justify-content: flex-start;
+        padding-top: calc(var(--padding)*2);
+    }
+}

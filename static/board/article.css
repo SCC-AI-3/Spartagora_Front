@@ -1,0 +1,244 @@
+/* 게시판 페이지 */
+.Container {
+    max-width: 1137px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    padding: var(--padding);
+    margin: auto;
+}
+
+.Main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: calc(var(--padding) / 2);
+    max-width: 1130px;
+    width: 100%;
+    background-color: var(--white-color);
+}
+
+/* LowerCategory */
+.LowerCategory {
+    display: flex;
+    justify-content: center;
+}
+
+.LowerCategory .CategoryName {
+    display: flex;
+    flex-direction: row;
+    padding-top: var(--padding);
+}
+
+.LowerCategory a {
+    padding: 0 var(--padding);
+    font-weight: bold;
+    font-size: var(--font-medium);
+}
+
+.LowerCategory .active {
+    color: var(--accent-color);
+}
+
+/* Lower Category Media Query */
+.Topic {
+    display: none;
+    background-color: var(--white-color);
+}
+
+/* 상세게시글 */
+.Article {
+    display: flex;
+    flex-direction: column;
+    padding: var(--padding);
+}
+
+.Article .ProfileInfo {
+    display: flex;
+    padding: calc(var(--padding) / 2);
+    border: 1px solid var(--gray-light-color);
+    border-radius: 15px;
+}
+
+.Article .Profile-Rtan {
+    display: flex;
+    flex-direction: row;
+}
+
+.Article .ProfileInfo .Profile-Rtan img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+}
+
+.Article .ProfileInfo .User {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: var(--font-medium);
+    padding-left: var(--padding);
+}
+
+.Article .ProfileInfo .User .Anonymous {
+    font-size: var(--font-medium);
+    font-weight: bold;
+}
+
+.Article .ProfileInfo .User .UploadTime {
+    font-size: var(--font-small);
+    color: var(--gray-dark-color);
+}
+
+.Article .ProfileInfo img {
+    width: 30px;
+    height: 30px;
+}
+
+.Article .Article-Title {
+    padding: var(--padding);
+}
+
+.Article .Article-Title .Title {
+    font-size: var(--font-large);
+    line-height: 1.8;
+}
+
+.Article .Article-Title .Category {
+    color: var(--gray-dark-color);
+    font-size: var(--font-small);
+}
+
+.Article .Count {
+    padding: var(--padding);
+}
+
+.Article .Count i {
+    padding: 0 calc(var(--padding) / 2);
+}
+
+.Article .Content {
+    padding: calc(var(--padding) * 2);
+    line-height: 2.0;
+}
+
+/* 상세게시글 댓글 */
+.Comment {
+    display: flex;
+    flex-direction: column;
+    padding: calc(var(--padding)*2);
+}
+
+.Comment .Total {
+    display: flex;
+    flex-direction: row;
+    padding: var(--padding);
+    border-top: 1px solid var(--gray-light-color);
+    font-size: var(--font-large);
+}
+
+.Comment .Total .Count {
+    padding-left: var(--padding);
+}
+
+.List {
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1px solid var(--gray-light-color);
+    padding: var(--padding) 0;
+}
+
+.List .Content {
+    padding-left: var(--padding);
+    line-height: 1.6;
+}
+
+.List .User {
+    display: flex;
+    flex-direction: row;
+    padding-bottom: calc(var(--padding) / 2);
+}
+
+.List .User .Update {
+    display: flex;
+    align-items: center;
+    color: var(--gray-dark-color);
+    padding-left: var(--padding);
+    font-size: var(--font-small);
+}
+
+.Post {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: calc(var(--padding) * 2);
+}
+
+.Post .Editer {
+    display: flex;
+    max-width: 800px;
+    width: 100%;
+    padding-right: var(--padding);
+}
+
+.Post .Editer input {
+    display: flex;
+    max-width: 800px;
+    width: 100%;
+    height: 50px;
+    border: 1px solid var(--gray-dark-color);
+    border-radius: 12px;
+    font-size: var(--font-medium);
+}
+
+.Post button {
+    color: var(--accent-color);
+    font-weight: bold;
+    font-size: var(--font-large);
+}
+
+/* 공유, 좋아요 버튼 */
+.Sharelike {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: var(--font-large);
+}
+
+.Sharelike .Share {
+    padding-right: var(--padding);
+}
+
+.Sharelike .Share i {
+    padding-right: var(--padding);
+}
+
+.Sharelike .Like {
+    padding-left: var(--padding);
+}
+
+.Sharelike .Like i {
+    padding-right: var(--padding);
+}
+
+/* 목록이동 버튼 */
+.ReCategory {
+    display: flex;
+    justify-content: center;
+    padding: calc(var(--padding)*2) 0;
+}
+
+.ReCategory a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    height: 50px;
+    background-color: var(--accent-color);
+    border-radius: 15px;
+    color: var(--white-color);
+    font-weight: bold;
+}

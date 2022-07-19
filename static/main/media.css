@@ -15,34 +15,31 @@
         padding: 8px;
     }
 
-    .Navbar_upper.active {
-        display: flex;
-        width: 100%;
-    }
-
     .Navbar_upper {
         font-size: var(--font-medium);
-        display: none;
+        display: flex;
         flex-direction: row;
+        justify-content: center;
         align-items: center;
+        max-width: 1130px;
+        width: 100%;
     }
 
     .Navbar_upper li {
         width: 100%;
+        padding-top: var(--padding);
         text-align: row;
         background-color: transparent;
+        align-items: center;
+    }
+
+    .Navbar_upper li a {
+        display: flex;
+        justify-content: center;
     }
 
     .Navbar_icons {
         display: none;
-        justify-content: center;
-        width: 100%;
-        background-color: var(--white-color);
-        border-bottom: 1px solid var(--gray-light-color);
-    }
-    
-    .Navbar_toogleBtn {
-        display: block;
     }
 
     /* 게시판 페이지 반응형 */
