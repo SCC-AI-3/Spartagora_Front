@@ -23,7 +23,7 @@
 
 body {
     background-color: var(--background-color);
-    font-family: Pretendard;
+    font-family: 'Gothic A1', sans-serif;
     display: flex;
     flex-direction: column;
     margin: auto;
@@ -166,6 +166,7 @@ body {
 .signup_btn:hover {
     background-color: var(--button-color);
     color: rgb(255, 255, 255);
+    cursor: pointer;
 }
 
 .btn a {
