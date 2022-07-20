@@ -5,6 +5,7 @@ const frontend_base_url = "http://127.0.0.1:5500"
 async function handleSignup() {
 
     const signupData = {
+        assignment: document.getElementById("assignment").value,
         username: document.getElementById("id").value,
         password: document.getElementById('pw').value,
         password2: document.getElementById('pw2').value,
