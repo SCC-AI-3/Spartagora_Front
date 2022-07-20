@@ -28,7 +28,7 @@ async function handleSignup() {
         response_json = await response.json()
 
         if (response.status == 200) {
-            window.location.replace(`${frontend_base_url}/templates/login.html`);
+            window.location.replace(`${frontend_base_url}/templates/user/login.html`);
         } else {
             alert(response.status)
         }
