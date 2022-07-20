@@ -1,0 +1,97 @@
+.Wrap {
+    padding: calc(var(--padding)*2);
+    max-width: 1130px;
+    width: 100%;
+}
+
+.Caution {
+    padding: calc(var(--padding)*2);
+}
+
+.Caution .CautionInfo {
+    padding: var(--padding);
+}
+
+.Caution .CautionInfo .Title {
+    font-size: var(--font-title);
+    color: var(--accent-color);
+    padding-bottom: var(--padding);
+}
+
+.Caution .CautionInfo p {
+    font-size: var(--font-medium);
+    color: var(--gray-dark-color);
+    line-height: 1.8;
+}
+
+.List {
+    display: flex;
+    flex-direction: column;
+    padding: var(--padding);
+}
+
+.List .ProfileInfo {
+    display: flex;
+    padding: calc(var(--padding) / 4);
+    border-radius: 15px;
+}
+
+.List .Profile-Rtan {
+    display: flex;
+    flex-direction: row;
+}
+
+.List .ProfileInfo .Profile-Rtan img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+}
+
+.List .ProfileInfo .User {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: var(--font-medium);
+    padding-left: var(--padding);
+}
+
+.List .ProfileInfo .User .Anonymous {
+    font-size: var(--font-medium);
+    font-weight: bold;
+}
+
+.List .ProfileInfo .User .UploadTime {
+    font-size: var(--font-small);
+    color: var(--gray-dark-color);
+}
+
+.List .ProfileInfo img {
+    width: 30px;
+    height: 30px;
+}
+
+.List .Article-Title {
+    padding: calc(var(--padding) / 4);
+}
+
+.List .Article-Title .Title {
+    font-size: var(--font-large);
+    line-height: 1.5;
+}
+
+.List .Article-Title .Category {
+    color: var(--gray-dark-color);
+    font-size: var(--font-small);
+}
+
+.List .Count i {
+    padding: 0 calc(var(--padding) / 2);
+}
+
+.List .Content {
+    padding: calc(var(--padding) * 2);
+    line-height: 2.0;
+}

@@ -76,15 +76,3 @@
 .Navbar_icons li {
     padding: 8px 12px;
 }
-
-.Navbar_toogleBtn {
-    display: none;
-    position: absolute;
-    right: 32px;
-    padding-top: 5px;
-    font-size: var(--font-large);
-}
-
-.Navbar_toogleBtn:hover {
-    color:var(--accent-color);
-}

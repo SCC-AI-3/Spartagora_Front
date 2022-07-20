@@ -50,14 +50,14 @@
 .Article {
     display: flex;
     flex-direction: column;
-    padding: var(--padding);
+    margin: var(--padding);
+    border: 1px solid var(--gray-light-color);
+    border-radius: 15px;
 }
 
 .Article .ProfileInfo {
     display: flex;
     padding: calc(var(--padding) / 2);
-    border: 1px solid var(--gray-light-color);
-    border-radius: 15px;
 }
 
 .Article .Profile-Rtan {
