@@ -1,1096 +1,1029 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- Stylesheet -->
-    <link rel="stylesheet" href="/static/root.css" />
-    <link rel="stylesheet" href="/static/main/main_navbar.css" />
-    <link rel="stylesheet" href="/static/main/container.css" />
-    <link rel="stylesheet" href="/static/footer.css" />
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- Media Query -->
-    <link rel="stylesheet" href="/static/main/media.css" />
-    <link rel="stylesheet" href="/static/footer_media.css" />
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="/static/root.css" />
+  <link rel="stylesheet" href="/static/main/main_navbar.css" />
+  <link rel="stylesheet" href="/static/main/container.css" />
+  <link rel="stylesheet" href="/static/footer.css" />
 
-    <!-- Google Font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link
-      rel="preconnect"
-      href="https://fonts.gstatic.com"
-      crossorigin="crossorigin"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@500&display=swap"
-      rel="stylesheet"
-    />
+  <!-- Media Query -->
+  <link rel="stylesheet" href="/static/main/media.css" />
+  <link rel="stylesheet" href="/static/footer_media.css" />
 
-    <!-- Font Awesome -->
-    <script
-      src="https://kit.fontawesome.com/993c2cba92.js"
-      crossorigin="anonymous"
-    ></script>
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="crossorigin" />
+  <link href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@500&display=swap" rel="stylesheet" />
 
-    <title>Spartagora | 게시판</title>
-  </head>
-  <body>
-    <!-- Header -->
-    <div class="Header">
-      <nav class="Navbar">
-        <!-- 네비게이션바 로고 -->
-        <div class="Navbar_logo">
-          <a href="/templates/main.html">Spartagora</a>
-        </div>
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/993c2cba92.js" crossorigin="anonymous"></script>
 
-        <!-- 네비게이션바 Uppor Category -->
-        <ul class="Navbar_upper">
-          <li>
-            <a class="active" href="/templates/main.html">게시판</a>
-          </li>
-          <li>
-            <a href="#">과정후기</a>
-          </li>
-          <li>
-            <a href="#">채용정보</a>
-          </li>
-          <li>
-            <a href="#">취업후기</a>
-          </li>
-          <!-- <li>
+  <title>Spartagora | 게시판</title>
+</head>
+
+<body>
+  <!-- Header -->
+  <div class="Header">
+    <nav class="Navbar">
+      <!-- 네비게이션바 로고 -->
+      <div class="Navbar_logo">
+        <a href="/templates/main.html">Spartagora</a>
+      </div>
+
+      <!-- 네비게이션바 Uppor Category -->
+      <ul class="Navbar_upper">
+        <li>
+          <a class="active" href="/templates/main.html">게시판</a>
+        </li>
+        <li>
+          <a href="#">과정후기</a>
+        </li>
+        <li>
+          <a href="#">채용정보</a>
+        </li>
+        <li>
+          <a href="#">취업후기</a>
+        </li>
+        <!-- <li>
                         <a href="#">외주의뢰</a>
                     </li> -->
-        </ul>
-        <ul class="Navbar_icons">
-          <li>
-            <a>
-              <i class="fa-regular fa-user"></i>
-            </a>
-          </li>
-        </ul>
-      </nav>
-    </div>
+      </ul>
+      <ul class="Navbar_icons">
+        <li>
+          <a>
+            <i class="fa-regular fa-user"></i>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
 
-    <!-- 게시판 메인화면 -->
-    <div class="Container">
-      <div class="Main">
-        <!-- 토픽베스트 -->
-        <div class="BoardBlock">
-          <div>
-            <p class="BoardTitle">토픽 베스트</p>
-            <ul class="BestList">
-              <li class="List">
-                <div class="Article">
-                  <span>
-                    <a href="" class="ArticleCategory">즉문즉답</a>
-                  </span>
-                  <a href="" class="tit"
-                    >최종프로젝트 관련해서 질문드립니다....</a
-                  >
-                  <div class="ArticleInfo">
-                    <a href="" class="like">
-                      <i class="fa-regular fa-thumbs-up"></i>29
-                    </a>
-                    <a href="" class="cmt">
-                      <i class="fa-regular fa-comments"></i>
-                      89
-                    </a>
-                    <a href="" class="views">
-                      <i class="fa-solid fa-arrow-pointer"></i>
-                      504
-                    </a>
-                  </div>
+  <!-- 게시판 메인화면 -->
+  <div class="Container">
+    <div class="Main">
+      <!-- 토픽베스트 -->
+      <div class="BoardBlock">
+        <div>
+          <p class="BoardTitle">토픽 베스트</p>
+          <ul class="BestList">
+            <li class="List">
+              <div class="Article">
+                <span>
+                  <a href="" class="ArticleCategory">즉문즉답</a>
+                </span>
+                <a href="" class="tit">최종프로젝트 관련해서 질문드립니다....</a>
+                <div class="ArticleInfo">
+                  <a href="" class="like">
+                    <i class="fa-regular fa-thumbs-up"></i>29
+                  </a>
+                  <a href="" class="cmt">
+                    <i class="fa-regular fa-comments"></i>
+                    89
+                  </a>
+                  <a href="" class="views">
+                    <i class="fa-solid fa-arrow-pointer"></i>
+                    504
+                  </a>
                 </div>
-              </li>
-              <li class="List">
-                <div class="Article">
-                  <span>
-                    <a href="" class="ArticleCategory">스터디/팀원모집</a>
-                  </span>
-                  <a href="" class="tit"
-                    >개인적인 프로젝트 진행하려는데 참여하실 분 모집합니다.</a
-                  >
-                  <div class="ArticleInfo">
-                    <a href="" class="like">
-                      <i class="fa-regular fa-thumbs-up"></i>10
-                    </a>
-                    <a href="" class="cmt">
-                      <i class="fa-regular fa-comments"></i>
-                      75
-                    </a>
-                    <a href="" class="views">
-                      <i class="fa-solid fa-arrow-pointer"></i>
-                      209
-                    </a>
-                  </div>
+              </div>
+            </li>
+            <li class="List">
+              <div class="Article">
+                <span>
+                  <a href="" class="ArticleCategory">스터디/팀원모집</a>
+                </span>
+                <a href="" class="tit">개인적인 프로젝트 진행하려는데 참여하실 분 모집합니다.</a>
+                <div class="ArticleInfo">
+                  <a href="" class="like">
+                    <i class="fa-regular fa-thumbs-up"></i>10
+                  </a>
+                  <a href="" class="cmt">
+                    <i class="fa-regular fa-comments"></i>
+                    75
+                  </a>
+                  <a href="" class="views">
+                    <i class="fa-solid fa-arrow-pointer"></i>
+                    209
+                  </a>
                 </div>
-              </li>
-              <li class="List">
-                <div class="Article">
-                  <span>
-                    <a href="" class="ArticleCategory">썸, 연애</a>
-                  </span>
-                  <a href="" class="tit">이런 남자 어려운거야?</a>
-                  <div class="ArticleInfo">
-                    <a href="" class="like">
-                      <i class="fa-regular fa-thumbs-up"></i>10
-                    </a>
-                    <a href="" class="cmt">
-                      <i class="fa-regular fa-comments"></i>
-                      75
-                    </a>
-                    <a href="" class="views">
-                      <i class="fa-solid fa-arrow-pointer"></i>
-                      756
-                    </a>
-                  </div>
+              </div>
+            </li>
+            <li class="List">
+              <div class="Article">
+                <span>
+                  <a href="lower_category/list_greenlight.html?3" class="ArticleCategory">썸, 연애</a>
+                </span>
+                <a href="" class="tit">이런 남자 어려운거야?</a>
+                <div class="ArticleInfo">
+                  <a href="" class="like">
+                    <i class="fa-regular fa-thumbs-up"></i>10
+                  </a>
+                  <a href="" class="cmt">
+                    <i class="fa-regular fa-comments"></i>
+                    75
+                  </a>
+                  <a href="" class="views">
+                    <i class="fa-solid fa-arrow-pointer"></i>
+                    756
+                  </a>
                 </div>
-              </li>
-              <li class="List">
-                <div class="Article">
-                  <span>
-                    <a href="" class="ArticleCategory">반려동물</a>
-                  </span>
-                  <a href="" class="tit"
-                    >얼마전에 우리집 앞에서 새끼고양이 세마리를 봤는데 그냥
-                    냅뒀거든?</a
-                  >
-                  <div class="ArticleInfo">
-                    <a href="" class="like">
-                      <i class="fa-regular fa-thumbs-up"></i>34
-                    </a>
-                    <a href="" class="cmt">
-                      <i class="fa-regular fa-comments"></i>
-                      23
-                    </a>
-                    <a href="" class="views">
-                      <i class="fa-solid fa-arrow-pointer"></i>
-                      101
-                    </a>
-                  </div>
+              </div>
+            </li>
+            <li class="List">
+              <div class="Article">
+                <span>
+                  <a href="" class="ArticleCategory">반려동물</a>
+                </span>
+                <a href="" class="tit">얼마전에 우리집 앞에서 새끼고양이 세마리를 봤는데 그냥
+                  냅뒀거든?</a>
+                <div class="ArticleInfo">
+                  <a href="" class="like">
+                    <i class="fa-regular fa-thumbs-up"></i>34
+                  </a>
+                  <a href="" class="cmt">
+                    <i class="fa-regular fa-comments"></i>
+                    23
+                  </a>
+                  <a href="" class="views">
+                    <i class="fa-solid fa-arrow-pointer"></i>
+                    101
+                  </a>
                 </div>
-              </li>
-              <li class="List">
-                <div class="Article">
-                  <span>
-                    <a href="" class="ArticleCategory">헬스, 다이어트</a>
-                  </span>
-                  <a href="" class="tit"
-                    >잠실근처에서 헬스장 다니시는 분 괜찮은 곳 추천 좀..</a
-                  >
-                  <div class="ArticleInfo">
-                    <a href="" class="like">
-                      <i class="fa-regular fa-thumbs-up"></i>17
-                    </a>
-                    <a href="" class="cmt">
-                      <i class="fa-regular fa-comments"></i>
-                      21
-                    </a>
-                    <a href="" class="views">
-                      <i class="fa-solid fa-arrow-pointer"></i>
-                      94
-                    </a>
-                  </div>
+              </div>
+            </li>
+            <li class="List">
+              <div class="Article">
+                <span>
+                  <a href="" class="ArticleCategory">헬스, 다이어트</a>
+                </span>
+                <a href="" class="tit">잠실근처에서 헬스장 다니시는 분 괜찮은 곳 추천 좀..</a>
+                <div class="ArticleInfo">
+                  <a href="" class="like">
+                    <i class="fa-regular fa-thumbs-up"></i>17
+                  </a>
+                  <a href="" class="cmt">
+                    <i class="fa-regular fa-comments"></i>
+                    21
+                  </a>
+                  <a href="" class="views">
+                    <i class="fa-solid fa-arrow-pointer"></i>
+                    94
+                  </a>
                 </div>
-              </li>
-              <li class="List">
-                <div class="Article">
-                  <span>
-                    <a href="" class="ArticleCategory">여행, 맛집</a>
-                  </span>
-                  <a href="" class="tit"
-                    >이번에 빠지 갔다왔는데 이거 맞는거냐??</a
-                  >
-                  <div class="ArticleInfo">
-                    <a href="" class="like">
-                      <i class="fa-regular fa-thumbs-up"></i>60
-                    </a>
-                    <a href="" class="cmt">
-                      <i class="fa-regular fa-comments"></i>
-                      55
-                    </a>
-                    <a href="" class="views">
-                      <i class="fa-solid fa-arrow-pointer"></i>
-                      357
-                    </a>
-                  </div>
+              </div>
+            </li>
+            <li class="List">
+              <div class="Article">
+                <span>
+                  <a href="" class="ArticleCategory">여행, 맛집</a>
+                </span>
+                <a href="" class="tit">이번에 빠지 갔다왔는데 이거 맞는거냐??</a>
+                <div class="ArticleInfo">
+                  <a href="" class="like">
+                    <i class="fa-regular fa-thumbs-up"></i>60
+                  </a>
+                  <a href="" class="cmt">
+                    <i class="fa-regular fa-comments"></i>
+                    55
+                  </a>
+                  <a href="" class="views">
+                    <i class="fa-solid fa-arrow-pointer"></i>
+                    357
+                  </a>
                 </div>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- 즉문즉답 -->
-        <div class="BoardBlock">
-          <div>
-            <div class="BoardTitle">
-              즉문즉답
-              <a
-                href="/templates/lower_category/list_qna.html"
-                class="MoreArticle"
-                >더보기</a
-              >
-            </div>
-            <ul class="BestList">
-              <li class="List">
-                <div class="Article">
-                  <span>
-                    <a href="" class="ArticleCategory">웹개발 종합반</a>
-                  </span>
-                  <a href="" class="tit"
-                    >3-11[앱페이지적용]설치-스택네비게이션01 강좌에서 컴파일
-                    에러입니다.</a
-                  >
-                  <div class="ArticleInfo">
-                    <a href="" class="like">
-                      <i class="fa-regular fa-thumbs-up"></i>4
-                    </a>
-                    <a href="" class="cmt">
-                      <i class="fa-regular fa-comments"></i>6
-                    </a>
-                    <a href="" class="views">
-                      <i class="fa-solid fa-arrow-pointer"></i>29
-                    </a>
-                  </div>
-                </div>
-              </li>
-              <li class="List">
-                <div class="Article">
-                  <span>
-                    <a href="" class="ArticleCategory">웹개발 종합반</a>
-                  </span>
-                  <a href="" class="tit"
-                    >og title이랑 og description git hub에 수정했는데 카톡으로
-                    공유시 변경이 안됩니다.</a
-                  >
-                  <div class="ArticleInfo">
-                    <a href="" class="like">
-                      <i class="fa-regular fa-thumbs-up"></i>8
-                    </a>
-                    <a href="" class="cmt">
-                      <i class="fa-regular fa-comments"></i>12
-                    </a>
-                    <a href="" class="views">
-                      <i class="fa-solid fa-arrow-pointer"></i>37
-                    </a>
-                  </div>
-                </div>
-              </li>
-              <li class="List">
-                <div class="Article">
-                  <span>
-                    <a href="" class="ArticleCategory"
-                      >[왕초보] 비개발자를 위한, 웹개발 종합반(프로그래밍 실무,
-                      풀스택)</a
-                    >
-                  </span>
-                  <a href="" class="tit">jqery 퀴즈 문제 문의 드립니다..</a>
-                  <div class="ArticleInfo">
-                    <a href="" class="like">
-                      <i class="fa-regular fa-thumbs-up"></i>4
-                    </a>
-                    <a href="" class="cmt">
-                      <i class="fa-regular fa-comments"></i>20
-                    </a>
-                    <a href="" class="views">
-                      <i class="fa-solid fa-arrow-pointer"></i>41
-                    </a>
-                  </div>
-                </div>
-              </li>
-              <li class="List">
-                <div class="Article">
-                  <span>
-                    <a href="" class="ArticleCategory"
-                      >[왕초보] 비개발자를 위한, 웹개발 종합반(프로그래밍 실무,
-                      풀스택)</a
-                    >
-                  </span>
-                  <a href="" class="tit">몽고 DB 접속에서 오류가 발생합니다.</a>
-                  <div class="ArticleInfo">
-                    <a href="" class="like">
-                      <i class="fa-regular fa-thumbs-up"></i>
-                      5
-                    </a>
-                    <a href="" class="cmt">
-                      <i class="fa-regular fa-comments"></i>
-                      7
-                    </a>
-                    <a href="" class="views">
-                      <i class="fa-solid fa-arrow-pointer"></i>39
-                    </a>
-                  </div>
-                </div>
-              </li>
-              <li class="List">
-                <div class="Article">
-                  <span>
-                    <a href="" class="ArticleCategory"
-                      >[왕초보] 비개발자를 위한, 웹개발 종합반(프로그래밍 실무,
-                      풀스택)</a
-                    >
-                  </span>
-                  <a href="" class="tit">이거 무슨 에러일까요?</a>
-                  <div class="ArticleInfo">
-                    <a href="" class="like">
-                      <i class="fa-regular fa-thumbs-up"></i>
-                      7
-                    </a>
-                    <a href="" class="cmt">
-                      <i class="fa-regular fa-comments"></i>
-                      9
-                    </a>
-                    <a href="" class="views">
-                      <i class="fa-solid fa-arrow-pointer"></i>14
-                    </a>
-                  </div>
-                </div>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- 스터디 팀원 모집 -->
-        <div class="BoardBlock">
-          <div>
-            <div class="BoardTitle">
-              스터디/팀원모집
-              <a
-                href="/templates/lower_category/list_team_recruit.html"
-                class="MoreArticle"
-                >더보기</a
-              >
-            </div>
-            <ul class="BestList">
-              <li class="List">
-                <div class="Article">
-                  <span>
-                    <a href="" class="ArticleCategory">빈 카테고리</a>
-                  </span>
-                  <a href="" class="tit">빈 게시글 제목 예시</a>
-                  <div class="ArticleInfo">
-                    <a href="" class="like">
-                      <i class="fa-regular fa-thumbs-up"></i>
-                      0
-                    </a>
-                    <a href="" class="cmt">
-                      <i class="fa-regular fa-comments"></i>
-                      0
-                    </a>
-                    <a href="" class="views">
-                      <i class="fa-solid fa-arrow-pointer"></i>
-                      0
-                    </a>
-                  </div>
-                </div>
-              </li>
-              <li class="List">
-                <div class="Article">
-                  <span>
-                    <a href="" class="ArticleCategory">빈 카테고리</a>
-                  </span>
-                  <a href="" class="tit">빈 게시글 제목 예시</a>
-                  <div class="ArticleInfo">
-                    <a href="" class="like">
-                      <i class="fa-regular fa-thumbs-up"></i>
-                      0
-                    </a>
-                    <a href="" class="cmt">
-                      <i class="fa-regular fa-comments"></i>
-                      0
-                    </a>
-                    <a href="" class="views">
-                      <i class="fa-solid fa-arrow-pointer"></i>
-                      0
-                    </a>
-                  </div>
-                </div>
-              </li>
-              <li class="List">
-                <div class="Article">
-                  <span>
-                    <a href="" class="ArticleCategory">빈 카테고리</a>
-                  </span>
-                  <a href="" class="tit">빈 게시글 제목 예시</a>
-                  <div class="ArticleInfo">
-                    <a href="" class="like">
-                      <i class="fa-regular fa-thumbs-up"></i>
-                      0
-                    </a>
-                    <a href="" class="cmt">
-                      <i class="fa-regular fa-comments"></i>
-                      0
-                    </a>
-                    <a href="" class="views">
-                      <i class="fa-solid fa-arrow-pointer"></i>
-                      0
-                    </a>
-                  </div>
-                </div>
-              </li>
-              <li class="List">
-                <div class="Article">
-                  <span>
-                    <a href="" class="ArticleCategory">빈 카테고리</a>
-                  </span>
-                  <a href="" class="tit">빈 게시글 제목 예시</a>
-                  <div class="ArticleInfo">
-                    <a href="" class="like">
-                      <i class="fa-regular fa-thumbs-up"></i>
-                      0
-                    </a>
-                    <a href="" class="cmt">
-                      <i class="fa-regular fa-comments"></i>
-                      0
-                    </a>
-                    <a href="" class="views">
-                      <i class="fa-solid fa-arrow-pointer"></i>
-                      0
-                    </a>
-                  </div>
-                </div>
-              </li>
-              <li class="List">
-                <div class="Article">
-                  <span>
-                    <a href="" class="ArticleCategory">빈 카테고리</a>
-                  </span>
-                  <a href="" class="tit">빈 게시글 제목 예시</a>
-                  <div class="ArticleInfo">
-                    <a href="" class="like">
-                      <i class="fa-regular fa-thumbs-up"></i>
-                      0
-                    </a>
-                    <a href="" class="cmt">
-                      <i class="fa-regular fa-comments"></i>
-                      0
-                    </a>
-                    <a href="" class="views">
-                      <i class="fa-solid fa-arrow-pointer"></i>
-                      0
-                    </a>
-                  </div>
-                </div>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- 연애 -->
-        <div class="BoardBlock">
-          <div>
-            <div class="BoardTitle">
-              썸, 연애
-              <a
-                href="/templates/lower_category/list_greenlight.html"
-                class="MoreArticle"
-                >더보기</a
-              >
-            </div>
-            <ul class="BestList">
-              <li class="List">
-                <div class="Article">
-                  <span>
-                    <a href="" class="ArticleCategory">빈 카테고리</a>
-                  </span>
-                  <a href="" class="tit">빈 게시글 제목 예시</a>
-                  <div class="ArticleInfo">
-                    <a href="" class="like">
-                      <i class="fa-regular fa-thumbs-up"></i>
-                      0
-                    </a>
-                    <a href="" class="cmt">
-                      <i class="fa-regular fa-comments"></i>
-                      0
-                    </a>
-                    <a href="" class="views">
-                      <i class="fa-solid fa-arrow-pointer"></i>
-                      0
-                    </a>
-                  </div>
-                </div>
-              </li>
-              <li class="List">
-                <div class="Article">
-                  <span>
-                    <a href="" class="ArticleCategory">빈 카테고리</a>
-                  </span>
-                  <a href="" class="tit">빈 게시글 제목 예시</a>
-                  <div class="ArticleInfo">
-                    <a href="" class="like">
-                      <i class="fa-regular fa-thumbs-up"></i>
-                      0
-                    </a>
-                    <a href="" class="cmt">
-                      <i class="fa-regular fa-comments"></i>
-                      0
-                    </a>
-                    <a href="" class="views">
-                      <i class="fa-solid fa-arrow-pointer"></i>
-                      0
-                    </a>
-                  </div>
-                </div>
-              </li>
-              <li class="List">
-                <div class="Article">
-                  <span>
-                    <a href="" class="ArticleCategory">빈 카테고리</a>
-                  </span>
-                  <a href="" class="tit">빈 게시글 제목 예시</a>
-                  <div class="ArticleInfo">
-                    <a href="" class="like">
-                      <i class="fa-regular fa-thumbs-up"></i>
-                      0
-                    </a>
-                    <a href="" class="cmt">
-                      <i class="fa-regular fa-comments"></i>
-                      0
-                    </a>
-                    <a href="" class="views">
-                      <i class="fa-solid fa-arrow-pointer"></i>
-                      0
-                    </a>
-                  </div>
-                </div>
-              </li>
-              <li class="List">
-                <div class="Article">
-                  <span>
-                    <a href="" class="ArticleCategory">빈 카테고리</a>
-                  </span>
-                  <a href="" class="tit">빈 게시글 제목 예시</a>
-                  <div class="ArticleInfo">
-                    <a href="" class="like">
-                      <i class="fa-regular fa-thumbs-up"></i>
-                      0
-                    </a>
-                    <a href="" class="cmt">
-                      <i class="fa-regular fa-comments"></i>
-                      0
-                    </a>
-                    <a href="" class="views">
-                      <i class="fa-solid fa-arrow-pointer"></i>
-                      0
-                    </a>
-                  </div>
-                </div>
-              </li>
-              <li class="List">
-                <div class="Article">
-                  <span>
-                    <a href="" class="ArticleCategory">빈 카테고리</a>
-                  </span>
-                  <a href="" class="tit">빈 게시글 제목 예시</a>
-                  <div class="ArticleInfo">
-                    <a href="" class="like">
-                      <i class="fa-regular fa-thumbs-up"></i>
-                      0
-                    </a>
-                    <a href="" class="cmt">
-                      <i class="fa-regular fa-comments"></i>
-                      0
-                    </a>
-                    <a href="" class="views">
-                      <i class="fa-solid fa-arrow-pointer"></i>
-                      0
-                    </a>
-                  </div>
-                </div>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- 반려동물 -->
-        <div class="BoardBlock">
-          <div>
-            <div class="BoardTitle">
-              반려동물
-              <a
-                href="/templates/lower_category/list_pat.html"
-                class="MoreArticle"
-                >더보기</a
-              >
-            </div>
-            <ul class="BestList">
-              <li class="List">
-                <div class="Article">
-                  <span>
-                    <a href="" class="ArticleCategory">빈 카테고리</a>
-                  </span>
-                  <a href="" class="tit">빈 게시글 제목 예시</a>
-                  <div class="ArticleInfo">
-                    <a href="" class="like">
-                      <i class="fa-regular fa-thumbs-up"></i>
-                      0
-                    </a>
-                    <a href="" class="cmt">
-                      <i class="fa-regular fa-comments"></i>
-                      0
-                    </a>
-                    <a href="" class="views">
-                      <i class="fa-solid fa-arrow-pointer"></i>
-                      0
-                    </a>
-                  </div>
-                </div>
-              </li>
-              <li class="List">
-                <div class="Article">
-                  <span>
-                    <a href="" class="ArticleCategory">빈 카테고리</a>
-                  </span>
-                  <a href="" class="tit">빈 게시글 제목 예시</a>
-                  <div class="ArticleInfo">
-                    <a href="" class="like">
-                      <i class="fa-regular fa-thumbs-up"></i>
-                      0
-                    </a>
-                    <a href="" class="cmt">
-                      <i class="fa-regular fa-comments"></i>
-                      0
-                    </a>
-                    <a href="" class="views">
-                      <i class="fa-solid fa-arrow-pointer"></i>
-                      0
-                    </a>
-                  </div>
-                </div>
-              </li>
-              <li class="List">
-                <div class="Article">
-                  <span>
-                    <a href="" class="ArticleCategory">빈 카테고리</a>
-                  </span>
-                  <a href="" class="tit">빈 게시글 제목 예시</a>
-                  <div class="ArticleInfo">
-                    <a href="" class="like">
-                      <i class="fa-regular fa-thumbs-up"></i>
-                      0
-                    </a>
-                    <a href="" class="cmt">
-                      <i class="fa-regular fa-comments"></i>
-                      0
-                    </a>
-                    <a href="" class="views">
-                      <i class="fa-solid fa-arrow-pointer"></i>
-                      0
-                    </a>
-                  </div>
-                </div>
-              </li>
-              <li class="List">
-                <div class="Article">
-                  <span>
-                    <a href="" class="ArticleCategory">빈 카테고리</a>
-                  </span>
-                  <a href="" class="tit">빈 게시글 제목 예시</a>
-                  <div class="ArticleInfo">
-                    <a href="" class="like">
-                      <i class="fa-regular fa-thumbs-up"></i>
-                      0
-                    </a>
-                    <a href="" class="cmt">
-                      <i class="fa-regular fa-comments"></i>
-                      0
-                    </a>
-                    <a href="" class="views">
-                      <i class="fa-solid fa-arrow-pointer"></i>
-                      0
-                    </a>
-                  </div>
-                </div>
-              </li>
-              <li class="List">
-                <div class="Article">
-                  <span>
-                    <a href="" class="ArticleCategory">빈 카테고리</a>
-                  </span>
-                  <a href="" class="tit">빈 게시글 제목 예시</a>
-                  <div class="ArticleInfo">
-                    <a href="" class="like">
-                      <i class="fa-regular fa-thumbs-up"></i>
-                      0
-                    </a>
-                    <a href="" class="cmt">
-                      <i class="fa-regular fa-comments"></i>
-                      0
-                    </a>
-                    <a href="" class="views">
-                      <i class="fa-solid fa-arrow-pointer"></i>
-                      0
-                    </a>
-                  </div>
-                </div>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- 헬스 다이어트 -->
-        <div class="BoardBlock">
-          <div>
-            <div class="BoardTitle">
-              헬스, 다이어트
-              <a
-                href="/templates/lower_category/list_health.html"
-                class="MoreArticle"
-                >더보기</a
-              >
-            </div>
-            <ul class="BestList">
-              <li class="List">
-                <div class="Article">
-                  <span>
-                    <a href="" class="ArticleCategory">빈 카테고리</a>
-                  </span>
-                  <a href="" class="tit">빈 게시글 제목 예시</a>
-                  <div class="ArticleInfo">
-                    <a href="" class="like">
-                      <i class="fa-regular fa-thumbs-up"></i>
-                      0
-                    </a>
-                    <a href="" class="cmt">
-                      <i class="fa-regular fa-comments"></i>
-                      0
-                    </a>
-                    <a href="" class="views">
-                      <i class="fa-solid fa-arrow-pointer"></i>
-                      0
-                    </a>
-                  </div>
-                </div>
-              </li>
-              <li class="List">
-                <div class="Article">
-                  <span>
-                    <a href="" class="ArticleCategory">빈 카테고리</a>
-                  </span>
-                  <a href="" class="tit">빈 게시글 제목 예시</a>
-                  <div class="ArticleInfo">
-                    <a href="" class="like">
-                      <i class="fa-regular fa-thumbs-up"></i>
-                      0
-                    </a>
-                    <a href="" class="cmt">
-                      <i class="fa-regular fa-comments"></i>
-                      0
-                    </a>
-                    <a href="" class="views">
-                      <i class="fa-solid fa-arrow-pointer"></i>
-                      0
-                    </a>
-                  </div>
-                </div>
-              </li>
-              <li class="List">
-                <div class="Article">
-                  <span>
-                    <a href="" class="ArticleCategory">빈 카테고리</a>
-                  </span>
-                  <a href="" class="tit">빈 게시글 제목 예시</a>
-                  <div class="ArticleInfo">
-                    <a href="" class="like">
-                      <i class="fa-regular fa-thumbs-up"></i>
-                      0
-                    </a>
-                    <a href="" class="cmt">
-                      <i class="fa-regular fa-comments"></i>
-                      0
-                    </a>
-                    <a href="" class="views">
-                      <i class="fa-solid fa-arrow-pointer"></i>
-                      0
-                    </a>
-                  </div>
-                </div>
-              </li>
-              <li class="List">
-                <div class="Article">
-                  <span>
-                    <a href="" class="ArticleCategory">빈 카테고리</a>
-                  </span>
-                  <a href="" class="tit">빈 게시글 제목 예시</a>
-                  <div class="ArticleInfo">
-                    <a href="" class="like">
-                      <i class="fa-regular fa-thumbs-up"></i>
-                      0
-                    </a>
-                    <a href="" class="cmt">
-                      <i class="fa-regular fa-comments"></i>
-                      0
-                    </a>
-                    <a href="" class="views">
-                      <i class="fa-solid fa-arrow-pointer"></i>
-                      0
-                    </a>
-                  </div>
-                </div>
-              </li>
-              <li class="List">
-                <div class="Article">
-                  <span>
-                    <a href="" class="ArticleCategory">빈 카테고리</a>
-                  </span>
-                  <a href="" class="tit">빈 게시글 제목 예시</a>
-                  <div class="ArticleInfo">
-                    <a href="" class="like">
-                      <i class="fa-regular fa-thumbs-up"></i>
-                      0
-                    </a>
-                    <a href="" class="cmt">
-                      <i class="fa-regular fa-comments"></i>
-                      0
-                    </a>
-                    <a href="" class="views">
-                      <i class="fa-solid fa-arrow-pointer"></i>
-                      0
-                    </a>
-                  </div>
-                </div>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- 여행 먹방 -->
-        <div class="BoardBlock">
-          <div>
-            <div class="BoardTitle">
-              여행, 맛집
-              <a
-                href="/templates/lower_category/list_travel.html"
-                class="MoreArticle"
-                >더보기</a
-              >
-            </div>
-            <ul class="BestList">
-              <li class="List">
-                <div class="Article">
-                  <span>
-                    <a href="" class="ArticleCategory">빈 카테고리</a>
-                  </span>
-                  <a href="" class="tit">빈 게시글 제목 예시</a>
-                  <div class="ArticleInfo">
-                    <a href="" class="like">
-                      <i class="fa-regular fa-thumbs-up"></i>
-                      0
-                    </a>
-                    <a href="" class="cmt">
-                      <i class="fa-regular fa-comments"></i>
-                      0
-                    </a>
-                    <a href="" class="views">
-                      <i class="fa-solid fa-arrow-pointer"></i>
-                      0
-                    </a>
-                  </div>
-                </div>
-              </li>
-              <li class="List">
-                <div class="Article">
-                  <span>
-                    <a href="" class="ArticleCategory">빈 카테고리</a>
-                  </span>
-                  <a href="" class="tit">빈 게시글 제목 예시</a>
-                  <div class="ArticleInfo">
-                    <a href="" class="like">
-                      <i class="fa-regular fa-thumbs-up"></i>
-                      0
-                    </a>
-                    <a href="" class="cmt">
-                      <i class="fa-regular fa-comments"></i>
-                      0
-                    </a>
-                    <a href="" class="views">
-                      <i class="fa-solid fa-arrow-pointer"></i>
-                      0
-                    </a>
-                  </div>
-                </div>
-              </li>
-              <li class="List">
-                <div class="Article">
-                  <span>
-                    <a href="" class="ArticleCategory">빈 카테고리</a>
-                  </span>
-                  <a href="" class="tit">빈 게시글 제목 예시</a>
-                  <div class="ArticleInfo">
-                    <a href="" class="like">
-                      <i class="fa-regular fa-thumbs-up"></i>
-                      0
-                    </a>
-                    <a href="" class="cmt">
-                      <i class="fa-regular fa-comments"></i>
-                      0
-                    </a>
-                    <a href="" class="views">
-                      <i class="fa-solid fa-arrow-pointer"></i>
-                      0
-                    </a>
-                  </div>
-                </div>
-              </li>
-              <li class="List">
-                <div class="Article">
-                  <span>
-                    <a href="" class="ArticleCategory">빈 카테고리</a>
-                  </span>
-                  <a href="" class="tit">빈 게시글 제목 예시</a>
-                  <div class="ArticleInfo">
-                    <a href="" class="like">
-                      <i class="fa-regular fa-thumbs-up"></i>
-                      0
-                    </a>
-                    <a href="" class="cmt">
-                      <i class="fa-regular fa-comments"></i>
-                      0
-                    </a>
-                    <a href="" class="views">
-                      <i class="fa-solid fa-arrow-pointer"></i>
-                      0
-                    </a>
-                  </div>
-                </div>
-              </li>
-              <li class="List">
-                <div class="Article">
-                  <span>
-                    <a href="" class="ArticleCategory">빈 카테고리</a>
-                  </span>
-                  <a href="" class="tit">빈 게시글 제목 예시</a>
-                  <div class="ArticleInfo">
-                    <a href="" class="like">
-                      <i class="fa-regular fa-thumbs-up"></i>
-                      0
-                    </a>
-                    <a href="" class="cmt">
-                      <i class="fa-regular fa-comments"></i>
-                      0
-                    </a>
-                    <a href="" class="views">
-                      <i class="fa-solid fa-arrow-pointer"></i>
-                      0
-                    </a>
-                  </div>
-                </div>
-              </li>
-            </ul>
-          </div>
+              </div>
+            </li>
+          </ul>
         </div>
       </div>
 
-      <!-- 사이드바 -->
-      <div class="Side">
-        <div class="ad1">ad1</div>
-        <div class="blank">blank</div>
-        <div class="ad2">ad2</div>
+      <!-- 즉문즉답 -->
+      <div class="BoardBlock">
+        <div>
+          <div class="BoardTitle">
+            즉문즉답
+            <a href="/templates/lower_category/list_qna.html" class="MoreArticle">더보기</a>
+          </div>
+          <ul class="BestList">
+            <li class="List">
+              <div class="Article">
+                <span>
+                  <a href="" class="ArticleCategory">웹개발 종합반</a>
+                </span>
+                <a href="" class="tit">3-11[앱페이지적용]설치-스택네비게이션01 강좌에서 컴파일
+                  에러입니다.</a>
+                <div class="ArticleInfo">
+                  <a href="" class="like">
+                    <i class="fa-regular fa-thumbs-up"></i>4
+                  </a>
+                  <a href="" class="cmt">
+                    <i class="fa-regular fa-comments"></i>6
+                  </a>
+                  <a href="" class="views">
+                    <i class="fa-solid fa-arrow-pointer"></i>29
+                  </a>
+                </div>
+              </div>
+            </li>
+            <li class="List">
+              <div class="Article">
+                <span>
+                  <a href="" class="ArticleCategory">웹개발 종합반</a>
+                </span>
+                <a href="" class="tit">og title이랑 og description git hub에 수정했는데 카톡으로
+                  공유시 변경이 안됩니다.</a>
+                <div class="ArticleInfo">
+                  <a href="" class="like">
+                    <i class="fa-regular fa-thumbs-up"></i>8
+                  </a>
+                  <a href="" class="cmt">
+                    <i class="fa-regular fa-comments"></i>12
+                  </a>
+                  <a href="" class="views">
+                    <i class="fa-solid fa-arrow-pointer"></i>37
+                  </a>
+                </div>
+              </div>
+            </li>
+            <li class="List">
+              <div class="Article">
+                <span>
+                  <a href="" class="ArticleCategory">[왕초보] 비개발자를 위한, 웹개발 종합반(프로그래밍 실무,
+                    풀스택)</a>
+                </span>
+                <a href="" class="tit">jqery 퀴즈 문제 문의 드립니다..</a>
+                <div class="ArticleInfo">
+                  <a href="" class="like">
+                    <i class="fa-regular fa-thumbs-up"></i>4
+                  </a>
+                  <a href="" class="cmt">
+                    <i class="fa-regular fa-comments"></i>20
+                  </a>
+                  <a href="" class="views">
+                    <i class="fa-solid fa-arrow-pointer"></i>41
+                  </a>
+                </div>
+              </div>
+            </li>
+            <li class="List">
+              <div class="Article">
+                <span>
+                  <a href="" class="ArticleCategory">[왕초보] 비개발자를 위한, 웹개발 종합반(프로그래밍 실무,
+                    풀스택)</a>
+                </span>
+                <a href="" class="tit">몽고 DB 접속에서 오류가 발생합니다.</a>
+                <div class="ArticleInfo">
+                  <a href="" class="like">
+                    <i class="fa-regular fa-thumbs-up"></i>
+                    5
+                  </a>
+                  <a href="" class="cmt">
+                    <i class="fa-regular fa-comments"></i>
+                    7
+                  </a>
+                  <a href="" class="views">
+                    <i class="fa-solid fa-arrow-pointer"></i>39
+                  </a>
+                </div>
+              </div>
+            </li>
+            <li class="List">
+              <div class="Article">
+                <span>
+                  <a href="" class="ArticleCategory">[왕초보] 비개발자를 위한, 웹개발 종합반(프로그래밍 실무,
+                    풀스택)</a>
+                </span>
+                <a href="" class="tit">이거 무슨 에러일까요?</a>
+                <div class="ArticleInfo">
+                  <a href="" class="like">
+                    <i class="fa-regular fa-thumbs-up"></i>
+                    7
+                  </a>
+                  <a href="" class="cmt">
+                    <i class="fa-regular fa-comments"></i>
+                    9
+                  </a>
+                  <a href="" class="views">
+                    <i class="fa-solid fa-arrow-pointer"></i>14
+                  </a>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- 스터디 팀원 모집 -->
+      <div class="BoardBlock">
+        <div>
+          <div class="BoardTitle">
+            스터디/팀원모집
+            <a href="/templates/lower_category/list_team_recruit.html" class="MoreArticle">더보기</a>
+          </div>
+          <ul class="BestList">
+            <li class="List">
+              <div class="Article">
+                <span>
+                  <a href="" class="ArticleCategory">빈 카테고리</a>
+                </span>
+                <a href="" class="tit">빈 게시글 제목 예시</a>
+                <div class="ArticleInfo">
+                  <a href="" class="like">
+                    <i class="fa-regular fa-thumbs-up"></i>
+                    0
+                  </a>
+                  <a href="" class="cmt">
+                    <i class="fa-regular fa-comments"></i>
+                    0
+                  </a>
+                  <a href="" class="views">
+                    <i class="fa-solid fa-arrow-pointer"></i>
+                    0
+                  </a>
+                </div>
+              </div>
+            </li>
+            <li class="List">
+              <div class="Article">
+                <span>
+                  <a href="" class="ArticleCategory">빈 카테고리</a>
+                </span>
+                <a href="" class="tit">빈 게시글 제목 예시</a>
+                <div class="ArticleInfo">
+                  <a href="" class="like">
+                    <i class="fa-regular fa-thumbs-up"></i>
+                    0
+                  </a>
+                  <a href="" class="cmt">
+                    <i class="fa-regular fa-comments"></i>
+                    0
+                  </a>
+                  <a href="" class="views">
+                    <i class="fa-solid fa-arrow-pointer"></i>
+                    0
+                  </a>
+                </div>
+              </div>
+            </li>
+            <li class="List">
+              <div class="Article">
+                <span>
+                  <a href="" class="ArticleCategory">빈 카테고리</a>
+                </span>
+                <a href="" class="tit">빈 게시글 제목 예시</a>
+                <div class="ArticleInfo">
+                  <a href="" class="like">
+                    <i class="fa-regular fa-thumbs-up"></i>
+                    0
+                  </a>
+                  <a href="" class="cmt">
+                    <i class="fa-regular fa-comments"></i>
+                    0
+                  </a>
+                  <a href="" class="views">
+                    <i class="fa-solid fa-arrow-pointer"></i>
+                    0
+                  </a>
+                </div>
+              </div>
+            </li>
+            <li class="List">
+              <div class="Article">
+                <span>
+                  <a href="" class="ArticleCategory">빈 카테고리</a>
+                </span>
+                <a href="" class="tit">빈 게시글 제목 예시</a>
+                <div class="ArticleInfo">
+                  <a href="" class="like">
+                    <i class="fa-regular fa-thumbs-up"></i>
+                    0
+                  </a>
+                  <a href="" class="cmt">
+                    <i class="fa-regular fa-comments"></i>
+                    0
+                  </a>
+                  <a href="" class="views">
+                    <i class="fa-solid fa-arrow-pointer"></i>
+                    0
+                  </a>
+                </div>
+              </div>
+            </li>
+            <li class="List">
+              <div class="Article">
+                <span>
+                  <a href="" class="ArticleCategory">빈 카테고리</a>
+                </span>
+                <a href="" class="tit">빈 게시글 제목 예시</a>
+                <div class="ArticleInfo">
+                  <a href="" class="like">
+                    <i class="fa-regular fa-thumbs-up"></i>
+                    0
+                  </a>
+                  <a href="" class="cmt">
+                    <i class="fa-regular fa-comments"></i>
+                    0
+                  </a>
+                  <a href="" class="views">
+                    <i class="fa-solid fa-arrow-pointer"></i>
+                    0
+                  </a>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- 연애 -->
+      <div class="BoardBlock">
+        <div>
+          <div class="BoardTitle">
+            썸, 연애
+            <a href="/templates/lower_category/list_greenlight.html" class="MoreArticle">더보기</a>
+          </div>
+          <ul class="BestList">
+            <li class="List">
+              <div class="Article">
+                <span>
+                  <a href="" class="ArticleCategory">빈 카테고리</a>
+                </span>
+                <a href="" class="tit">빈 게시글 제목 예시</a>
+                <div class="ArticleInfo">
+                  <a href="" class="like">
+                    <i class="fa-regular fa-thumbs-up"></i>
+                    0
+                  </a>
+                  <a href="" class="cmt">
+                    <i class="fa-regular fa-comments"></i>
+                    0
+                  </a>
+                  <a href="" class="views">
+                    <i class="fa-solid fa-arrow-pointer"></i>
+                    0
+                  </a>
+                </div>
+              </div>
+            </li>
+            <li class="List">
+              <div class="Article">
+                <span>
+                  <a href="" class="ArticleCategory">빈 카테고리</a>
+                </span>
+                <a href="" class="tit">빈 게시글 제목 예시</a>
+                <div class="ArticleInfo">
+                  <a href="" class="like">
+                    <i class="fa-regular fa-thumbs-up"></i>
+                    0
+                  </a>
+                  <a href="" class="cmt">
+                    <i class="fa-regular fa-comments"></i>
+                    0
+                  </a>
+                  <a href="" class="views">
+                    <i class="fa-solid fa-arrow-pointer"></i>
+                    0
+                  </a>
+                </div>
+              </div>
+            </li>
+            <li class="List">
+              <div class="Article">
+                <span>
+                  <a href="" class="ArticleCategory">빈 카테고리</a>
+                </span>
+                <a href="" class="tit">빈 게시글 제목 예시</a>
+                <div class="ArticleInfo">
+                  <a href="" class="like">
+                    <i class="fa-regular fa-thumbs-up"></i>
+                    0
+                  </a>
+                  <a href="" class="cmt">
+                    <i class="fa-regular fa-comments"></i>
+                    0
+                  </a>
+                  <a href="" class="views">
+                    <i class="fa-solid fa-arrow-pointer"></i>
+                    0
+                  </a>
+                </div>
+              </div>
+            </li>
+            <li class="List">
+              <div class="Article">
+                <span>
+                  <a href="" class="ArticleCategory">빈 카테고리</a>
+                </span>
+                <a href="" class="tit">빈 게시글 제목 예시</a>
+                <div class="ArticleInfo">
+                  <a href="" class="like">
+                    <i class="fa-regular fa-thumbs-up"></i>
+                    0
+                  </a>
+                  <a href="" class="cmt">
+                    <i class="fa-regular fa-comments"></i>
+                    0
+                  </a>
+                  <a href="" class="views">
+                    <i class="fa-solid fa-arrow-pointer"></i>
+                    0
+                  </a>
+                </div>
+              </div>
+            </li>
+            <li class="List">
+              <div class="Article">
+                <span>
+                  <a href="" class="ArticleCategory">빈 카테고리</a>
+                </span>
+                <a href="" class="tit">빈 게시글 제목 예시</a>
+                <div class="ArticleInfo">
+                  <a href="" class="like">
+                    <i class="fa-regular fa-thumbs-up"></i>
+                    0
+                  </a>
+                  <a href="" class="cmt">
+                    <i class="fa-regular fa-comments"></i>
+                    0
+                  </a>
+                  <a href="" class="views">
+                    <i class="fa-solid fa-arrow-pointer"></i>
+                    0
+                  </a>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- 반려동물 -->
+      <div class="BoardBlock">
+        <div>
+          <div class="BoardTitle">
+            반려동물
+            <a href="/templates/lower_category/list_pat.html" class="MoreArticle">더보기</a>
+          </div>
+          <ul class="BestList">
+            <li class="List">
+              <div class="Article">
+                <span>
+                  <a href="" class="ArticleCategory">빈 카테고리</a>
+                </span>
+                <a href="" class="tit">빈 게시글 제목 예시</a>
+                <div class="ArticleInfo">
+                  <a href="" class="like">
+                    <i class="fa-regular fa-thumbs-up"></i>
+                    0
+                  </a>
+                  <a href="" class="cmt">
+                    <i class="fa-regular fa-comments"></i>
+                    0
+                  </a>
+                  <a href="" class="views">
+                    <i class="fa-solid fa-arrow-pointer"></i>
+                    0
+                  </a>
+                </div>
+              </div>
+            </li>
+            <li class="List">
+              <div class="Article">
+                <span>
+                  <a href="" class="ArticleCategory">빈 카테고리</a>
+                </span>
+                <a href="" class="tit">빈 게시글 제목 예시</a>
+                <div class="ArticleInfo">
+                  <a href="" class="like">
+                    <i class="fa-regular fa-thumbs-up"></i>
+                    0
+                  </a>
+                  <a href="" class="cmt">
+                    <i class="fa-regular fa-comments"></i>
+                    0
+                  </a>
+                  <a href="" class="views">
+                    <i class="fa-solid fa-arrow-pointer"></i>
+                    0
+                  </a>
+                </div>
+              </div>
+            </li>
+            <li class="List">
+              <div class="Article">
+                <span>
+                  <a href="" class="ArticleCategory">빈 카테고리</a>
+                </span>
+                <a href="" class="tit">빈 게시글 제목 예시</a>
+                <div class="ArticleInfo">
+                  <a href="" class="like">
+                    <i class="fa-regular fa-thumbs-up"></i>
+                    0
+                  </a>
+                  <a href="" class="cmt">
+                    <i class="fa-regular fa-comments"></i>
+                    0
+                  </a>
+                  <a href="" class="views">
+                    <i class="fa-solid fa-arrow-pointer"></i>
+                    0
+                  </a>
+                </div>
+              </div>
+            </li>
+            <li class="List">
+              <div class="Article">
+                <span>
+                  <a href="" class="ArticleCategory">빈 카테고리</a>
+                </span>
+                <a href="" class="tit">빈 게시글 제목 예시</a>
+                <div class="ArticleInfo">
+                  <a href="" class="like">
+                    <i class="fa-regular fa-thumbs-up"></i>
+                    0
+                  </a>
+                  <a href="" class="cmt">
+                    <i class="fa-regular fa-comments"></i>
+                    0
+                  </a>
+                  <a href="" class="views">
+                    <i class="fa-solid fa-arrow-pointer"></i>
+                    0
+                  </a>
+                </div>
+              </div>
+            </li>
+            <li class="List">
+              <div class="Article">
+                <span>
+                  <a href="" class="ArticleCategory">빈 카테고리</a>
+                </span>
+                <a href="" class="tit">빈 게시글 제목 예시</a>
+                <div class="ArticleInfo">
+                  <a href="" class="like">
+                    <i class="fa-regular fa-thumbs-up"></i>
+                    0
+                  </a>
+                  <a href="" class="cmt">
+                    <i class="fa-regular fa-comments"></i>
+                    0
+                  </a>
+                  <a href="" class="views">
+                    <i class="fa-solid fa-arrow-pointer"></i>
+                    0
+                  </a>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- 헬스 다이어트 -->
+      <div class="BoardBlock">
+        <div>
+          <div class="BoardTitle">
+            헬스, 다이어트
+            <a href="/templates/lower_category/list_health.html" class="MoreArticle">더보기</a>
+          </div>
+          <ul class="BestList">
+            <li class="List">
+              <div class="Article">
+                <span>
+                  <a href="" class="ArticleCategory">빈 카테고리</a>
+                </span>
+                <a href="" class="tit">빈 게시글 제목 예시</a>
+                <div class="ArticleInfo">
+                  <a href="" class="like">
+                    <i class="fa-regular fa-thumbs-up"></i>
+                    0
+                  </a>
+                  <a href="" class="cmt">
+                    <i class="fa-regular fa-comments"></i>
+                    0
+                  </a>
+                  <a href="" class="views">
+                    <i class="fa-solid fa-arrow-pointer"></i>
+                    0
+                  </a>
+                </div>
+              </div>
+            </li>
+            <li class="List">
+              <div class="Article">
+                <span>
+                  <a href="" class="ArticleCategory">빈 카테고리</a>
+                </span>
+                <a href="" class="tit">빈 게시글 제목 예시</a>
+                <div class="ArticleInfo">
+                  <a href="" class="like">
+                    <i class="fa-regular fa-thumbs-up"></i>
+                    0
+                  </a>
+                  <a href="" class="cmt">
+                    <i class="fa-regular fa-comments"></i>
+                    0
+                  </a>
+                  <a href="" class="views">
+                    <i class="fa-solid fa-arrow-pointer"></i>
+                    0
+                  </a>
+                </div>
+              </div>
+            </li>
+            <li class="List">
+              <div class="Article">
+                <span>
+                  <a href="" class="ArticleCategory">빈 카테고리</a>
+                </span>
+                <a href="" class="tit">빈 게시글 제목 예시</a>
+                <div class="ArticleInfo">
+                  <a href="" class="like">
+                    <i class="fa-regular fa-thumbs-up"></i>
+                    0
+                  </a>
+                  <a href="" class="cmt">
+                    <i class="fa-regular fa-comments"></i>
+                    0
+                  </a>
+                  <a href="" class="views">
+                    <i class="fa-solid fa-arrow-pointer"></i>
+                    0
+                  </a>
+                </div>
+              </div>
+            </li>
+            <li class="List">
+              <div class="Article">
+                <span>
+                  <a href="" class="ArticleCategory">빈 카테고리</a>
+                </span>
+                <a href="" class="tit">빈 게시글 제목 예시</a>
+                <div class="ArticleInfo">
+                  <a href="" class="like">
+                    <i class="fa-regular fa-thumbs-up"></i>
+                    0
+                  </a>
+                  <a href="" class="cmt">
+                    <i class="fa-regular fa-comments"></i>
+                    0
+                  </a>
+                  <a href="" class="views">
+                    <i class="fa-solid fa-arrow-pointer"></i>
+                    0
+                  </a>
+                </div>
+              </div>
+            </li>
+            <li class="List">
+              <div class="Article">
+                <span>
+                  <a href="" class="ArticleCategory">빈 카테고리</a>
+                </span>
+                <a href="" class="tit">빈 게시글 제목 예시</a>
+                <div class="ArticleInfo">
+                  <a href="" class="like">
+                    <i class="fa-regular fa-thumbs-up"></i>
+                    0
+                  </a>
+                  <a href="" class="cmt">
+                    <i class="fa-regular fa-comments"></i>
+                    0
+                  </a>
+                  <a href="" class="views">
+                    <i class="fa-solid fa-arrow-pointer"></i>
+                    0
+                  </a>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- 여행 먹방 -->
+      <div class="BoardBlock">
+        <div>
+          <div class="BoardTitle">
+            여행, 맛집
+            <a href="/templates/lower_category/list_travel.html" class="MoreArticle">더보기</a>
+          </div>
+          <ul class="BestList">
+            <li class="List">
+              <div class="Article">
+                <span>
+                  <a href="" class="ArticleCategory">빈 카테고리</a>
+                </span>
+                <a href="" class="tit">빈 게시글 제목 예시</a>
+                <div class="ArticleInfo">
+                  <a href="" class="like">
+                    <i class="fa-regular fa-thumbs-up"></i>
+                    0
+                  </a>
+                  <a href="" class="cmt">
+                    <i class="fa-regular fa-comments"></i>
+                    0
+                  </a>
+                  <a href="" class="views">
+                    <i class="fa-solid fa-arrow-pointer"></i>
+                    0
+                  </a>
+                </div>
+              </div>
+            </li>
+            <li class="List">
+              <div class="Article">
+                <span>
+                  <a href="" class="ArticleCategory">빈 카테고리</a>
+                </span>
+                <a href="" class="tit">빈 게시글 제목 예시</a>
+                <div class="ArticleInfo">
+                  <a href="" class="like">
+                    <i class="fa-regular fa-thumbs-up"></i>
+                    0
+                  </a>
+                  <a href="" class="cmt">
+                    <i class="fa-regular fa-comments"></i>
+                    0
+                  </a>
+                  <a href="" class="views">
+                    <i class="fa-solid fa-arrow-pointer"></i>
+                    0
+                  </a>
+                </div>
+              </div>
+            </li>
+            <li class="List">
+              <div class="Article">
+                <span>
+                  <a href="" class="ArticleCategory">빈 카테고리</a>
+                </span>
+                <a href="" class="tit">빈 게시글 제목 예시</a>
+                <div class="ArticleInfo">
+                  <a href="" class="like">
+                    <i class="fa-regular fa-thumbs-up"></i>
+                    0
+                  </a>
+                  <a href="" class="cmt">
+                    <i class="fa-regular fa-comments"></i>
+                    0
+                  </a>
+                  <a href="" class="views">
+                    <i class="fa-solid fa-arrow-pointer"></i>
+                    0
+                  </a>
+                </div>
+              </div>
+            </li>
+            <li class="List">
+              <div class="Article">
+                <span>
+                  <a href="" class="ArticleCategory">빈 카테고리</a>
+                </span>
+                <a href="" class="tit">빈 게시글 제목 예시</a>
+                <div class="ArticleInfo">
+                  <a href="" class="like">
+                    <i class="fa-regular fa-thumbs-up"></i>
+                    0
+                  </a>
+                  <a href="" class="cmt">
+                    <i class="fa-regular fa-comments"></i>
+                    0
+                  </a>
+                  <a href="" class="views">
+                    <i class="fa-solid fa-arrow-pointer"></i>
+                    0
+                  </a>
+                </div>
+              </div>
+            </li>
+            <li class="List">
+              <div class="Article">
+                <span>
+                  <a href="" class="ArticleCategory">빈 카테고리</a>
+                </span>
+                <a href="" class="tit">빈 게시글 제목 예시</a>
+                <div class="ArticleInfo">
+                  <a href="" class="like">
+                    <i class="fa-regular fa-thumbs-up"></i>
+                    0
+                  </a>
+                  <a href="" class="cmt">
+                    <i class="fa-regular fa-comments"></i>
+                    0
+                  </a>
+                  <a href="" class="views">
+                    <i class="fa-solid fa-arrow-pointer"></i>
+                    0
+                  </a>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
 
-    <!-- Footer -->
-    <footer class="Footer">
-      <section class="Copyright">
-        <!-- Name Footer -->
-        <div class="SpartaName">
-          <p>스파르타 코딩클럽</p>
-          <ul class="SpartaLink">
-            <a href="https://spartacodingclub.kr/sparta_online" target="_blank"
-              ><li>스파르타 온라인</li></a
-            >
-            <a href="https://hanghae99.spartacodingclub.kr/" target="_blank"
-              ><li>항해 99</li></a
-            >
-            <a href="https://chang.spartacodingclub.kr/" target="_blank"
-              ><li>{창}</li></a
-            >
-            <a href="https://ddingdong.spartacodingclub.kr/" target="_blank"
-              ><li>띵똥코딩</li></a
-            >
-            <a href="https://spartacodingclub.kr/nb" target="_blank"
-              ><li>국비지원교육</li></a
-            >
-            <a href="https://spartacodingclub.kr/b2b" target="_blank"
-              ><li>기업교육</li></a
-            >
-          </ul>
-        </div>
+    <!-- 사이드바 -->
+    <div class="Side">
+      <div class="ad1">ad1</div>
+      <div class="blank">blank</div>
+      <div class="ad2">ad2</div>
+    </div>
+  </div>
 
-        <!-- ETC Footer -->
-        <div class="Etc">
-          <p>ETC</p>
-          <ul>
-            <a
-              href="https://docs.google.com/forms/d/e/1FAIpQLSdDGm0fLFVls1-QI2KVWYIT1EksN0Lmd5dtkwJqSCetL_-b_g/viewform"
-              target="_blank"
-              ><li>튜터</li></a
-            >
-            <a href="https://teamsparta-careers.oopy.io/" target="_blank"
-              ><li>채용</li></a
-            >
-            <a href="https://swjungle.net/" target="_blank"
-              ><li>SW사관학교 정글</li></a
-            >
-          </ul>
-        </div>
+  <!-- Footer -->
+  <footer class="Footer">
+    <section class="Copyright">
+      <!-- Name Footer -->
+      <div class="SpartaName">
+        <p>스파르타 코딩클럽</p>
+        <ul class="SpartaLink">
+          <a href="https://spartacodingclub.kr/sparta_online" target="_blank">
+            <li>스파르타 온라인</li>
+          </a>
+          <a href="https://hanghae99.spartacodingclub.kr/" target="_blank">
+            <li>항해 99</li>
+          </a>
+          <a href="https://chang.spartacodingclub.kr/" target="_blank">
+            <li>{창}</li>
+          </a>
+          <a href="https://ddingdong.spartacodingclub.kr/" target="_blank">
+            <li>띵똥코딩</li>
+          </a>
+          <a href="https://spartacodingclub.kr/nb" target="_blank">
+            <li>국비지원교육</li>
+          </a>
+          <a href="https://spartacodingclub.kr/b2b" target="_blank">
+            <li>기업교육</li>
+          </a>
+        </ul>
+      </div>
 
-        <!-- Footer Icons -->
-        <div class="FooterIcons">
-          <a
-            href="https://m.blog.naver.com/PostList.nhn?blogId=spartacoding&categoryNo=6&logCode=0&categoryName=%EC%88%98%EA%B0%95%EC%83%9D%C2%A0%EC%86%94%EC%A7%81%ED%9B%84%EA%B8%B0"
-            target="_blank"
-            >blog</a
-          >
-          <a href="https://spartacodingclub.tistory.com/" target="_blank"
-            >Tstory</a
-          >
-          <a href="https://www.instagram.com/spartacodingclub/" target="_blank"
-            >Insta</a
-          >
-          <a
-            href="https://www.youtube.com/channel/UC2Fh3XoQYNYTba-cigq5cAA"
-            target="_blank"
-            >YouTube</a
-          >
-        </div>
-      </section>
-
-      <!-- 개인정보처리방침 -->
-      <section class="PerInfo">
+      <!-- ETC Footer -->
+      <div class="Etc">
+        <p>ETC</p>
         <ul>
-          <a
-            href="https://www.notion.so/3-f2e359d2a710447db3036ff2a3156869"
-            target="_blank"
-            ><li>개인정보처리방침</li></a
-          >
-          <a
-            href="https://www.notion.so/900680faf2ee4ed88f5f3679f4c57b95"
-            target="_blank"
-            ><li>환불규정</li></a
-          >
-          <a href="https://sparta-faq.oopy.io/" target="_blank"
-            ><li>자주묻는질문</li></a
-          >
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSdDGm0fLFVls1-QI2KVWYIT1EksN0Lmd5dtkwJqSCetL_-b_g/viewform"
+            target="_blank">
+            <li>튜터</li>
+          </a>
+          <a href="https://teamsparta-careers.oopy.io/" target="_blank">
+            <li>채용</li>
+          </a>
+          <a href="https://swjungle.net/" target="_blank">
+            <li>SW사관학교 정글</li>
+          </a>
         </ul>
-      </section>
+      </div>
 
-      <!-- 팀스파르타 사업자 정보 -->
-      <section class="Company">
-        <div class="Info">
-          <h4>팀스파르타(주) 사업자 정보</h4>
-          <p>
-            대표자: 이범규 사업자 등록번호: 783-86-01715 통신판매업 신고번호:
-            2020-서울강남-02300 평생교육시설<br />신고번호: 제 661호 주소:
-            서울특별시 강남구 테헤란로44길 8 12층 이메일: contact@teamsparta.co
-            전화 1522-8016
-          </p>
-        </div>
-        <div class="TEAMSPARTA">
-          <p>Copyright ©2022 TEAMSPARTA. All rights reserved.</p>
-        </div>
-      </section>
-    </footer>
-  </body>
+      <!-- Footer Icons -->
+      <div class="FooterIcons">
+        <a href="https://m.blog.naver.com/PostList.nhn?blogId=spartacoding&categoryNo=6&logCode=0&categoryName=%EC%88%98%EA%B0%95%EC%83%9D%C2%A0%EC%86%94%EC%A7%81%ED%9B%84%EA%B8%B0"
+          target="_blank">blog</a>
+        <a href="https://spartacodingclub.tistory.com/" target="_blank">Tstory</a>
+        <a href="https://www.instagram.com/spartacodingclub/" target="_blank">Insta</a>
+        <a href="https://www.youtube.com/channel/UC2Fh3XoQYNYTba-cigq5cAA" target="_blank">YouTube</a>
+      </div>
+    </section>
+
+    <!-- 개인정보처리방침 -->
+    <section class="PerInfo">
+      <ul>
+        <a href="https://www.notion.so/3-f2e359d2a710447db3036ff2a3156869" target="_blank">
+          <li>개인정보처리방침</li>
+        </a>
+        <a href="https://www.notion.so/900680faf2ee4ed88f5f3679f4c57b95" target="_blank">
+          <li>환불규정</li>
+        </a>
+        <a href="https://sparta-faq.oopy.io/" target="_blank">
+          <li>자주묻는질문</li>
+        </a>
+      </ul>
+    </section>
+
+    <!-- 팀스파르타 사업자 정보 -->
+    <section class="Company">
+      <div class="Info">
+        <h4>팀스파르타(주) 사업자 정보</h4>
+        <p>
+          대표자: 이범규 사업자 등록번호: 783-86-01715 통신판매업 신고번호:
+          2020-서울강남-02300 평생교육시설<br />신고번호: 제 661호 주소:
+          서울특별시 강남구 테헤란로44길 8 12층 이메일: contact@teamsparta.co
+          전화 1522-8016
+        </p>
+      </div>
+      <div class="TEAMSPARTA">
+        <p>Copyright ©2022 TEAMSPARTA. All rights reserved.</p>
+      </div>
+    </section>
+  </footer>
+</body>
+
 </html>

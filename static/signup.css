@@ -1,18 +1,18 @@
 :root {
     /* Color */
     --background-color: rgb(245, 245, 245);
-    --black-color : rgb(50, 50, 50);
-    --gray-dark-color : rgb(100, 100, 100);
-    --gray-light-color : rgb(160, 160, 160);
+    --black-color: rgb(50, 50, 50);
+    --gray-dark-color: rgb(100, 100, 100);
+    --gray-light-color: rgb(160, 160, 160);
     --accent-color: rgb(251, 105, 105);
     --button-color: rgb(255, 130, 130);
     --test-color: rgb(0, 50, 250);
     --text-color: rgb(100, 100, 100);
-    
+
     /* Size */
     --padding: 20px;
     --avartar-size: 36px;
-    
+
     /* Fort Size */
     --font-title: 20px;
     --font-large: 18px;
@@ -120,7 +120,8 @@ body {
     padding: 8px 8px;
 }
 
-.cautions P, h2 {
+.cautions P,
+h2 {
     color: var(--text-color);
 }
 
@@ -133,7 +134,7 @@ body {
 
 .agree-btn {
     width: 20px;
-    height:20px;
+    height: 20px;
 }
 
 /* 로그인 회원가입 버튼 */
