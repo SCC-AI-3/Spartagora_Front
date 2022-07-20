@@ -11,7 +11,8 @@ async function handleSignup() {
     }
 
     if (signupData.password != signupData.password2) {
-        alert("비밀번호가 일치하지 않습니다.")
+        temp_html = `비밀번호가 일치하지 않습니다.`
+        $("#password_check").append(temp_html)
     }
     else {
         const response = await fetch(`${backend_base_url}/user/register/`, {
@@ -41,8 +42,8 @@ async function handleLogin() {
     console.log("handle login")
 
     const loginData = {
-        username: document.getElementById("username").value,
-        password: document.getElementById('password').value
+        username: document.getElementById("id").value,
+        password: document.getElementById('pw').value
     }
 
 
@@ -81,9 +82,9 @@ async function handleLogin() {
 }
 
 
-async function logout() {
-    window.localStorage.clear(); //로컬스토리지에 저장된 토큰 삭제해줌.
-}
+// async function logout() {
+//     window.localStorage.clear(); //로컬스토리지에 저장된 토큰 삭제해줌.
+// }
 
 
 // async function pictureupload() {

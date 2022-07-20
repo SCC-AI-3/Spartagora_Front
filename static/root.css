@@ -1,18 +1,18 @@
 :root {
     /* Color */
     --background-color: rgb(235, 235, 235);
-    --black-color : rgb(50, 50, 50);
-    --white-color : rgb(245, 245, 245);
-    --gray-dark-color : rgb(100, 100, 100);
-    --gray-light-color : rgb(200, 200, 200);
+    --black-color: rgb(50, 50, 50);
+    --white-color: rgb(245, 245, 245);
+    --gray-dark-color: rgb(100, 100, 100);
+    --gray-light-color: rgb(200, 200, 200);
     --accent-color: rgb(232, 52, 78);
     --pink-light-color: rgb(255, 122, 141);
     --test-color: rgb(0, 50, 250);
-    
+
     /* Size */
     --padding: 20px;
     --avartar-size: 36px;
-    
+
     /* Fort Size */
     --font-title: 28px;
     --font-large: 20px;
@@ -31,7 +31,7 @@ body {
     padding: 0;
     margin: 0;
     background-color: var(--white-color);
-    font-family: Pretendard;
+    font-family: 'Gothic A1', sans-serif;
     background-color: var(--background-color);
 }
 
@@ -44,7 +44,8 @@ button:focus {
     border: none;
     cursor: pointer;
     outline: none;
-    background-color: transparent; /* 얘 중요 */
+    background-color: transparent;
+    /* 얘 중요 */
 }
 
 a {

@@ -4,6 +4,7 @@ const frontend_base_url = "http://127.0.0.1:5500"
 
 async function userarticleget() {
     const category_id = location.href.split("?")[1]
+    console.log(category_id)
     const categoryData = async () => {
         const response = await fetch(`${backend_base_url}/article/${category_id}/`, {
             method: 'GET',
