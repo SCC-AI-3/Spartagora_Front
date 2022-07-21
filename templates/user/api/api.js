@@ -1,6 +1,12 @@
 const backend_base_url = "http://127.0.0.1:8000"
 const frontend_base_url = "http://127.0.0.1:5500"
 
+function ifLoggedIn() {
+    if (localStorage.getItem("access")) {
+        window.location.replace(`${frontend_base_url}/templates/main.html`);
+    }
+}
+
 
 async function handleSignup() {
 
@@ -29,7 +35,7 @@ async function handleSignup() {
         response_json = await response.json()
 
         if (response.status == 200) {
-            window.location.replace(`${frontend_base_url}/templates/login.html`);
+            window.location.replace(`${frontend_base_url}/templates/user/login.html`);
         } else {
             alert(response.status)
         }
@@ -78,9 +84,12 @@ async function handleLogin() {
         alert("아이디 및 비밀번호가 틀렸습니다")
     }
     if (response.status == 200) {
-        window.location.replace(`${frontend_base_url}/templates/index.html`);
+        window.location.replace(`${frontend_base_url}/templates/main.html`);
     }
 }
+
+
+$('document').ready(ifLoggedIn());
 
 
 // async function logout() {
