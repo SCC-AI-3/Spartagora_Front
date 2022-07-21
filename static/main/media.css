@@ -93,3 +93,10 @@
         padding: 8px 15px;
     }
 }
+
+@media screen and (max-width:450px) {
+    .Navbar_upper li {
+        font-size: var(--font-medium);
+        flex-direction: column;
+    }
+}

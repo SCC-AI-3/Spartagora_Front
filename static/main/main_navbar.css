@@ -12,7 +12,7 @@
 
 .Navbar {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     max-width: 942px;
     width: 100%;
     margin-left: auto;
@@ -30,6 +30,7 @@
     font-size: var(--font-title);
     font-weight: bold;
     color: var(--text-color);
+    padding-right: calc(var(--padding)*7);
 }
 
 .Navbar_logo li {
@@ -59,20 +60,4 @@
 
 .Navbar_upper a:hover {
     color: var(--accent-color);
-}
-
-.Navbar_icons {
-    display: flex;
-    list-style: none;
-    color: var(--text-color);
-    padding-left: 0;
-    font-size: var(--font-medium);
-}
-
-.Navbar_icons a:hover {
-    color: var(--accent-color);
-}
-
-.Navbar_icons li {
-    padding: 8px 12px;
 }

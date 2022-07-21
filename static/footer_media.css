@@ -23,3 +23,14 @@
         padding-top: calc(var(--padding)*2);
     }
 }
+
+@media screen and (max-width:475px) {
+    .SpartaName .SpartaLink {
+        flex-direction: column;
+        padding: var(--padding);
+    }
+
+    .SpartaName .SpartaLink li {
+        padding: calc(var(--padding)/2);
+    }
+}

@@ -11,10 +11,12 @@
         <link rel="stylesheet" href="/static/board/lower_article.css"/>
         <link rel="stylesheet" href="/static/board/media.css">
         <link rel="stylesheet" href="/static/footer.css"/>
+        <link rel="stylesheet" href="/static/board/write.css">
 
         <!-- Media Query -->
         <link rel="stylesheet" href="/static/main/media.css"/>
         <link rel="stylesheet" href="/static/footer_media.css"/>
+        <link rel="stylesheet" href="/static/board/write_media.css">
 
         <!-- Google Font -->
         <link rel="preconnect" href="https://fonts.googleapis.com"/>
@@ -29,7 +31,7 @@
         <!-- Font Awesome -->
         <script src="https://kit.fontawesome.com/993c2cba92.js" crossorigin="anonymous"></script>
 
-        <title>Spartagora | 반려동물</title>
+        <title>Spartagora | 글 작성하기</title>
     </head>
     <body>
         <!-- Header -->
@@ -43,7 +45,7 @@
                 <!-- 네비게이션바 Uppor Category -->
                 <ul class="Navbar_upper">
                     <li>
-                        <a class="active" href="/templates/main.html">게시판</a>
+                        <a href="/templates/main.html">게시판</a>
                     </li>
                     <li>
                         <a href="#">과정후기</a>
@@ -55,7 +57,7 @@
                         <a href="#">취업후기</a>
                     </li>
                     <li>
-                        <a href="/templates/board_write/write.html" class="NavWrite">글작성</a>
+                        <a href="/templates/board_write/write.html" class="NavWrite active">글작성</a>
                     </li>
                 </ul>
             </nav>
@@ -68,7 +70,7 @@
                 <a href="/templates/lower_category/list_team_recruit.html">스터디/팀원모집</a>
                 <a href="/templates/lower_category/list_greenlight.html">썸, 연애</a>
                 <a href="/templates/lower_category/list_health.html">헬스, 다이어트</a>
-                <a href="/templates/lower_category/list_pet.html" class="active">반려동물</a>
+                <a href="/templates/lower_category/list_pet.html">반려동물</a>
                 <a href="/templates/lower_category/list_travel.html">여행, 맛집</a>
             </div>
         </div>
@@ -88,90 +90,47 @@
         <!-- 게시판 메인화면 -->
         <div class="Container">
             <div class="Main">
-
-                <!-- 상세 게시글 -->
-                <div class="Article">
-                        <div class="ProfileInfo">
-                            <div class="Profile-Rtan">
-                                <img src="/image/0.png" alt="">
-                                <div class="User">
-                                    <div>
-                                        <a href="#" class="Anonymous">assignment 소속</a>
-                                        <span class="Anonymous">- anonymous 익명</span>
-                                    </div>
-                                    <p class="UploadTime">2022년 7월 20일 오후 4:23</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="Article-Title">
-                            <p class="Title">게시글 제목 예시</p>
-                            <p class="Category">게시판 > 고민을 말해봐</p>
-                        </div>
-                        <div class="Count">
-                            <a href="" class="like">
-                                <i class="fa-regular fa-thumbs-up"></i>
-                            </a>10
-                            <a href="" class="cmt">
-                                <i class="fa-regular fa-comments"></i>
-                            </a>20
-                            <a href="" class="views">
-                                <i class="fa-solid fa-arrow-pointer"></i>
-                            </a>30
-                        </div>
-                        <div class="Content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, placeat vel. Culpa perspiciatis dolor inventore rerum placeat nostrum ab. Sunt aut aperiam laboriosam rerum, tempora quibusdam ex repellendus veniam quo.
-                    </div>
+                <div class="Write">
+                    <p>글 작성하기</p>
                 </div>
-
-                <!-- 상세게시글에 대한 댓글 -->
-                <div class="Comment">
-                    <div class="Total">
-                        <div class="icon">
-                            <i class="fa-regular fa-comments"></i>
+                <form method="POST" class="PostForm">
+                    <div class="SelectCategory">
+                        <div class="Select">
+                            <select name="" id="">
+                                <option value="">카테고리를 선택하세요</option>
+                                <optgroup label="게시판">
+                                    <option value="">고민을 말해봐</option>
+                                    <option value="">스터디/팀원모집</option>
+                                    <option value="">썸, 연애</option>
+                                    <option value="">헬스, 다이어트</option>
+                                    <option value="">반려동물</option>
+                                    <option value="">여행, 맛집</option>
+                                </optgroup>
+                                <optgroup label="과정후기"></optgroup>
+                                <optgroup label="취업후기"></optgroup>
+                            </select>
                         </div>
-                        <div class="Count">댓글 1</div>
-                    </div>
-                    <div class="List">
-                        <div class="Content">
-                            <div class="User">
-                                <p class="Username">익명1</p>
-                                <p class="Update">21분전</p>
-                            </div>
-                            <p class="content">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repudiandae illo eaque perferendis perspiciatis eveniet iusto? Eligendi, doloremque inventore accusantium recusandae expedita numquam quia. Rem laudantium quod corporis, blanditiis vel vero?</p>
-                        </div>
-                    </div>
-                    <div class="List">
-                        <div class="Content">
-                            <div class="User">
-                                <p class="Username">익명2</p>
-                                <p class="Update">39분전</p>
-                            </div>
-                            <p class="content">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repudiandae illo eaque perferendis perspiciatis eveniet iusto? Eligendi, doloremque inventore accusantium recusandae expedita numquam quia. Rem laudantium quod corporis, blanditiis vel vero?</p>
+                        <div class="TitleBox">
+                            <input type="text" placeholder="게시글 제목" class="Title">
                         </div>
                     </div>
-                    <div class="Post">
-                        <div class="Editer">
-                            <input name="" id="" cols="30" rows="10" placeholder="     댓글을 남겨보세요"></input>
+                    <div class="WriteArea">
+                        <textarea class="Textarea" name="" id="" cols="30" rows="10" placeholder="내용을 작성해주세요. 명예훼손, 모욕, 비방, 혐오, 정치 등의 텍스트를 감지하는 기능이 작동중입니다."></textarea>
+                        <div class="ImgInput">
+                            <label for="chooseFile">
+                                + tag
+                            </label>
+                            <input type="file" id="chooseFile" name="chooseFile" accept="image/*" onchange="loadFile(this)">
                         </div>
-                        <button>댓글등록</button>
                     </div>
-                </div>
-
-                <!-- 공유, 좋아요 버튼 -->
-                <div class="Sharelike">
-                    <div class="Share">
-                        <a href="#"><i class="fa-solid fa-share-nodes"></i>
-                        공유</a>
+                    <div class="Tag">
+                        <div class="TagArea">#스파르타 코딩클럽</div>
                     </div>
-                    <div class="Like">
-                        <a href="#"><i class="fa-regular fa-thumbs-up"></i>
-                        좋아요</a>
+                    <div class="WriteBtn">
+                        <button class="Post">게시글 등록하기</button>
+                        <button class="Cancel">취소</button>
                     </div>
-                </div>
-
-                <!-- 목록으로 이동 -->
-                <div type="button" class="ReCategory">
-                    <a href="/templates/lower_category/list_pat.html">목록으로</a>
-                </div>
+                </form>
             </div>
         </div>
 

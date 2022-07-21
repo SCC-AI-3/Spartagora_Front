@@ -1,0 +1,166 @@
+.Write {
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid var(--gray-light-color);
+    color: var(--accent-color);
+    font-size: var(--font-large);
+    font-weight: bold;
+    padding: var(--padding) calc(var(--padding)*2);
+    max-width: 1130px;
+    width: 100%;
+}
+
+.PostForm {
+    max-width: 1130px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* 카테고리, 게시글 제목란 */
+.SelectCategory {
+    display: flex;
+    flex-direction: row;
+    max-width: 800px;
+    width: 100%;
+    justify-content: center;
+    margin: auto;
+    padding-top: var(--padding);
+}
+
+.SelectCategory .Select {
+    max-width: 250px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-right: calc(var(--padding)*2);
+    border-radius: var(--padding);
+    border: 1px solid var(--gray-light-color);
+}
+
+.SelectCategory .Select select {
+    padding: var(--padding);
+    max-width: 250px;
+    width: 100%;
+    border-radius: var(--padding);
+    color: var(--gray-dark-color);
+    font-size: var(--font-medium);
+}
+
+.SelectCategory .TitleBox {
+    max-width: 650px;
+    width: 100%;
+}
+
+.SelectCategory .TitleBox input {
+    max-width: 650px;
+    width: 100%;
+}
+
+.SelectCategory .TitleBox .Title {
+    padding: var(--padding);
+    border: 1px solid var(--gray-light-color);
+    border-radius: var(--padding);
+    font-size: var(--font-medium);
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* 글 작성란 */
+.WriteArea {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    max-width: 845px;
+    width: 100%;
+    height: 450px;
+    padding: var(--padding);
+}
+
+.WriteArea .Textarea {
+    height: 100%;
+    border: 1px solid var(--gray-light-color);
+    border-radius: var(--padding);
+    padding: calc(var(--padding)*2);
+    font-size: var(--font-medium);
+    color: var(--gray-dark-color);
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+    overflow: auto;
+    white-space: nowrap;
+}
+
+.WriteArea .ImgInput {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    padding-top: var(--padding);
+}
+
+.WriteArea .ImgInput label {
+    cursor: pointer;
+    font-size: 1em;
+    background-color: var(--white-color);
+    width: 100px;
+    height: 28px;
+    text-align: center;
+    justify-content: center;
+    font-size: var(--font-large);
+    border: 1px solid var(--accent-color);
+    border-radius: var(--padding);
+    color: var(--accent-color);
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+}
+
+#chooseFile {
+    visibility: hidden;
+}
+
+.Tag {
+    margin: auto;
+    max-width: 800px;
+    width: 100%;
+}
+
+.TagArea {
+    margin: auto;
+    margin-bottom: var(--padding);
+    padding: calc(var(--padding)/3);
+    font-size: var(--font-small);
+    height: 28px;
+    background-color: var(--white-color);
+    border-radius: var(--padding);
+    border: 1px solid var(--accent-color);
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+}
+
+.WriteBtn {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-bottom: calc(var(--padding)*2);
+}
+
+.WriteBtn .Post {
+    padding: var(--padding);
+    margin-right: var(--padding);
+    border-radius: var(--padding);
+    background-color: var(--accent-color);
+    color: var(--white-color);
+    width: 150px;
+    font-size: var(--font-medium);
+    font-weight: bold;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+}
+
+.WriteBtn .Cancel {
+    padding: var(--padding);
+    margin-left: var(--padding);
+    border-radius: var(--padding);
+    background-color: var(--white-color);
+    color: var(--gray-dark-color);
+    border: 1px solid var(--gray-dark-color);
+    width: 150px;
+    font-size: var(--font-medium);
+    font-weight: bold;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+}

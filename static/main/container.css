@@ -15,7 +15,7 @@
     padding: calc(var(--padding) / 2);
     max-width: 1130px;
     width: 100%;
-    background-color: var(--white-color);
+    background-color: rgb(255, 255, 255);
 }
 
 .Main .BoardBlock {
@@ -131,4 +131,8 @@
     padding: calc(var(--padding) / 2);
     width: 250px;
     height: 250px;
+}
+
+.Wrap .ADateList {
+    margin: var(--padding);
 }

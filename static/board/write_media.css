@@ -1,0 +1,31 @@
+@media screen and (max-width:1130px) {
+    .Topic {
+        display: none;
+    }
+}
+
+@media screen and (max-width:860px) {
+    .SelectCategory {
+        flex-direction: column;
+        padding-left: var(--padding);
+    }
+
+    .SelectCategory .Select {
+        margin-bottom: var(--padding);
+    }
+
+    .TagArea {
+        margin-left: var(--padding);
+        margin-right: var(--padding);
+    }
+}
+
+@media screen and (max-width:695px) {
+    .SelectCategory {
+        padding: calc(var(--padding)/2) var(--padding);
+    }
+    
+    .SelectCategory .TitleBox {
+        margin: auto;
+    }
+}
