@@ -1,38 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
-    <meta charset="UTF-8"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- Stylesheet -->
-    <link rel="stylesheet" href="/static/root.css"/>
-    <link rel="stylesheet" href="/static/main/main_navbar.css"/>
-    <link rel="stylesheet" href="/static/main/container.css"/>
-    <link rel="stylesheet" href="/static/footer.css"/>
+    <link rel="stylesheet" href="/static/root.css" />
+    <link rel="stylesheet" href="/static/main/main_navbar.css" />
+    <link rel="stylesheet" href="/static/main/container.css" />
+    <link rel="stylesheet" href="/static/footer.css" />
 
     <!-- Media Query -->
-    <link rel="stylesheet" href="/static/main/media.css"/>
-    <link rel="stylesheet" href="/static/footer_media.css"/>
+    <link rel="stylesheet" href="/static/main/media.css" />
+    <link rel="stylesheet" href="/static/footer_media.css" />
 
     <!-- Google Font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com"/>
-    <link
-        rel="preconnect"
-        href="https://fonts.gstatic.com"
-        crossorigin="crossorigin"/>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@500&display=swap"
-        rel="stylesheet"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="crossorigin" />
+    <link href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@500&display=swap" rel="stylesheet" />
 
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/993c2cba92.js" crossorigin="anonymous"></script>
 
-    <title>Spartagora | 게시판</title>
-  </head>
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.js"></script>
 
-  <body>
+    <!-- jsAPI -->
+    <script src="api/api.js"></script>
+
+    <title>Spartagora | 게시판</title>
+</head>
+
+<body>
     <!-- Header -->
     <div class="Header">
         <nav class="Navbar">
@@ -68,7 +70,8 @@
             <!-- 토픽베스트 -->
             <div class="BoardBlock">
                 <div>
-                    <div class="BoardTitle">토픽 베스트<a href="/templates/lower_category/list_topicbest.html" class="MoreArticle">더보기</a></div>
+                    <div class="BoardTitle">토픽 베스트<a href="/templates/lower_category/list_topicbest.html"
+                            class="MoreArticle">더보기</a></div>
                     <ul class="BestList">
                         <li class="List">
                             <div class="Article">
@@ -962,8 +965,7 @@
             <div class="Etc">
                 <p>ETC</p>
                 <ul>
-                    <a
-                        href="https://docs.google.com/forms/d/e/1FAIpQLSdDGm0fLFVls1-QI2KVWYIT1EksN0Lmd5dtkwJqSCetL_-b_g/viewform"
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdDGm0fLFVls1-QI2KVWYIT1EksN0Lmd5dtkwJqSCetL_-b_g/viewform"
                         target="_blank">
                         <li>튜터</li>
                     </a>
@@ -978,28 +980,21 @@
 
             <!-- Footer Icons -->
             <div class="FooterIcons">
-                <a
-                    href="https://m.blog.naver.com/PostList.nhn?blogId=spartacoding&categoryNo=6&logCode=0&categoryName=%EC%88%98%EA%B0%95%EC%83%9D%C2%A0%EC%86%94%EC%A7%81%ED%9B%84%EA%B8%B0"
+                <a href="https://m.blog.naver.com/PostList.nhn?blogId=spartacoding&categoryNo=6&logCode=0&categoryName=%EC%88%98%EA%B0%95%EC%83%9D%C2%A0%EC%86%94%EC%A7%81%ED%9B%84%EA%B8%B0"
                     target="_blank">blog</a>
                 <a href="https://spartacodingclub.tistory.com/" target="_blank">Tstory</a>
                 <a href="https://www.instagram.com/spartacodingclub/" target="_blank">Insta</a>
-                <a
-                    href="https://www.youtube.com/channel/UC2Fh3XoQYNYTba-cigq5cAA"
-                    target="_blank">YouTube</a>
+                <a href="https://www.youtube.com/channel/UC2Fh3XoQYNYTba-cigq5cAA" target="_blank">YouTube</a>
             </div>
         </section>
 
         <!-- 개인정보처리방침 -->
         <section class="PerInfo">
             <ul>
-                <a
-                    href="https://www.notion.so/3-f2e359d2a710447db3036ff2a3156869"
-                    target="_blank">
+                <a href="https://www.notion.so/3-f2e359d2a710447db3036ff2a3156869" target="_blank">
                     <li>개인정보처리방침</li>
                 </a>
-                <a
-                    href="https://www.notion.so/900680faf2ee4ed88f5f3679f4c57b95"
-                    target="_blank">
+                <a href="https://www.notion.so/900680faf2ee4ed88f5f3679f4c57b95" target="_blank">
                     <li>환불규정</li>
                 </a>
                 <a href="https://sparta-faq.oopy.io/" target="_blank">
@@ -1013,7 +1008,8 @@
             <div class="Info">
                 <h4>팀스파르타(주) 사업자 정보</h4>
                 <p>
-                    대표자: 이범규 사업자 등록번호: 783-86-01715 통신판매업 신고번호: 2020-서울강남-02300 평생교육시설<br/>신고번호: 제 661호 주소: 서울특별시 강남구 테헤란로44길 8 12층 이메일: contact@teamsparta.co 전화 1522-8016
+                    대표자: 이범규 사업자 등록번호: 783-86-01715 통신판매업 신고번호: 2020-서울강남-02300 평생교육시설<br />신고번호: 제 661호 주소: 서울특별시 강남구
+                    테헤란로44길 8 12층 이메일: contact@teamsparta.co 전화 1522-8016
                 </p>
             </div>
             <div class="TEAMSPARTA">
@@ -1021,6 +1017,6 @@
             </div>
         </section>
     </footer>
-  </body>
+</body>
 
 </html>

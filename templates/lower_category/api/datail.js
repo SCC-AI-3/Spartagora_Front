@@ -16,6 +16,6 @@ async function commentGet() {
         return response.json();
     }
     commentData().then((data) => {
-        console.log(data)
+        console.log(data.article_data)
     })
 }
