@@ -2,12 +2,14 @@ const backend_base_url = "http://127.0.0.1:8000"
 const frontend_base_url = "http://127.0.0.1:5500"
 
 
-function ifLoggedIn() {
-    if (localStorage.getItem("access") == true) {
-        window.location.replace(`${frontend_base_url}/templates/mainpage/main.html`);
+function ifLoggedOut() {
+    if (localStorage.getItem("access")) {
+        true;
+    }
+    else {
+        window.location.replace(`${frontend_base_url}/templates/user/login.html`);
     }
 }
-
 
 
 async function userarticleget() {

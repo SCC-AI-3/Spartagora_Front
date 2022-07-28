@@ -30,7 +30,9 @@
 
     <!-- jsAPI -->
     <script src="api/api.js"></script>
-
+    <script>
+        const frontend_base_url = "http://127.0.0.1:5500"
+    </script>
     <title>Spartagora | 게시판</title>
 </head>
 
@@ -40,7 +42,7 @@
         <nav class="Navbar">
             <!-- 네비게이션바 로고 -->
             <div class="Navbar_logo">
-                <a href="/templates/main.html">Spartagora</a>
+                <a href="/templates/mainpage/main.html">Spartagora</a>
             </div>
 
             <!-- 네비게이션바 Uppor Category -->
@@ -208,108 +210,10 @@
                 <div>
                     <div class="BoardTitle">
                         고민을 말해봐
-                        <a href="/templates/lower_category/list_qna.html" class="MoreArticle">더보기</a>
+                        <a href="/templates/lower_category/list_greenlight.html?1" class="MoreArticle">더보기</a>
                     </div>
-                    <ul class="BestList">
-                        <li class="List">
-                            <div class="Article">
-                                <span>
-                                    <a href="" class="ArticleCategory">웹개발 종합반</a>
-                                </span>
-                                <a href="" class="tit">3-11[앱페이지적용]설치-스택네비게이션01 강좌에서 컴파일 에러입니다.</a>
-                                <div class="ArticleInfo">
-                                    <a href="" class="like">
-                                        <i class="fa-regular fa-thumbs-up"></i>4
-                                    </a>
-                                    <a href="" class="cmt">
-                                        <i class="fa-regular fa-comments"></i>6
-                                    </a>
-                                    <a href="" class="views">
-                                        <i class="fa-solid fa-arrow-pointer"></i>29
-                                    </a>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="List">
-                            <div class="Article">
-                                <span>
-                                    <a href="" class="ArticleCategory">웹개발 종합반</a>
-                                </span>
-                                <a href="" class="tit">og title이랑 og description git hub에 수정했는데 카톡으로 공유시 변경이 안됩니다.</a>
-                                <div class="ArticleInfo">
-                                    <a href="" class="like">
-                                        <i class="fa-regular fa-thumbs-up"></i>8
-                                    </a>
-                                    <a href="" class="cmt">
-                                        <i class="fa-regular fa-comments"></i>12
-                                    </a>
-                                    <a href="" class="views">
-                                        <i class="fa-solid fa-arrow-pointer"></i>37
-                                    </a>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="List">
-                            <div class="Article">
-                                <span>
-                                    <a href="" class="ArticleCategory">[왕초보] 비개발자를 위한, 웹개발 종합반(프로그래밍 실무, 풀스택)</a>
-                                </span>
-                                <a href="" class="tit">jqery 퀴즈 문제 문의 드립니다..</a>
-                                <div class="ArticleInfo">
-                                    <a href="" class="like">
-                                        <i class="fa-regular fa-thumbs-up"></i>4
-                                    </a>
-                                    <a href="" class="cmt">
-                                        <i class="fa-regular fa-comments"></i>20
-                                    </a>
-                                    <a href="" class="views">
-                                        <i class="fa-solid fa-arrow-pointer"></i>41
-                                    </a>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="List">
-                            <div class="Article">
-                                <span>
-                                    <a href="" class="ArticleCategory">[왕초보] 비개발자를 위한, 웹개발 종합반(프로그래밍 실무, 풀스택)</a>
-                                </span>
-                                <a href="" class="tit">몽고 DB 접속에서 오류가 발생합니다.</a>
-                                <div class="ArticleInfo">
-                                    <a href="" class="like">
-                                        <i class="fa-regular fa-thumbs-up"></i>
-                                        5
-                                    </a>
-                                    <a href="" class="cmt">
-                                        <i class="fa-regular fa-comments"></i>
-                                        7
-                                    </a>
-                                    <a href="" class="views">
-                                        <i class="fa-solid fa-arrow-pointer"></i>39
-                                    </a>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="List">
-                            <div class="Article">
-                                <span>
-                                    <a href="" class="ArticleCategory">[왕초보] 비개발자를 위한, 웹개발 종합반(프로그래밍 실무, 풀스택)</a>
-                                </span>
-                                <a href="" class="tit">이거 무슨 에러일까요?</a>
-                                <div class="ArticleInfo">
-                                    <a href="" class="like">
-                                        <i class="fa-regular fa-thumbs-up"></i>
-                                        7
-                                    </a>
-                                    <a href="" class="cmt">
-                                        <i class="fa-regular fa-comments"></i>
-                                        9
-                                    </a>
-                                    <a href="" class="views">
-                                        <i class="fa-solid fa-arrow-pointer"></i>14
-                                    </a>
-                                </div>
-                            </div>
-                        </li>
+                    <ul class="BestList" id="list1">
+
                     </ul>
                 </div>
             </div>
@@ -319,119 +223,10 @@
                 <div>
                     <div class="BoardTitle">
                         스터디/팀원모집
-                        <a href="/templates/lower_category/list_team_recruit.html" class="MoreArticle">더보기</a>
+                        <a href="/templates/lower_category/list_team_recruit.html?2" class="MoreArticle">더보기</a>
                     </div>
-                    <ul class="BestList">
-                        <li class="List">
-                            <div class="Article">
-                                <span>
-                                    <a href="" class="ArticleCategory">빈 카테고리</a>
-                                </span>
-                                <a href="" class="tit">빈 게시글 제목 예시</a>
-                                <div class="ArticleInfo">
-                                    <a href="" class="like">
-                                        <i class="fa-regular fa-thumbs-up"></i>
-                                        0
-                                    </a>
-                                    <a href="" class="cmt">
-                                        <i class="fa-regular fa-comments"></i>
-                                        0
-                                    </a>
-                                    <a href="" class="views">
-                                        <i class="fa-solid fa-arrow-pointer"></i>
-                                        0
-                                    </a>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="List">
-                            <div class="Article">
-                                <span>
-                                    <a href="" class="ArticleCategory">빈 카테고리</a>
-                                </span>
-                                <a href="" class="tit">빈 게시글 제목 예시</a>
-                                <div class="ArticleInfo">
-                                    <a href="" class="like">
-                                        <i class="fa-regular fa-thumbs-up"></i>
-                                        0
-                                    </a>
-                                    <a href="" class="cmt">
-                                        <i class="fa-regular fa-comments"></i>
-                                        0
-                                    </a>
-                                    <a href="" class="views">
-                                        <i class="fa-solid fa-arrow-pointer"></i>
-                                        0
-                                    </a>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="List">
-                            <div class="Article">
-                                <span>
-                                    <a href="" class="ArticleCategory">빈 카테고리</a>
-                                </span>
-                                <a href="" class="tit">빈 게시글 제목 예시</a>
-                                <div class="ArticleInfo">
-                                    <a href="" class="like">
-                                        <i class="fa-regular fa-thumbs-up"></i>
-                                        0
-                                    </a>
-                                    <a href="" class="cmt">
-                                        <i class="fa-regular fa-comments"></i>
-                                        0
-                                    </a>
-                                    <a href="" class="views">
-                                        <i class="fa-solid fa-arrow-pointer"></i>
-                                        0
-                                    </a>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="List">
-                            <div class="Article">
-                                <span>
-                                    <a href="" class="ArticleCategory">빈 카테고리</a>
-                                </span>
-                                <a href="" class="tit">빈 게시글 제목 예시</a>
-                                <div class="ArticleInfo">
-                                    <a href="" class="like">
-                                        <i class="fa-regular fa-thumbs-up"></i>
-                                        0
-                                    </a>
-                                    <a href="" class="cmt">
-                                        <i class="fa-regular fa-comments"></i>
-                                        0
-                                    </a>
-                                    <a href="" class="views">
-                                        <i class="fa-solid fa-arrow-pointer"></i>
-                                        0
-                                    </a>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="List">
-                            <div class="Article">
-                                <span>
-                                    <a href="" class="ArticleCategory">빈 카테고리</a>
-                                </span>
-                                <a href="" class="tit">빈 게시글 제목 예시</a>
-                                <div class="ArticleInfo">
-                                    <a href="" class="like">
-                                        <i class="fa-regular fa-thumbs-up"></i>
-                                        0
-                                    </a>
-                                    <a href="" class="cmt">
-                                        <i class="fa-regular fa-comments"></i>
-                                        0
-                                    </a>
-                                    <a href="" class="views">
-                                        <i class="fa-solid fa-arrow-pointer"></i>
-                                        0
-                                    </a>
-                                </div>
-                            </div>
-                        </li>
+                    <ul class="BestList" id="list2">
+
                     </ul>
                 </div>
             </div>
@@ -441,119 +236,10 @@
                 <div>
                     <div class="BoardTitle">
                         썸, 연애
-                        <a href="/templates/lower_category/list_greenlight.html" class="MoreArticle">더보기</a>
+                        <a href="/templates/lower_category/list_greenlight.html?3" class="MoreArticle">더보기</a>
                     </div>
-                    <ul class="BestList">
-                        <li class="List">
-                            <div class="Article">
-                                <span>
-                                    <a href="" class="ArticleCategory">빈 카테고리</a>
-                                </span>
-                                <a href="" class="tit">빈 게시글 제목 예시</a>
-                                <div class="ArticleInfo">
-                                    <a href="" class="like">
-                                        <i class="fa-regular fa-thumbs-up"></i>
-                                        0
-                                    </a>
-                                    <a href="" class="cmt">
-                                        <i class="fa-regular fa-comments"></i>
-                                        0
-                                    </a>
-                                    <a href="" class="views">
-                                        <i class="fa-solid fa-arrow-pointer"></i>
-                                        0
-                                    </a>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="List">
-                            <div class="Article">
-                                <span>
-                                    <a href="" class="ArticleCategory">빈 카테고리</a>
-                                </span>
-                                <a href="" class="tit">빈 게시글 제목 예시</a>
-                                <div class="ArticleInfo">
-                                    <a href="" class="like">
-                                        <i class="fa-regular fa-thumbs-up"></i>
-                                        0
-                                    </a>
-                                    <a href="" class="cmt">
-                                        <i class="fa-regular fa-comments"></i>
-                                        0
-                                    </a>
-                                    <a href="" class="views">
-                                        <i class="fa-solid fa-arrow-pointer"></i>
-                                        0
-                                    </a>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="List">
-                            <div class="Article">
-                                <span>
-                                    <a href="" class="ArticleCategory">빈 카테고리</a>
-                                </span>
-                                <a href="" class="tit">빈 게시글 제목 예시</a>
-                                <div class="ArticleInfo">
-                                    <a href="" class="like">
-                                        <i class="fa-regular fa-thumbs-up"></i>
-                                        0
-                                    </a>
-                                    <a href="" class="cmt">
-                                        <i class="fa-regular fa-comments"></i>
-                                        0
-                                    </a>
-                                    <a href="" class="views">
-                                        <i class="fa-solid fa-arrow-pointer"></i>
-                                        0
-                                    </a>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="List">
-                            <div class="Article">
-                                <span>
-                                    <a href="" class="ArticleCategory">빈 카테고리</a>
-                                </span>
-                                <a href="" class="tit">빈 게시글 제목 예시</a>
-                                <div class="ArticleInfo">
-                                    <a href="" class="like">
-                                        <i class="fa-regular fa-thumbs-up"></i>
-                                        0
-                                    </a>
-                                    <a href="" class="cmt">
-                                        <i class="fa-regular fa-comments"></i>
-                                        0
-                                    </a>
-                                    <a href="" class="views">
-                                        <i class="fa-solid fa-arrow-pointer"></i>
-                                        0
-                                    </a>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="List">
-                            <div class="Article">
-                                <span>
-                                    <a href="" class="ArticleCategory">빈 카테고리</a>
-                                </span>
-                                <a href="" class="tit">빈 게시글 제목 예시</a>
-                                <div class="ArticleInfo">
-                                    <a href="" class="like">
-                                        <i class="fa-regular fa-thumbs-up"></i>
-                                        0
-                                    </a>
-                                    <a href="" class="cmt">
-                                        <i class="fa-regular fa-comments"></i>
-                                        0
-                                    </a>
-                                    <a href="" class="views">
-                                        <i class="fa-solid fa-arrow-pointer"></i>
-                                        0
-                                    </a>
-                                </div>
-                            </div>
-                        </li>
+                    <ul class="BestList" id="list3">
+
                     </ul>
                 </div>
             </div>
@@ -563,119 +249,10 @@
                 <div>
                     <div class="BoardTitle">
                         반려동물
-                        <a href="/templates/lower_category/list_pat.html" class="MoreArticle">더보기</a>
+                        <a href="/templates/lower_category/list_pet.html?4" class="MoreArticle">더보기</a>
                     </div>
-                    <ul class="BestList">
-                        <li class="List">
-                            <div class="Article">
-                                <span>
-                                    <a href="" class="ArticleCategory">빈 카테고리</a>
-                                </span>
-                                <a href="" class="tit">빈 게시글 제목 예시</a>
-                                <div class="ArticleInfo">
-                                    <a href="" class="like">
-                                        <i class="fa-regular fa-thumbs-up"></i>
-                                        0
-                                    </a>
-                                    <a href="" class="cmt">
-                                        <i class="fa-regular fa-comments"></i>
-                                        0
-                                    </a>
-                                    <a href="" class="views">
-                                        <i class="fa-solid fa-arrow-pointer"></i>
-                                        0
-                                    </a>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="List">
-                            <div class="Article">
-                                <span>
-                                    <a href="" class="ArticleCategory">빈 카테고리</a>
-                                </span>
-                                <a href="" class="tit">빈 게시글 제목 예시</a>
-                                <div class="ArticleInfo">
-                                    <a href="" class="like">
-                                        <i class="fa-regular fa-thumbs-up"></i>
-                                        0
-                                    </a>
-                                    <a href="" class="cmt">
-                                        <i class="fa-regular fa-comments"></i>
-                                        0
-                                    </a>
-                                    <a href="" class="views">
-                                        <i class="fa-solid fa-arrow-pointer"></i>
-                                        0
-                                    </a>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="List">
-                            <div class="Article">
-                                <span>
-                                    <a href="" class="ArticleCategory">빈 카테고리</a>
-                                </span>
-                                <a href="" class="tit">빈 게시글 제목 예시</a>
-                                <div class="ArticleInfo">
-                                    <a href="" class="like">
-                                        <i class="fa-regular fa-thumbs-up"></i>
-                                        0
-                                    </a>
-                                    <a href="" class="cmt">
-                                        <i class="fa-regular fa-comments"></i>
-                                        0
-                                    </a>
-                                    <a href="" class="views">
-                                        <i class="fa-solid fa-arrow-pointer"></i>
-                                        0
-                                    </a>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="List">
-                            <div class="Article">
-                                <span>
-                                    <a href="" class="ArticleCategory">빈 카테고리</a>
-                                </span>
-                                <a href="" class="tit">빈 게시글 제목 예시</a>
-                                <div class="ArticleInfo">
-                                    <a href="" class="like">
-                                        <i class="fa-regular fa-thumbs-up"></i>
-                                        0
-                                    </a>
-                                    <a href="" class="cmt">
-                                        <i class="fa-regular fa-comments"></i>
-                                        0
-                                    </a>
-                                    <a href="" class="views">
-                                        <i class="fa-solid fa-arrow-pointer"></i>
-                                        0
-                                    </a>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="List">
-                            <div class="Article">
-                                <span>
-                                    <a href="" class="ArticleCategory">빈 카테고리</a>
-                                </span>
-                                <a href="" class="tit">빈 게시글 제목 예시</a>
-                                <div class="ArticleInfo">
-                                    <a href="" class="like">
-                                        <i class="fa-regular fa-thumbs-up"></i>
-                                        0
-                                    </a>
-                                    <a href="" class="cmt">
-                                        <i class="fa-regular fa-comments"></i>
-                                        0
-                                    </a>
-                                    <a href="" class="views">
-                                        <i class="fa-solid fa-arrow-pointer"></i>
-                                        0
-                                    </a>
-                                </div>
-                            </div>
-                        </li>
+                    <ul class="BestList" id="list4">
+
                     </ul>
                 </div>
             </div>
@@ -685,119 +262,10 @@
                 <div>
                     <div class="BoardTitle">
                         헬스, 다이어트
-                        <a href="/templates/lower_category/list_health.html" class="MoreArticle">더보기</a>
+                        <a href="/templates/lower_category/list_health.html?5" class="MoreArticle">더보기</a>
                     </div>
-                    <ul class="BestList">
-                        <li class="List">
-                            <div class="Article">
-                                <span>
-                                    <a href="" class="ArticleCategory">빈 카테고리</a>
-                                </span>
-                                <a href="" class="tit">빈 게시글 제목 예시</a>
-                                <div class="ArticleInfo">
-                                    <a href="" class="like">
-                                        <i class="fa-regular fa-thumbs-up"></i>
-                                        0
-                                    </a>
-                                    <a href="" class="cmt">
-                                        <i class="fa-regular fa-comments"></i>
-                                        0
-                                    </a>
-                                    <a href="" class="views">
-                                        <i class="fa-solid fa-arrow-pointer"></i>
-                                        0
-                                    </a>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="List">
-                            <div class="Article">
-                                <span>
-                                    <a href="" class="ArticleCategory">빈 카테고리</a>
-                                </span>
-                                <a href="" class="tit">빈 게시글 제목 예시</a>
-                                <div class="ArticleInfo">
-                                    <a href="" class="like">
-                                        <i class="fa-regular fa-thumbs-up"></i>
-                                        0
-                                    </a>
-                                    <a href="" class="cmt">
-                                        <i class="fa-regular fa-comments"></i>
-                                        0
-                                    </a>
-                                    <a href="" class="views">
-                                        <i class="fa-solid fa-arrow-pointer"></i>
-                                        0
-                                    </a>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="List">
-                            <div class="Article">
-                                <span>
-                                    <a href="" class="ArticleCategory">빈 카테고리</a>
-                                </span>
-                                <a href="" class="tit">빈 게시글 제목 예시</a>
-                                <div class="ArticleInfo">
-                                    <a href="" class="like">
-                                        <i class="fa-regular fa-thumbs-up"></i>
-                                        0
-                                    </a>
-                                    <a href="" class="cmt">
-                                        <i class="fa-regular fa-comments"></i>
-                                        0
-                                    </a>
-                                    <a href="" class="views">
-                                        <i class="fa-solid fa-arrow-pointer"></i>
-                                        0
-                                    </a>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="List">
-                            <div class="Article">
-                                <span>
-                                    <a href="" class="ArticleCategory">빈 카테고리</a>
-                                </span>
-                                <a href="" class="tit">빈 게시글 제목 예시</a>
-                                <div class="ArticleInfo">
-                                    <a href="" class="like">
-                                        <i class="fa-regular fa-thumbs-up"></i>
-                                        0
-                                    </a>
-                                    <a href="" class="cmt">
-                                        <i class="fa-regular fa-comments"></i>
-                                        0
-                                    </a>
-                                    <a href="" class="views">
-                                        <i class="fa-solid fa-arrow-pointer"></i>
-                                        0
-                                    </a>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="List">
-                            <div class="Article">
-                                <span>
-                                    <a href="" class="ArticleCategory">빈 카테고리</a>
-                                </span>
-                                <a href="" class="tit">빈 게시글 제목 예시</a>
-                                <div class="ArticleInfo">
-                                    <a href="" class="like">
-                                        <i class="fa-regular fa-thumbs-up"></i>
-                                        0
-                                    </a>
-                                    <a href="" class="cmt">
-                                        <i class="fa-regular fa-comments"></i>
-                                        0
-                                    </a>
-                                    <a href="" class="views">
-                                        <i class="fa-solid fa-arrow-pointer"></i>
-                                        0
-                                    </a>
-                                </div>
-                            </div>
-                        </li>
+                    <ul class="BestList" id="list5">
+
                     </ul>
                 </div>
             </div>
@@ -807,119 +275,10 @@
                 <div>
                     <div class="BoardTitle">
                         여행, 맛집
-                        <a href="/templates/lower_category/list_travel.html" class="MoreArticle">더보기</a>
+                        <a href="/templates/lower_category/list_travel.html?6" class="MoreArticle">더보기</a>
                     </div>
-                    <ul class="BestList">
-                        <li class="List">
-                            <div class="Article">
-                                <span>
-                                    <a href="" class="ArticleCategory">빈 카테고리</a>
-                                </span>
-                                <a href="" class="tit">빈 게시글 제목 예시</a>
-                                <div class="ArticleInfo">
-                                    <a href="" class="like">
-                                        <i class="fa-regular fa-thumbs-up"></i>
-                                        0
-                                    </a>
-                                    <a href="" class="cmt">
-                                        <i class="fa-regular fa-comments"></i>
-                                        0
-                                    </a>
-                                    <a href="" class="views">
-                                        <i class="fa-solid fa-arrow-pointer"></i>
-                                        0
-                                    </a>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="List">
-                            <div class="Article">
-                                <span>
-                                    <a href="" class="ArticleCategory">빈 카테고리</a>
-                                </span>
-                                <a href="" class="tit">빈 게시글 제목 예시</a>
-                                <div class="ArticleInfo">
-                                    <a href="" class="like">
-                                        <i class="fa-regular fa-thumbs-up"></i>
-                                        0
-                                    </a>
-                                    <a href="" class="cmt">
-                                        <i class="fa-regular fa-comments"></i>
-                                        0
-                                    </a>
-                                    <a href="" class="views">
-                                        <i class="fa-solid fa-arrow-pointer"></i>
-                                        0
-                                    </a>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="List">
-                            <div class="Article">
-                                <span>
-                                    <a href="" class="ArticleCategory">빈 카테고리</a>
-                                </span>
-                                <a href="" class="tit">빈 게시글 제목 예시</a>
-                                <div class="ArticleInfo">
-                                    <a href="" class="like">
-                                        <i class="fa-regular fa-thumbs-up"></i>
-                                        0
-                                    </a>
-                                    <a href="" class="cmt">
-                                        <i class="fa-regular fa-comments"></i>
-                                        0
-                                    </a>
-                                    <a href="" class="views">
-                                        <i class="fa-solid fa-arrow-pointer"></i>
-                                        0
-                                    </a>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="List">
-                            <div class="Article">
-                                <span>
-                                    <a href="" class="ArticleCategory">빈 카테고리</a>
-                                </span>
-                                <a href="" class="tit">빈 게시글 제목 예시</a>
-                                <div class="ArticleInfo">
-                                    <a href="" class="like">
-                                        <i class="fa-regular fa-thumbs-up"></i>
-                                        0
-                                    </a>
-                                    <a href="" class="cmt">
-                                        <i class="fa-regular fa-comments"></i>
-                                        0
-                                    </a>
-                                    <a href="" class="views">
-                                        <i class="fa-solid fa-arrow-pointer"></i>
-                                        0
-                                    </a>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="List">
-                            <div class="Article">
-                                <span>
-                                    <a href="" class="ArticleCategory">빈 카테고리</a>
-                                </span>
-                                <a href="" class="tit">빈 게시글 제목 예시</a>
-                                <div class="ArticleInfo">
-                                    <a href="" class="like">
-                                        <i class="fa-regular fa-thumbs-up"></i>
-                                        0
-                                    </a>
-                                    <a href="" class="cmt">
-                                        <i class="fa-regular fa-comments"></i>
-                                        0
-                                    </a>
-                                    <a href="" class="views">
-                                        <i class="fa-solid fa-arrow-pointer"></i>
-                                        0
-                                    </a>
-                                </div>
-                            </div>
-                        </li>
+                    <ul class="BestList" id="list6">
+
                     </ul>
                 </div>
             </div>
