@@ -1,6 +1,11 @@
 const backend_base_url = "http://127.0.0.1:8000"
 const frontend_base_url = "http://127.0.0.1:5500"
 
+function ifLoggedOut() {
+    if (localStorage.getItem("access") != true) {
+        window.location.replace(`${frontend_base_url}/templates/user/login.html`);
+    }
+}
 
 async function topicbestGet() {
     const topicbestData = async () => {
@@ -41,3 +46,4 @@ async function mainpageGet() {
 
 
 $('document').ready(topicbestGet());
+$('document').ready(ifLoggedOut());
