@@ -1,20 +1,13 @@
 const backend_base_url = "http://127.0.0.1:8000"
 const frontend_base_url = "http://127.0.0.1:5500"
 
-
-function ifLoggedOut() {
-    if (localStorage.getItem("access")) {
-        true;
-    }
-    else {
-        window.location.replace(`${frontend_base_url}/templates/user/login.html`);
-    }
+async function logout() {
+    window.localStorage.clear(); //로컬스토리지에 저장된 토큰 삭제해줌.
 }
 
 
 async function userarticleget() {
     const category_id = location.href.split("?")[1]
-    console.log(category_id)
     const categoryData = async () => {
         const response = await fetch(`${backend_base_url}/article/${category_id}/`, {
             method: 'GET',
@@ -28,80 +21,193 @@ async function userarticleget() {
     categoryData().then((data) => {
         article = data
         console.log(data)
+        if (data['code'] == 'token_not_valid') {
+            logout()
+            window.location.replace(`${frontend_base_url}/templates/user/login.html`)
+        }
         articles = article[0]
         for (let i = 0; i < article.length; i++) {
             let id = article[i]['id']
+            let assignment = article[i]['assignment']
             let title = article[i]['title']
-            let content = article[i]['content']
-            let create_at = article[i]['create_at']
-            let image = article[i]['image']
+            let create_at = article[i]['created_at']
             let count = article[i]['count']
-            if (image == true) {
+            let like = article[i]['like'].length
+            let comment_count = article[i]['comment_count']
+            let lower_category_name = article[i]['lower_category_name']
+            if (id == 1) {
                 let temp_html = `
-                <div class="List">
-                <div class="ProfileInfo">
-                    <div class="Profile-Rtan">
-                        <img src="/image/0.png" alt="">
-                        <div class="User">
-                            <p class="Anonymous">익명</p>
-                            <p class="UploadTime">2022년 7월 20일 오후 4:23</p>
+            <div class="List">
+                    <div class="ProfileInfo">
+                        <div class="Profile-Rtan">
+                            <img src="/image/0.png" alt="">
+                            <div class="User">
+                                <div>
+                                    <a href="#" class="Anonymous">${assignment}</a>
+                                    <span class="Anonymous">- anonymous 익명</span>
+                                </div>
+                                <p class="UploadTime">${create_at}</p>
+                            </div>
                         </div>
                     </div>
+                    <div class="Article-Title">
+                        <a href="/templates/lower_category/qna.html?${id}" class="Title">${title}</a>
+                        <p class="Category">게시판 > ${lower_category_name}</p>
+                    </div>
+                    <div class="Count">
+                            <i class="fa-regular fa-thumbs-up"></i>${like}
+                            <i class="fa-regular fa-comments"></i>${comment_count}
+                            <i class="fa-solid fa-arrow-pointer"></i>${count}
+                    </div>
                 </div>
-                <div class="Article-Title">
-                    <a href="/templates/lower_category/greenlight.html?${id}" class="Title">${title}</a>
-                    <p class="Category">게시판 > 썸, 연애</p>
-                </div>
-                <div class="Count">
-                    <a href="" class="like">
-                        <i class="fa-regular fa-thumbs-up"></i>10
-                    </a>
-                    <a href="" class="cmt">
-                        <i class="fa-regular fa-comments"></i>20
-                    </a>
-                    <a href="" class="views">
-                        <i class="fa-solid fa-arrow-pointer"></i>30
-                    </a>
-                </div>
-            </div>
-        `
+            `
                 $('#article_list').append(temp_html)
             }
-            else {
+            else if (id == 2) {
                 let temp_html = `
-                <div class="List">
-                <div class="ProfileInfo">
-                    <div class="Profile-Rtan">
-                        <img src="/image/0.png" alt="">
-                        <div class="User">
-                            <p class="Anonymous">익명</p>
-                            <p class="UploadTime">2022년 7월 20일 오후 4:23</p>
+            <div class="List">
+                    <div class="ProfileInfo">
+                        <div class="Profile-Rtan">
+                            <img src="/image/0.png" alt="">
+                            <div class="User">
+                                <div>
+                                    <a href="#" class="Anonymous">${assignment}</a>
+                                    <span class="Anonymous">- anonymous 익명</span>
+                                </div>
+                                <p class="UploadTime">${create_at}</p>
+                            </div>
                         </div>
                     </div>
+                    <div class="Article-Title">
+                        <a href="/templates/lower_category/team_recruit.html?${id}" class="Title">${title}</a>
+                        <p class="Category">게시판 > ${lower_category_name}</p>
+                    </div>
+                    <div class="Count">
+                            <i class="fa-regular fa-thumbs-up"></i>${like}
+                            <i class="fa-regular fa-comments"></i>${comment_count}
+                            <i class="fa-solid fa-arrow-pointer"></i>${count}
+                    </div>
                 </div>
-                <div class="Article-Title">
-                    <a href="/templates/lower_category/greenlight.html?${id}" class="Title">${title}</a>
-                    <p class="Category">게시판 > 썸, 연애</p>
+            `
+                $('#article_list').append(temp_html)
+            }
+            else if (id == 3) {
+                let temp_html = `
+            <div class="List">
+                    <div class="ProfileInfo">
+                        <div class="Profile-Rtan">
+                            <img src="/image/0.png" alt="">
+                            <div class="User">
+                                <div>
+                                    <a href="#" class="Anonymous">${assignment}</a>
+                                    <span class="Anonymous">- anonymous 익명</span>
+                                </div>
+                                <p class="UploadTime">${create_at}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="Article-Title">
+                        <a href="/templates/lower_category/greenlight.html?${id}" class="Title">${title}</a>
+                        <p class="Category">게시판 > ${lower_category_name}</p>
+                    </div>
+                    <div class="Count">
+                            <i class="fa-regular fa-thumbs-up"></i>${like}
+                            <i class="fa-regular fa-comments"></i>${comment_count}
+                            <i class="fa-solid fa-arrow-pointer"></i>${count}
+                    </div>
                 </div>
-                <div class="Count">
-                    <a href="" class="like">
-                        <i class="fa-regular fa-thumbs-up"></i>10
-                    </a>
-                    <a href="" class="cmt">
-                        <i class="fa-regular fa-comments"></i>20
-                    </a>
-                    <a href="" class="views">
-                        <i class="fa-solid fa-arrow-pointer"></i>30
-                    </a>
+            `
+                $('#article_list').append(temp_html)
+            }
+            else if (id == 4) {
+                let temp_html = `
+            <div class="List">
+                    <div class="ProfileInfo">
+                        <div class="Profile-Rtan">
+                            <img src="/image/0.png" alt="">
+                            <div class="User">
+                                <div>
+                                    <a href="#" class="Anonymous">${assignment}</a>
+                                    <span class="Anonymous">- anonymous 익명</span>
+                                </div>
+                                <p class="UploadTime">${create_at}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="Article-Title">
+                        <a href="/templates/lower_category/pet.html?${id}" class="Title">${title}</a>
+                        <p class="Category">게시판 > ${lower_category_name}</p>
+                    </div>
+                    <div class="Count">
+                            <i class="fa-regular fa-thumbs-up"></i>${like}
+                            <i class="fa-regular fa-comments"></i>${comment_count}
+                            <i class="fa-solid fa-arrow-pointer"></i>${count}
+                    </div>
                 </div>
-            </div>
-        `
+            `
+                $('#article_list').append(temp_html)
+            }
+            else if (id == 5) {
+                let temp_html = `
+            <div class="List">
+                    <div class="ProfileInfo">
+                        <div class="Profile-Rtan">
+                            <img src="/image/0.png" alt="">
+                            <div class="User">
+                                <div>
+                                    <a href="#" class="Anonymous">${assignment}</a>
+                                    <span class="Anonymous">- anonymous 익명</span>
+                                </div>
+                                <p class="UploadTime">${create_at}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="Article-Title">
+                        <a href="/templates/lower_category/health.html?${id}" class="Title">${title}</a>
+                        <p class="Category">게시판 > ${lower_category_name}</p>
+                    </div>
+                    <div class="Count">
+                            <i class="fa-regular fa-thumbs-up"></i>${like}
+                            <i class="fa-regular fa-comments"></i>${comment_count}
+                            <i class="fa-solid fa-arrow-pointer"></i>${count}
+                    </div>
+                </div>
+            `
+                $('#article_list').append(temp_html)
+            }
+            else if (id == 6) {
+                let temp_html = `
+            <div class="List">
+                    <div class="ProfileInfo">
+                        <div class="Profile-Rtan">
+                            <img src="/image/0.png" alt="">
+                            <div class="User">
+                                <div>
+                                    <a href="#" class="Anonymous">${assignment}</a>
+                                    <span class="Anonymous">- anonymous 익명</span>
+                                </div>
+                                <p class="UploadTime">${create_at}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="Article-Title">
+                        <a href="/templates/lower_category/travel.html?${id}" class="Title">${title}</a>
+                        <p class="Category">게시판 > ${lower_category_name}</p>
+                    </div>
+                    <div class="Count">
+                            <i class="fa-regular fa-thumbs-up"></i>${like}
+                            <i class="fa-regular fa-comments"></i>${comment_count}
+                            <i class="fa-solid fa-arrow-pointer"></i>${count}
+                    </div>
+                </div>
+            `
                 $('#article_list').append(temp_html)
             }
         }
     })
 }
 
+
+
 $('document').ready(userarticleget());
-$('document').ready(ifLoggedOut());
 
