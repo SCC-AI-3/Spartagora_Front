@@ -1,13 +1,8 @@
 const backend_base_url = "http://127.0.0.1:8000"
 const frontend_base_url = "http://127.0.0.1:5500"
 
-function ifLoggedOut() {
-    if (localStorage.getItem("access")) {
-        true;
-    }
-    else {
-        window.location.replace(`${frontend_base_url}/templates/user/login.html`);
-    }
+async function logout() {
+    window.localStorage.clear(); //로컬스토리지에 저장된 토큰 삭제해줌.
 }
 
 async function topicbestGet() {
@@ -22,7 +17,11 @@ async function topicbestGet() {
         return response.json();
     }
     topicbestData().then((data) => {
-        console.log(data)
+        console.log(data['code'])
+        if (data['code'] == 'token_not_valid') {
+            logout()
+            window.location.replace(`${frontend_base_url}/templates/user/login.html`)
+        }
     })
 }
 
@@ -344,8 +343,7 @@ async function trippageGet() {
 
 
 
-// $('document').ready(topicbestGet());
-$('document').ready(ifLoggedOut());
+$('document').ready(topicbestGet());
 $('document').ready(gominpageGet());
 $('document').ready(studypageGet());
 $('document').ready(somepageGet());
