@@ -27,7 +27,7 @@
 
     .Navbar_upper li {
         width: 100%;
-        padding-top: var(--padding);
+        padding-top: calc(var(--padding)/2);
         text-align: row;
         background-color: transparent;
         align-items: center;
@@ -90,13 +90,13 @@
 
 @media screen and (max-width:609px) {
     .Navbar_upper li {
-        padding: 8px 15px;
+        padding: 12px 15px;
     }
 }
 
 @media screen and (max-width:450px) {
     .Navbar_upper li {
-        font-size: var(--font-medium);
+        font-size: var(--font-small);
         flex-direction: column;
     }
 }

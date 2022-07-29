@@ -195,6 +195,7 @@
     border: 1px solid var(--gray-dark-color);
     border-radius: 12px;
     font-size: var(--font-medium);
+    padding-left: var(--padding);
 }
 
 .Post button {

@@ -34,7 +34,7 @@
     display: flex;
     justify-content: center;
     margin-right: calc(var(--padding)*2);
-    border-radius: var(--padding);
+    border-radius: calc(var(--padding)/3);
     border: 1px solid var(--gray-light-color);
 }
 
@@ -42,7 +42,7 @@
     padding: var(--padding);
     max-width: 250px;
     width: 100%;
-    border-radius: var(--padding);
+    border-radius: calc(var(--padding)/3);
     color: var(--gray-dark-color);
     font-size: var(--font-medium);
 }
@@ -60,7 +60,7 @@
 .SelectCategory .TitleBox .Title {
     padding: var(--padding);
     border: 1px solid var(--gray-light-color);
-    border-radius: var(--padding);
+    border-radius: calc(var(--padding)/3);
     font-size: var(--font-medium);
     box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
 }
@@ -73,42 +73,27 @@
     margin: auto;
     max-width: 845px;
     width: 100%;
-    height: 450px;
+    min-height: 300px;
+    height: 100%;
     padding: var(--padding);
 }
 
 .WriteArea .Textarea {
-    height: 100%;
+    height: 500px;
     border: 1px solid var(--gray-light-color);
-    border-radius: var(--padding);
+    border-radius: calc(var(--padding)/3);
     padding: calc(var(--padding)*2);
     font-size: var(--font-medium);
     color: var(--gray-dark-color);
     box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
     overflow: auto;
     white-space: nowrap;
+    line-height: 1.8;
 }
 
-.WriteArea .ImgInput {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    padding-top: var(--padding);
-}
-
-.WriteArea .ImgInput label {
-    cursor: pointer;
-    font-size: 1em;
-    background-color: var(--white-color);
-    width: 100px;
-    height: 28px;
-    text-align: center;
-    justify-content: center;
-    font-size: var(--font-large);
-    border: 1px solid var(--accent-color);
-    border-radius: var(--padding);
-    color: var(--accent-color);
-    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+.WriteArea textarea.form-control {
+    background: var(--white-color);
+    height: 500px;
 }
 
 #chooseFile {
@@ -119,18 +104,23 @@
     margin: auto;
     max-width: 800px;
     width: 100%;
+    padding-left: calc(var(--padding)*2);
+    padding-right: calc(var(--padding)*2);
 }
 
-.TagArea {
+.Tag .TagArea {
     margin: auto;
     margin-bottom: var(--padding);
-    padding: calc(var(--padding)/3);
+    padding: var(--padding);
     font-size: var(--font-small);
     height: 28px;
     background-color: var(--white-color);
-    border-radius: var(--padding);
+    border-radius: calc(var(--padding)/3);
     border: 1px solid var(--accent-color);
     box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+    font-size: var(--font-medium);
+    max-width: 800px;
+    width: 100%;
 }
 
 .WriteBtn {
@@ -143,7 +133,7 @@
 .WriteBtn .Post {
     padding: var(--padding);
     margin-right: var(--padding);
-    border-radius: var(--padding);
+    border-radius: calc(var(--padding)/3);
     background-color: var(--accent-color);
     color: var(--white-color);
     width: 150px;
@@ -155,7 +145,7 @@
 .WriteBtn .Cancel {
     padding: var(--padding);
     margin-left: var(--padding);
-    border-radius: var(--padding);
+    border-radius: calc(var(--padding)/3);
     background-color: var(--white-color);
     color: var(--gray-dark-color);
     border: 1px solid var(--gray-dark-color);
