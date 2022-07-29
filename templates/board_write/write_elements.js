@@ -1,4 +1,8 @@
-function getArticles() {
+const backend_base_url = "http://127.0.0.1:8000"
+const frontend_base_url = "http://127.0.0.1:5500"
+
+// 글 작성 기기
+async function postArticles() {
 
     const ArticleData = {
         category: document.getElementById('lowercategory').value,
@@ -7,5 +11,8 @@ function getArticles() {
         tags: document.getElementById('tags').value
     }
 
-    console.table(ArticleData)
+    // const response = await fetch()
+
+    console.log(ArticleData)
 }
+
