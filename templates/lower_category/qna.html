@@ -1,236 +1,224 @@
 <!DOCTYPE html>
 <html lang="ko">
-    <head>
-        <meta charset="UTF-8"/>
-        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-        <!-- stylesheet -->
-        <link rel="stylesheet" href="/static/root.css"/>
-        <link rel="stylesheet" href="/static/main/main_navbar.css"/>
-        <link rel="stylesheet" href="/static/board/lower_article.css"/>
-        <link rel="stylesheet" href="/static/board/media.css">
-        <link rel="stylesheet" href="/static/footer.css"/>
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        <!-- Media Query -->
-        <link rel="stylesheet" href="/static/main/media.css"/>
-        <link rel="stylesheet" href="/static/footer_media.css"/>
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="/static/root.css" />
+    <link rel="stylesheet" href="/static/main/main_navbar.css" />
+    <link rel="stylesheet" href="/static/board/lower_article.css" />
+    <link rel="stylesheet" href="/static/board/media.css">
+    <link rel="stylesheet" href="/static/footer.css" />
 
-        <!-- Google Font -->
-        <link rel="preconnect" href="https://fonts.googleapis.com"/>
-        <link
-            rel="preconnect"
-            href="https://fonts.gstatic.com"
-            crossorigin="crossorigin"/>
-        <link
-            href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@500&display=swap"
-            rel="stylesheet"/>
+    <!-- Media Query -->
+    <link rel="stylesheet" href="/static/main/media.css" />
+    <link rel="stylesheet" href="/static/footer_media.css" />
 
-        <!-- Font Awesome -->
-        <script src="https://kit.fontawesome.com/993c2cba92.js" crossorigin="anonymous"></script>
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="crossorigin" />
+    <link href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@500&display=swap" rel="stylesheet" />
 
-        <title>Spartagora | 고민을 말해봐</title>
-    </head>
-    <body>
-        <!-- Header -->
-        <div class="Header">
-            <nav class="Navbar">
-                
-                <!-- 네비게이션바 로고 -->
-                <div class="Navbar_logo">
-                    <a href="/templates/main.html">Spartagora</a>
-                </div>
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/993c2cba92.js" crossorigin="anonymous"></script>
 
-                <!-- 네비게이션바 Uppor Category -->
-                <ul class="Navbar_upper">
-                    <li>
-                        <a class="active" href="/templates/main.html">게시판</a>
-                    </li>
-                    <li>
-                        <a href="#">과정후기</a>
-                    </li>
-                    <li>
-                        <a href="#">채용정보</a>
-                    </li>
-                    <li>
-                        <a href="#">취업후기</a>
-                    </li>
-                    <li>
-                        <a href="/templates/board_write/write.html" class="NavWrite">글작성</a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.js"></script>
 
-        <div class="LowerCategory">
-            <div class="CategoryName">
-                <a href="/templates/lower_category/list_topicbest.html">토픽 베스트</a>
-                <a href="/templates/lower_category/list_qna.html" class="active">고민을 말해봐</a>
-                <a href="/templates/lower_category/list_team_recruit.html">스터디/팀원모집</a>
-                <a href="/templates/lower_category/list_greenlight.html">썸, 연애</a>
-                <a href="/templates/lower_category/list_health.html">헬스, 다이어트</a>
-                <a href="/templates/lower_category/list_pet.html">반려동물</a>
-                <a href="/templates/lower_category/list_travel.html">여행, 맛집</a>
+    <!-- jsAPI -->
+    <script src="api/detail.js"></script>
+
+    <title>Spartagora | 고민을 말해봐</title>
+</head>
+
+<body>
+    <!-- Header -->
+    <div class="Header">
+        <nav class="Navbar">
+
+            <!-- 네비게이션바 로고 -->
+            <div class="Navbar_logo">
+                <a href="/templates/main.html">Spartagora</a>
             </div>
+
+            <!-- 네비게이션바 Uppor Category -->
+            <ul class="Navbar_upper">
+                <li>
+                    <a class="active" href="/templates/main.html">게시판</a>
+                </li>
+                <li>
+                    <a href="#">과정후기</a>
+                </li>
+                <li>
+                    <a href="#">채용정보</a>
+                </li>
+                <li>
+                    <a href="#">취업후기</a>
+                </li>
+                <li>
+                    <a href="/templates/board_write/write.html" class="NavWrite">글작성</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="LowerCategory">
+        <div class="CategoryName">
+            <a href="/templates/lower_category/list_topicbest.html">토픽 베스트</a>
+            <a href="/templates/lower_category/list_qna.html" class="active">고민을 말해봐</a>
+            <a href="/templates/lower_category/list_team_recruit.html">스터디/팀원모집</a>
+            <a href="/templates/lower_category/list_greenlight.html">썸, 연애</a>
+            <a href="/templates/lower_category/list_health.html">헬스, 다이어트</a>
+            <a href="/templates/lower_category/list_pet.html">반려동물</a>
+            <a href="/templates/lower_category/list_travel.html">여행, 맛집</a>
         </div>
+    </div>
 
-        <div class="Topic">
-            <select name="" id="" onchange="window.open(value,'_self');">
-                <option value="/templates/lower_category/list_qna.html">고민을 말해봐</option>
-                <option value="/templates/lower_category/list_team_recruit.html">스터디/팀원모집</option>
-                <option value="/templates/lower_category/list_greenlight.html">썸, 연애</option>
-                <option value="/templates/lower_category/list_pet.html">반려동물</option>
-                <option value="/templates/lower_category/list_health.html">헬스, 다이어트</option>
-                <option value="/templates/lower_category/list_.html">여행, 맛집</option>
-                <option value="/templates/lower_category/list_topicbest.html">토픽베스트</option>
-            </select>
-        </div>
+    <div class="Topic">
+        <select name="" id="" onchange="window.open(value,'_self');">
+            <option value="/templates/lower_category/list_qna.html">고민을 말해봐</option>
+            <option value="/templates/lower_category/list_team_recruit.html">스터디/팀원모집</option>
+            <option value="/templates/lower_category/list_greenlight.html">썸, 연애</option>
+            <option value="/templates/lower_category/list_pet.html">반려동물</option>
+            <option value="/templates/lower_category/list_health.html">헬스, 다이어트</option>
+            <option value="/templates/lower_category/list_.html">여행, 맛집</option>
+            <option value="/templates/lower_category/list_topicbest.html">토픽베스트</option>
+        </select>
+    </div>
 
-        <!-- 게시판 메인화면 -->
-        <div class="Container">
-            <div class="Main">
+    <!-- 게시판 메인화면 -->
+    <div class="Container">
+        <div class="Main">
 
-                <!-- 상세 게시글 -->
-                <div class="Article">
-                        <div class="ProfileInfo">
-                            <div class="Profile-Rtan">
-                                <img src="/image/0.png" alt="">
-                                <div class="User">
-                                    <div>
-                                        <a href="#" class="Anonymous">assignment 소속</a>
-                                        <span class="Anonymous">- anonymous 익명</span>
-                                    </div>
-                                    <p class="UploadTime">2022년 7월 20일 오후 4:23</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="Article-Title">
-                            <p class="Title">게시글 제목 예시</p>
-                            <p class="Category">게시판 > 고민을 말해봐</p>
-                        </div>
-                        <div class="Count">
-                            <a href="#">#스파르타 코딩클럽</a>
-                            <a href="#">#Sparta</a>
-                            <a href="#">#항해99</a>
-                            <a href="#">#Java</a>
-                            <a href="#">#모래반지 빵야빵야</a>
-                            <a href="#">#주니어</a>
-                        </div>
-                        <div class="Content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, placeat vel. Culpa perspiciatis dolor inventore rerum placeat nostrum ab. Sunt aut aperiam laboriosam rerum, tempora quibusdam ex repellendus veniam quo.
+            <!-- 상세 게시글 -->
+            <div class="Article" id="get_article">
+            </div>
+
+            <!-- 상세게시글에 대한 댓글 -->
+            <div class="Comment">
+                <div class="Total">
+                    <div class="icon">
+                        <i class="fa-regular fa-comments"></i>
                     </div>
+                    <div class="Count" id="comment_counter"></div>
                 </div>
-
-                <!-- 상세게시글에 대한 댓글 -->
-                <div class="Comment">
-                    <div class="Total">
-                        <div class="icon">
-                            <i class="fa-regular fa-comments"></i>
-                        </div>
-                        <div class="Count">댓글 2</div>
+                <span id="comment_list"></span>
+                <div class="Post">
+                    <div class="Editer">
+                        <input name="" id="" cols="30" rows="10" placeholder="댓글을 남겨보세요"></input>
                     </div>
-                    <div class="List">
-                        <div class="Content">
-                            <div class="User">
-                                <p class="Username">익명1</p>
-                                <p class="Update">21분전</p>
-                            </div>
-                            <p class="content">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repudiandae illo eaque perferendis perspiciatis eveniet iusto? Eligendi, doloremque inventore accusantium recusandae expedita numquam quia. Rem laudantium quod corporis, blanditiis vel vero?</p>
-                        </div>
-                    </div>
-                    <div class="List">
-                        <div class="Content">
-                            <div class="User">
-                                <p class="Username">익명2</p>
-                                <p class="Update">39분전</p>
-                            </div>
-                            <p class="content">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repudiandae illo eaque perferendis perspiciatis eveniet iusto? Eligendi, doloremque inventore accusantium recusandae expedita numquam quia. Rem laudantium quod corporis, blanditiis vel vero?</p>
-                        </div>
-                    </div>
-                    <div class="Post">
-                        <div class="Editer">
-                            <input name="" id="" cols="30" rows="10" placeholder="댓글을 남겨보세요"></input>
-                        </div>
-                        <button>댓글등록</button>
-                    </div>
+                    <button>댓글등록</button>
                 </div>
+            </div>
 
-                <!-- 공유, 좋아요 버튼 -->
-                <div class="Sharelike">
-                    <div class="Share">
-                        <a href="#"><i class="fa-solid fa-share-nodes"></i>
+            <!-- 공유, 좋아요 버튼 -->
+            <div class="Sharelike">
+                <div class="Share">
+                    <a href="#"><i class="fa-solid fa-share-nodes"></i>
                         공유</a>
-                    </div>
-                    <div class="Like">
-                        <a href="#"><i class="fa-regular fa-thumbs-up"></i>
-                        좋아요</a>
-                    </div>
                 </div>
-
-                <!-- 목록으로 이동 -->
-                <div type="button" class="ReCategory">
-                    <a href="/templates/lower_category/list_qna.html">목록으로</a>
+                <div class="Like">
+                    <a href="#"><i class="fa-regular fa-thumbs-up"></i>
+                        좋아요</a>
                 </div>
             </div>
+
+            <!-- 목록으로 이동 -->
+            <div type="button" class="ReCategory">
+                <a href="/templates/lower_category/list_qna.html">목록으로</a>
+            </div>
         </div>
+    </div>
 
-        
 
-        <!-- Footer -->
-        <footer class="Footer">
-            <section class="Copyright">
-                <!-- Name Footer -->
-                <div class="SpartaName">
-                    <p>스파르타 코딩클럽</p>
-                    <ul class="SpartaLink">
-                        <a href="https://spartacodingclub.kr/sparta_online" target="_blank"><li>스파르타 온라인</li></a>
-                        <a href="https://hanghae99.spartacodingclub.kr/" target="_blank"><li>항해 99</li></a>
-                        <a href="https://chang.spartacodingclub.kr/" target="_blank"><li>{창}</li></a>
-                        <a href="https://ddingdong.spartacodingclub.kr/" target="_blank"><li>띵똥코딩</li></a>
-                        <a href="https://spartacodingclub.kr/nb" target="_blank"><li>국비지원교육</li></a>
-                        <a href="https://spartacodingclub.kr/b2b" target="_blank"><li>기업교육</li></a>
-                    </ul>
-                </div>
 
-                <!-- ETC Footer -->
-                <div class="Etc">
-                    <p>ETC</p>
-                    <ul>
-                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdDGm0fLFVls1-QI2KVWYIT1EksN0Lmd5dtkwJqSCetL_-b_g/viewform" target="_blank"><li>튜터</li></a>
-                        <a href="https://teamsparta-careers.oopy.io/" target="_blank"><li>채용</li></a>
-                        <a href="https://swjungle.net/" target="_blank"><li>SW사관학교 정글</li></a>
-                    </ul>
-                </div>
-
-                <!-- Footer Icons -->
-                <div class="FooterIcons">
-                    <a href="https://m.blog.naver.com/PostList.nhn?blogId=spartacoding&categoryNo=6&logCode=0&categoryName=%EC%88%98%EA%B0%95%EC%83%9D%C2%A0%EC%86%94%EC%A7%81%ED%9B%84%EA%B8%B0" target="_blank">blog</a>
-                    <a href="https://spartacodingclub.tistory.com/" target="_blank">Tstory</a>
-                    <a href="https://www.instagram.com/spartacodingclub/" target="_blank">Insta</a>
-                    <a href="https://www.youtube.com/channel/UC2Fh3XoQYNYTba-cigq5cAA" target="_blank">YouTube</a>
-                </div>
-            </section>
-
-            <!-- 개인정보처리방침 -->
-            <section class="PerInfo">
-                <ul>
-                    <a href="https://www.notion.so/3-f2e359d2a710447db3036ff2a3156869" target="_blank"><li>개인정보처리방침</li></a>
-                    <a href="https://www.notion.so/900680faf2ee4ed88f5f3679f4c57b95" target="_blank"><li>환불규정</li></a>
-                    <a href="https://sparta-faq.oopy.io/" target="_blank"><li>자주묻는질문</li></a>
+    <!-- Footer -->
+    <footer class="Footer">
+        <section class="Copyright">
+            <!-- Name Footer -->
+            <div class="SpartaName">
+                <p>스파르타 코딩클럽</p>
+                <ul class="SpartaLink">
+                    <a href="https://spartacodingclub.kr/sparta_online" target="_blank">
+                        <li>스파르타 온라인</li>
+                    </a>
+                    <a href="https://hanghae99.spartacodingclub.kr/" target="_blank">
+                        <li>항해 99</li>
+                    </a>
+                    <a href="https://chang.spartacodingclub.kr/" target="_blank">
+                        <li>{창}</li>
+                    </a>
+                    <a href="https://ddingdong.spartacodingclub.kr/" target="_blank">
+                        <li>띵똥코딩</li>
+                    </a>
+                    <a href="https://spartacodingclub.kr/nb" target="_blank">
+                        <li>국비지원교육</li>
+                    </a>
+                    <a href="https://spartacodingclub.kr/b2b" target="_blank">
+                        <li>기업교육</li>
+                    </a>
                 </ul>
-            </section>
+            </div>
 
-            <!-- 팀스파르타 사업자 정보 -->
-            <section class="Company">
-                <div class="Info">
-                    <h4>팀스파르타(주) 사업자 정보
-                    </h4>
-                    <p>대표자: 이범규 사업자 등록번호: 783-86-01715 통신판매업 신고번호: 2020-서울강남-02300 평생교육시설<br>신고번호: 제
+            <!-- ETC Footer -->
+            <div class="Etc">
+                <p>ETC</p>
+                <ul>
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdDGm0fLFVls1-QI2KVWYIT1EksN0Lmd5dtkwJqSCetL_-b_g/viewform"
+                        target="_blank">
+                        <li>튜터</li>
+                    </a>
+                    <a href="https://teamsparta-careers.oopy.io/" target="_blank">
+                        <li>채용</li>
+                    </a>
+                    <a href="https://swjungle.net/" target="_blank">
+                        <li>SW사관학교 정글</li>
+                    </a>
+                </ul>
+            </div>
+
+            <!-- Footer Icons -->
+            <div class="FooterIcons">
+                <a href="https://m.blog.naver.com/PostList.nhn?blogId=spartacoding&categoryNo=6&logCode=0&categoryName=%EC%88%98%EA%B0%95%EC%83%9D%C2%A0%EC%86%94%EC%A7%81%ED%9B%84%EA%B8%B0"
+                    target="_blank">blog</a>
+                <a href="https://spartacodingclub.tistory.com/" target="_blank">Tstory</a>
+                <a href="https://www.instagram.com/spartacodingclub/" target="_blank">Insta</a>
+                <a href="https://www.youtube.com/channel/UC2Fh3XoQYNYTba-cigq5cAA" target="_blank">YouTube</a>
+            </div>
+        </section>
+
+        <!-- 개인정보처리방침 -->
+        <section class="PerInfo">
+            <ul>
+                <a href="https://www.notion.so/3-f2e359d2a710447db3036ff2a3156869" target="_blank">
+                    <li>개인정보처리방침</li>
+                </a>
+                <a href="https://www.notion.so/900680faf2ee4ed88f5f3679f4c57b95" target="_blank">
+                    <li>환불규정</li>
+                </a>
+                <a href="https://sparta-faq.oopy.io/" target="_blank">
+                    <li>자주묻는질문</li>
+                </a>
+            </ul>
+        </section>
+
+        <!-- 팀스파르타 사업자 정보 -->
+        <section class="Company">
+            <div class="Info">
+                <h4>팀스파르타(주) 사업자 정보
+                </h4>
+                <p>대표자: 이범규 사업자 등록번호: 783-86-01715 통신판매업 신고번호: 2020-서울강남-02300 평생교육시설<br>신고번호: 제
                     661호 주소: 서울특별시 강남구 테헤란로44길 8 12층 이메일: contact@teamsparta.co 전화 1522-8016</p>
-                </div>
-                <div class="TEAMSPARTA">
-                    <p>Copyright ©2022 TEAMSPARTA. All rights reserved.</p>
-                </div>
-            </section>
-        </footer>
-    </body>
+            </div>
+            <div class="TEAMSPARTA">
+                <p>Copyright ©2022 TEAMSPARTA. All rights reserved.</p>
+            </div>
+        </section>
+    </footer>
+</body>
+
 </html>

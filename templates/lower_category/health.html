@@ -25,6 +25,14 @@
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/993c2cba92.js" crossorigin="anonymous"></script>
 
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.js"></script>
+
+    <!-- jsAPI -->
+    <script src="api/detail.js"></script>
+
     <title>Spartagora | 헬스, 다어어트</title>
 
 </head>
@@ -88,38 +96,8 @@
         <div class="Main">
 
             <!-- 상세 게시글 -->
-            <div class="Article">
-                <div class="ProfileInfo">
-                    <div class="Profile-Rtan">
-                        <img src="/image/0.png" alt="">
-                        <div class="User">
-                            <div>
-                                <a href="#" class="Anonymous">assignment 소속</a>
-                                <span class="Anonymous">- anonymous 익명</span>
-                            </div>
-                            <p class="UploadTime">2022년 7월 20일 오후 4:23</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="Article-Title">
-                    <p class="Title">게시글 제목 예시</p>
-                    <p class="Category">게시판 > 고민을 말해봐</p>
-                </div>
-                <div class="Count">
-                    <a href="" class="like">
-                        <i class="fa-regular fa-thumbs-up"></i>
-                    </a>10
-                    <a href="" class="cmt">
-                        <i class="fa-regular fa-comments"></i>
-                    </a>20
-                    <a href="" class="views">
-                        <i class="fa-solid fa-arrow-pointer"></i>
-                    </a>30
-                </div>
-                <div class="Content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, placeat vel. Culpa
-                    perspiciatis dolor inventore rerum placeat nostrum ab. Sunt aut aperiam laboriosam rerum, tempora
-                    quibusdam ex repellendus veniam quo.
-                </div>
+            <div class="Article" id="get_article">
+
             </div>
 
             <!-- 상세게시글에 대한 댓글 -->
@@ -128,30 +106,9 @@
                     <div class="icon">
                         <i class="fa-regular fa-comments"></i>
                     </div>
-                    <div class="Count">댓글 2</div>
+                    <div class="Count" id="comment_counter"></div>
                 </div>
-                <div class="List">
-                    <div class="Content">
-                        <div class="User">
-                            <p class="Username">익명1</p>
-                            <p class="Update">21분전</p>
-                        </div>
-                        <p class="content">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repudiandae illo
-                            eaque perferendis perspiciatis eveniet iusto? Eligendi, doloremque inventore accusantium
-                            recusandae expedita numquam quia. Rem laudantium quod corporis, blanditiis vel vero?</p>
-                    </div>
-                </div>
-                <div class="List">
-                    <div class="Content">
-                        <div class="User">
-                            <p class="Username">익명2</p>
-                            <p class="Update">39분전</p>
-                        </div>
-                        <p class="content">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repudiandae illo
-                            eaque perferendis perspiciatis eveniet iusto? Eligendi, doloremque inventore accusantium
-                            recusandae expedita numquam quia. Rem laudantium quod corporis, blanditiis vel vero?</p>
-                    </div>
-                </div>
+                <span id="comment_list"></span>
                 <div class="Post">
                     <div class="Editer">
                         <input name="" id="" cols="30" rows="10" placeholder="댓글을 남겨보세요"></input>

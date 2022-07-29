@@ -34,7 +34,9 @@ async function userarticleget() {
             let count = article[i]['count']
             let like = article[i]['like'].length
             let comment_count = article[i]['comment_count']
-            let temp_html = `
+            let lower_category_name = article[i]['lower_category_name']
+            if (id == 1) {
+                let temp_html = `
             <div class="List">
                     <div class="ProfileInfo">
                         <div class="Profile-Rtan">
@@ -49,26 +51,163 @@ async function userarticleget() {
                         </div>
                     </div>
                     <div class="Article-Title">
-                        <a href="/templates/lower_category/greenlight.html" class="Title">썸, 연애 게시글 제목 예시</a>
-                        <p class="Category">게시판 > 썸, 연애</p>
+                        <a href="/templates/lower_category/qna.html?${id}" class="Title">${title}</a>
+                        <p class="Category">게시판 > ${lower_category_name}</p>
                     </div>
                     <div class="Count">
-                        <a href="" class="like">
-                            <i class="fa-regular fa-thumbs-up"></i>10
-                        </a>
-                        <a href="" class="cmt">
-                            <i class="fa-regular fa-comments"></i>20
-                        </a>
-                        <a href="" class="views">
-                            <i class="fa-solid fa-arrow-pointer"></i>30
-                        </a>
+                            <i class="fa-regular fa-thumbs-up"></i>${like}
+                            <i class="fa-regular fa-comments"></i>${comment_count}
+                            <i class="fa-solid fa-arrow-pointer"></i>${count}
                     </div>
                 </div>
             `
-            $('#article_list').append(temp_html)
+                $('#article_list').append(temp_html)
+            }
+            else if (id == 2) {
+                let temp_html = `
+            <div class="List">
+                    <div class="ProfileInfo">
+                        <div class="Profile-Rtan">
+                            <img src="/image/0.png" alt="">
+                            <div class="User">
+                                <div>
+                                    <a href="#" class="Anonymous">${assignment}</a>
+                                    <span class="Anonymous">- anonymous 익명</span>
+                                </div>
+                                <p class="UploadTime">${create_at}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="Article-Title">
+                        <a href="/templates/lower_category/team_recruit.html?${id}" class="Title">${title}</a>
+                        <p class="Category">게시판 > ${lower_category_name}</p>
+                    </div>
+                    <div class="Count">
+                            <i class="fa-regular fa-thumbs-up"></i>${like}
+                            <i class="fa-regular fa-comments"></i>${comment_count}
+                            <i class="fa-solid fa-arrow-pointer"></i>${count}
+                    </div>
+                </div>
+            `
+                $('#article_list').append(temp_html)
+            }
+            else if (id == 3) {
+                let temp_html = `
+            <div class="List">
+                    <div class="ProfileInfo">
+                        <div class="Profile-Rtan">
+                            <img src="/image/0.png" alt="">
+                            <div class="User">
+                                <div>
+                                    <a href="#" class="Anonymous">${assignment}</a>
+                                    <span class="Anonymous">- anonymous 익명</span>
+                                </div>
+                                <p class="UploadTime">${create_at}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="Article-Title">
+                        <a href="/templates/lower_category/greenlight.html?${id}" class="Title">${title}</a>
+                        <p class="Category">게시판 > ${lower_category_name}</p>
+                    </div>
+                    <div class="Count">
+                            <i class="fa-regular fa-thumbs-up"></i>${like}
+                            <i class="fa-regular fa-comments"></i>${comment_count}
+                            <i class="fa-solid fa-arrow-pointer"></i>${count}
+                    </div>
+                </div>
+            `
+                $('#article_list').append(temp_html)
+            }
+            else if (id == 4) {
+                let temp_html = `
+            <div class="List">
+                    <div class="ProfileInfo">
+                        <div class="Profile-Rtan">
+                            <img src="/image/0.png" alt="">
+                            <div class="User">
+                                <div>
+                                    <a href="#" class="Anonymous">${assignment}</a>
+                                    <span class="Anonymous">- anonymous 익명</span>
+                                </div>
+                                <p class="UploadTime">${create_at}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="Article-Title">
+                        <a href="/templates/lower_category/pet.html?${id}" class="Title">${title}</a>
+                        <p class="Category">게시판 > ${lower_category_name}</p>
+                    </div>
+                    <div class="Count">
+                            <i class="fa-regular fa-thumbs-up"></i>${like}
+                            <i class="fa-regular fa-comments"></i>${comment_count}
+                            <i class="fa-solid fa-arrow-pointer"></i>${count}
+                    </div>
+                </div>
+            `
+                $('#article_list').append(temp_html)
+            }
+            else if (id == 5) {
+                let temp_html = `
+            <div class="List">
+                    <div class="ProfileInfo">
+                        <div class="Profile-Rtan">
+                            <img src="/image/0.png" alt="">
+                            <div class="User">
+                                <div>
+                                    <a href="#" class="Anonymous">${assignment}</a>
+                                    <span class="Anonymous">- anonymous 익명</span>
+                                </div>
+                                <p class="UploadTime">${create_at}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="Article-Title">
+                        <a href="/templates/lower_category/health.html?${id}" class="Title">${title}</a>
+                        <p class="Category">게시판 > ${lower_category_name}</p>
+                    </div>
+                    <div class="Count">
+                            <i class="fa-regular fa-thumbs-up"></i>${like}
+                            <i class="fa-regular fa-comments"></i>${comment_count}
+                            <i class="fa-solid fa-arrow-pointer"></i>${count}
+                    </div>
+                </div>
+            `
+                $('#article_list').append(temp_html)
+            }
+            else if (id == 6) {
+                let temp_html = `
+            <div class="List">
+                    <div class="ProfileInfo">
+                        <div class="Profile-Rtan">
+                            <img src="/image/0.png" alt="">
+                            <div class="User">
+                                <div>
+                                    <a href="#" class="Anonymous">${assignment}</a>
+                                    <span class="Anonymous">- anonymous 익명</span>
+                                </div>
+                                <p class="UploadTime">${create_at}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="Article-Title">
+                        <a href="/templates/lower_category/travel.html?${id}" class="Title">${title}</a>
+                        <p class="Category">게시판 > ${lower_category_name}</p>
+                    </div>
+                    <div class="Count">
+                            <i class="fa-regular fa-thumbs-up"></i>${like}
+                            <i class="fa-regular fa-comments"></i>${comment_count}
+                            <i class="fa-solid fa-arrow-pointer"></i>${count}
+                    </div>
+                </div>
+            `
+                $('#article_list').append(temp_html)
+            }
         }
     })
 }
+
+
 
 $('document').ready(userarticleget());
 
