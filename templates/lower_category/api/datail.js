@@ -1,6 +1,14 @@
 const backend_base_url = "http://127.0.0.1:8000"
 const frontend_base_url = "http://127.0.0.1:5500"
 
+function ifLoggedOut() {
+    if (localStorage.getItem("access")) {
+        true;
+    }
+    else {
+        window.location.replace(`${frontend_base_url}/templates/user/login.html`);
+    }
+}
 
 async function commentGet() {
     const article_id = location.href.split("?")[1]
@@ -16,6 +24,8 @@ async function commentGet() {
         return response.json();
     }
     commentData().then((data) => {
-        console.log(data)
+        console.log(data.article_data)
     })
 }
+
+$('document').ready(ifLoggedOut());
