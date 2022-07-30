@@ -110,5 +110,49 @@ async function commentGet() {
     )
 }
 
+
+async function commentPost() {
+    const formData = {
+        comment: document.getElementById("comment_write").value
+    }
+
+    const commentData = async () => {
+        const response = await fetch(`${backend_base_url}/user/login/`, {
+            headers: {
+                Accept: "application/json",
+                'Content-type': 'application/json'
+            },
+            method: 'POST',
+            body: JSON.stringify(formData)
+        }
+        )
+        response_json = await response.json();
+    }
+    commentData().then((data) => {
+        if (response.status == 200) {
+            let comment = data
+            let content = comment[i]['content']
+            let created_at = comment[i]['created_at']
+            temp_html = `
+            <div class="List">
+            <div class="Content">
+                        <div class="User">
+                            <p class="Username">익명1</p>
+                            <p class="Update">${created_at}</p>
+                        </div>
+                        <p class="content">${content}</p>
+                    </div>
+                    </div>
+            `
+            $('#comment_list').append(temp_html)
+        } else {
+            alert("아이디 및 비밀번호가 틀렸습니다")
+        }
+
+    }
+    )
+}
+
+
 $('document').ready(commentGet());
 $('document').ready(articleGet());
