@@ -1,0 +1,11 @@
+.List .Post {
+    padding: calc(var(--padding)/2);
+}
+
+.List .Post .Editer input {
+    height: 20px;
+}
+
+.List .Post button {
+    font-size: var(--font-medium);
+}
