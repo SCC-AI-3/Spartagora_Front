@@ -1,0 +1,13 @@
+.Caution .SearchBox {
+    display: flex;
+    flex-direction: row;
+    padding-left: var(--padding);
+    justify-content: right;
+}
+
+.Caution .SearchBox select {
+    width: 300px;
+    padding-left: var(--padding);
+    height: 40px;
+    border-radius: 15px;
+}

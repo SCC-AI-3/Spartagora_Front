@@ -14,8 +14,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      AWS_ACCESS_KEY_ID: ${{ secrets.AKIATWM5VVS33J4YMQH7 }}
-      AWS_SECRET_ACCESS_KEY: ${{ secrets.Qw4KeOlI0gghe7REgJt2nJYlwgzinM9TK4KjPqAS }}
+      AWS_ACCESS_KEY_ID: ${{ secrets. }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets. }}
       AWS_REGION: "ap-northeast-2"
 
     steps:
@@ -32,6 +32,6 @@ jobs:
       - name: Invalidate cache CloudFront
         uses: chetan/invalidate-cloudfront-action@master
         env:
-          DISTRIBUTION: ${{ secrets.E1GY9TAA0UX3G9 }}
+          DISTRIBUTION: ${{ secrets. }}
           PATHS: "/index.html"
         continue-on-error: true

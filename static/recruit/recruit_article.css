@@ -1,0 +1,14 @@
+.Article .RecruitInfo {
+    display: flex;
+    flex-direction: column;
+    padding: calc(var(--padding) * 2);
+}
+
+.Article .RecruitInfo .RecruitInfoTable {
+    display: flex;
+    flex-direction: column;
+}
+
+.Article .RecruitInfo .RecruitInfoTable .RIT {
+    line-height: 1.8;
+}

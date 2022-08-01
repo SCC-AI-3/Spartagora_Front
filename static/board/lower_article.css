@@ -116,6 +116,10 @@
 }
 
 .Article .Count {
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    margin-right: var(--padding);
     padding: var(--padding);
     font-size: var(--font-small);
 }
@@ -133,7 +137,7 @@
 .Comment {
     display: flex;
     flex-direction: column;
-    padding: calc(var(--padding)*2);
+    margin: calc(var(--padding)*2);
 }
 
 .Comment .Total {
@@ -247,4 +251,16 @@
     border-radius: 15px;
     color: var(--white-color);
     font-weight: bold;
+}
+
+@media screen and (max-width:1130px) {
+    .Main .Article {
+        margin: auto;
+        width: 85%;
+    }
+
+    .Main .Comment {
+        margin: auto;
+        width:85%;
+    }
 }
