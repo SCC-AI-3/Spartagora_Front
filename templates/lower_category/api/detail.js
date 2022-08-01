@@ -67,7 +67,6 @@ async function articleGet() {
 
 async function commentGet() {
     const article_id = location.href.split("?")[1]
-    console.log(article_id)
     const commentData = async () => {
         const response = await fetch(`${backend_base_url}/article/comment/${article_id}/`, {
             method: 'GET',
@@ -79,16 +78,16 @@ async function commentGet() {
         return response.json();
     }
     commentData().then((data) => {
-        console.log(data)
         comment = data
         for (let i = 0; i < comment.length; i++) {
+            let name = i + 1
             let content = comment[i]['content']
             let created_at = comment[i]['created_at']
             temp_html = `
             <div class="List">
             <div class="Content">
                         <div class="User">
-                            <p class="Username">익명1</p>
+                            <p class="Username">익명 ${name}</p>
                             <p class="Update">${created_at}</p>
                         </div>
                         <p class="content">${content}</p>
