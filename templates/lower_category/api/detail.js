@@ -153,9 +153,10 @@ async function commentPost() {
         response_json = await response.json();
     }
     commentData().then((data) => {
-        let content = document.getElementById("comment_write").value
-        let created_at = "good"
-        temp_html = `
+        if (response.status == 200) {
+            let content = document.getElementById("comment_write").value
+            let created_at = "good"
+            temp_html = `
             <div class="List">
             <div class="Content">
                         <div class="User">
@@ -166,11 +167,13 @@ async function commentPost() {
                     </div>
                     </div>
             `
-        $('#comment_list').append(temp_html)
-
+            $('#comment_list').append(temp_html)
+            window.location.reload()
+        }
+        alert(response.status)
     }
-
     )
+
 }
 
 
