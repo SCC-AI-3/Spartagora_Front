@@ -101,8 +101,6 @@ async function articleGet() {
                                         <i class="fa-solid fa-arrow-pointer"></i>
                                     ${view_count}
                                 </div>
-                                <div id="authorEditBtn"></div>
-                                
         `
             $('#get_article').append(temp_html)
         }
@@ -123,7 +121,7 @@ async function articleGet() {
         if (data.boolean == true) {
             let temp_html = `
             <a href="javascript:void(0);" onclick="likePost();"><i class="fa-solid fa-thumbs-up"></i>
-                        좋아요 취소</a>
+            좋아요 취소</a>
             `
             $('#like_unlike').append(temp_html)
         }
@@ -237,4 +235,3 @@ async function likePost() {
 $('document').ready(countPost());
 $('document').ready(commentGet());
 $('document').ready(articleGet());
-

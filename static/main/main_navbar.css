@@ -28,7 +28,6 @@
 
 .Navbar_logo {
     font-size: var(--font-title);
-    font-weight: bold;
     color: var(--text-color);
     padding-right: calc(var(--padding)*7);
 }
