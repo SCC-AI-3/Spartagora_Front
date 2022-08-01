@@ -2,6 +2,10 @@ const backend_base_url = "http://127.0.0.1:8000"
 const frontend_base_url = "http://127.0.0.1:5500"
 
 
+async function logout() {
+    window.localStorage.clear(); //로컬스토리지에 저장된 토큰 삭제해줌.
+}
+
 async function articleGet() {
     const article_id = location.href.split("?")[1]
     const articleData = async () => {
@@ -20,6 +24,8 @@ async function articleGet() {
             window.location.replace(`${frontend_base_url}/templates/user/login.html`)
         }
         article = data
+        console.log(article)
+        let nickname = article['nickname']
         let id = article['id']
         let created_at = article['created_at']
         let assignment = article['assignment']
@@ -38,7 +44,7 @@ async function articleGet() {
                                         <div class="User">
                                             <div>
                                                 <a href="#" class="Anonymous">${assignment}</a>
-                                                <span class="Anonymous">- anonymous 익명</span>
+                                                <span class="Anonymous">- ${nickname}</span>
                                             </div>
                                             <p class="UploadTime">${created_at}</p>
                                         </div>
@@ -48,6 +54,8 @@ async function articleGet() {
                                     <p class="Title">${title}</p>
                                     <p class="Category">게시판 > ${lower_category_name}</p>
                                 </div>
+                                <div class="Content">${content}
+                                </div>
                                 <div class="Count">
                                         <i class="fa-regular fa-thumbs-up"></i>
                                     ${like}
@@ -56,12 +64,27 @@ async function articleGet() {
                                         <i class="fa-solid fa-arrow-pointer"></i>
                                     ${view_count}
                                 </div>
-                                <div class="Content">${content}
-                                </div>
+                                
         `
         $('#get_article').append(temp_html)
     }
     )
+    articleData().then((data) => {
+        if (data.boolean == true) {
+            let temp_html = `
+            <a href="javascript:void(0);" onclick="likePost();"><i class="fa-regular fa-thumbs-up"></i>
+                        좋아요 취소</a>
+            `
+            $('#like_unlike').append(temp_html)
+        }
+        else {
+            let temp_html = `
+            <a href="javascript:void(0);" onclick="likePost();"><i class="fa-regular fa-thumbs-up"></i>
+                        좋아요</a>
+            `
+            $('#like_unlike').append(temp_html)
+        }
+    })
 }
 
 
@@ -158,6 +181,18 @@ async function countPost() {
             Accept: "application/json",
             'Content-type': 'application/json',
             'Authorization': 'Bearer ' + localStorage.getItem("access"),
+        },
+        method: 'GET',
+    })
+}
+
+async function likePost() {
+    const article_id = location.href.split("?")[1]
+    const response = await fetch(`${backend_base_url}/article/like/${article_id}`, {
+        headers: {
+            Accept: "application/json",
+            'Content-type': 'application/json',
+            'Authorization': 'Bearer ' + localStorage.getItem("access")
         },
         method: 'GET',
     })
