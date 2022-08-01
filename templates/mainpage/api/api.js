@@ -17,7 +17,6 @@ async function topicbestGet() {
         return response.json();
     }
     topicbestData().then((data) => {
-        console.log(data['code'])
         if (data['code'] == 'token_not_valid') {
             logout()
             window.location.replace(`${frontend_base_url}/templates/user/login.html`)
@@ -234,61 +233,9 @@ async function petpageGet() {
     })
 }
 
-async function healthpageGet() {
+async function travelpageGet() {
     const mainpageData = async () => {
         const response = await fetch(`${backend_base_url}/article/5/`, {
-            method: 'GET',
-            headers: {
-                'Content-Type': 'application/json',
-                'Authorization': 'Bearer ' + localStorage.getItem('access')
-            },
-        })
-        return response.json();
-    }
-    mainpageData().then((data) => {
-        let max_length = 0
-        if (data.length < 5) {
-            max_length = data.length
-        }
-        else {
-            max_length = 5
-        }
-        for (let i = 0; i < max_length; i++) {
-            let id = data[i]['id']
-            let title = data[i]['title']
-            let comment_count = data[i]['comment_count']
-            let like = data[i]['like'].length
-            let view_count = data[i]['count']
-            let assignment = data[i]['assignment']
-            let temp_html = `
-                <li class="List">
-                            <div class="Article">
-                                <span>
-                                    <a href="" class="ArticleCategory">${assignment}</a>
-                                </span>
-                                <a href="${frontend_base_url}/templates/lower_category/health.html?${id}" class="tit">${title}</a>
-                                <div class="ArticleInfo">
-                                    <a href="" class="like">
-                                        <i class="fa-regular fa-thumbs-up"></i>${like}
-                                    </a>
-                                    <a href="" class="cmt">
-                                        <i class="fa-regular fa-comments"></i>${comment_count}
-                                    </a>
-                                    <a href="" class="views">
-                                        <i class="fa-solid fa-arrow-pointer"></i>${view_count}
-                                    </a>
-                                </div>
-                            </div>
-                        </li>
-        `
-            $('#list5').append(temp_html)
-        }
-    })
-}
-
-async function trippageGet() {
-    const mainpageData = async () => {
-        const response = await fetch(`${backend_base_url}/article/6/`, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
@@ -333,10 +280,11 @@ async function trippageGet() {
                             </div>
                         </li>
         `
-            $('#list6').append(temp_html)
+            $('#list5').append(temp_html)
         }
     })
 }
+
 
 
 
@@ -348,5 +296,4 @@ $('document').ready(gominpageGet());
 $('document').ready(studypageGet());
 $('document').ready(somepageGet());
 $('document').ready(petpageGet());
-$('document').ready(healthpageGet());
-$('document').ready(trippageGet());
+$('document').ready(travelpageGet());
