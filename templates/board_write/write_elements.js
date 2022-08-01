@@ -54,8 +54,9 @@ async function loadArticleData() {
     })
         .then(response => response.json())
         .then(data => {
-            console.log(data.content)
+            console.log(data)
             document.getElementById("title").setAttribute('value', data.title)
+            document.getElementById("lowercategory").setAttribute('value', data.lowercategory)
             document.getElementById("summernote").innerHTML = data.content
             $("#summernote").summernote('code', data.content);
             $('#summernote').summernote({
@@ -82,7 +83,7 @@ async function putArticle() {
     formData.append("lower_category", category)
     formData.append("tags", tags)
 
-    const response = await fetch(`${backend_base_url}/aticle/${obj_id}`, {
+    const response = await fetch(`${backend_base_url}/article/put/${obj_id}/`, {
         method: 'PUT',
         headers: { Authorization: "Bearer " + localStorage.getItem("access"), },
         body: formData
