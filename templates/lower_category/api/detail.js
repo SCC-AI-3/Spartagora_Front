@@ -234,6 +234,20 @@ async function likePost() {
     window.location.reload();
 }
 
+async function deleteArticle() {
+    const article_id = location.href.split("?")[1]
+    const response = await fetch(`${backend_base_url}/article/${article_id}`, {
+        headers: {
+            Accept: "application/json",
+            'Content-type': 'application/json',
+            'Authorization': 'Bearer ' + localStorage.getItem("access"),
+        },
+        method: 'DELETE',
+    })
+    window.location.replace(`${frontend_base_url}/templates/mainpage/main.html`)
+}
+
+
 $('document').ready(countPost());
 $('document').ready(commentGet());
 $('document').ready(articleGet());
