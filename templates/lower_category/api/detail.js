@@ -112,15 +112,17 @@ async function commentGet() {
 
 
 async function commentPost() {
+    const category_id = location.href.split("?")[1]
     const formData = {
         comment: document.getElementById("comment_write").value
     }
 
     const commentData = async () => {
-        const response = await fetch(`${backend_base_url}/user/login/`, {
+        const response = await fetch(`${backend_base_url}/article/comment/${category_id}/`, {
             headers: {
                 Accept: "application/json",
-                'Content-type': 'application/json'
+                'Content-type': 'application/json',
+                'Authorization': 'Bearer ' + localStorage.getItem("access")
             },
             method: 'POST',
             body: JSON.stringify(formData)
@@ -129,11 +131,9 @@ async function commentPost() {
         response_json = await response.json();
     }
     commentData().then((data) => {
-        if (response.status == 200) {
-            let comment = data
-            let content = comment[i]['content']
-            let created_at = comment[i]['created_at']
-            temp_html = `
+        let content = document.getElementById("comment_write").value
+        let created_at = "good"
+        temp_html = `
             <div class="List">
             <div class="Content">
                         <div class="User">
@@ -144,15 +144,27 @@ async function commentPost() {
                     </div>
                     </div>
             `
-            $('#comment_list').append(temp_html)
-        } else {
-            alert("아이디 및 비밀번호가 틀렸습니다")
-        }
+        $('#comment_list').append(temp_html)
 
     }
+
     )
 }
 
 
+async function countPost() {
+    const article_id = location.href.split("?")[1]
+    const response = await fetch(`${backend_base_url}/article/count/${article_id}`, {
+        headers: {
+            Accept: "application/json",
+            'Content-type': 'application/json',
+            'Authorization': 'Bearer ' + localStorage.getItem("access"),
+        },
+        method: 'GET',
+    })
+}
+
+$('document').ready(countPost());
 $('document').ready(commentGet());
 $('document').ready(articleGet());
+
