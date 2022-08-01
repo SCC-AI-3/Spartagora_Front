@@ -33,3 +33,7 @@ async function postArticles() {
 
     return response.json()
 }
+
+function goBack() {
+    window.history.back();
+}
