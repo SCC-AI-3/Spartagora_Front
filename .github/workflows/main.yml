@@ -25,7 +25,7 @@ jobs:
       - name: Upload binary to S3 bucket
         uses: jakejarvis/s3-sync-action@master
         with:
-          args: --acl public-read --exclude '*' --include '/templates/main.html'
+          args: --acl public-read --exclude '*' --include 'main.html'
         env:
           AWS_S3_BUCKET: ${{ secrets.spartagora }}
 
