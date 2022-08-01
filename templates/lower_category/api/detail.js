@@ -110,5 +110,61 @@ async function commentGet() {
     )
 }
 
+
+async function commentPost() {
+    const category_id = location.href.split("?")[1]
+    const formData = {
+        comment: document.getElementById("comment_write").value
+    }
+
+    const commentData = async () => {
+        const response = await fetch(`${backend_base_url}/article/comment/${category_id}/`, {
+            headers: {
+                Accept: "application/json",
+                'Content-type': 'application/json',
+                'Authorization': 'Bearer ' + localStorage.getItem("access")
+            },
+            method: 'POST',
+            body: JSON.stringify(formData)
+        }
+        )
+        response_json = await response.json();
+    }
+    commentData().then((data) => {
+        let content = document.getElementById("comment_write").value
+        let created_at = "good"
+        temp_html = `
+            <div class="List">
+            <div class="Content">
+                        <div class="User">
+                            <p class="Username">익명1</p>
+                            <p class="Update">${created_at}</p>
+                        </div>
+                        <p class="content">${content}</p>
+                    </div>
+                    </div>
+            `
+        $('#comment_list').append(temp_html)
+
+    }
+
+    )
+}
+
+
+async function countPost() {
+    const article_id = location.href.split("?")[1]
+    const response = await fetch(`${backend_base_url}/article/count/${article_id}`, {
+        headers: {
+            Accept: "application/json",
+            'Content-type': 'application/json',
+            'Authorization': 'Bearer ' + localStorage.getItem("access"),
+        },
+        method: 'GET',
+    })
+}
+
+$('document').ready(countPost());
 $('document').ready(commentGet());
 $('document').ready(articleGet());
+
