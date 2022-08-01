@@ -69,7 +69,7 @@ async function articleGet() {
                                         <i class="fa-solid fa-arrow-pointer"></i>
                                     ${view_count}
                                 </div>
-                                
+                                <div id="authorEditBtn"></div>
         `
             $('#get_article').append(temp_html)
         }
@@ -117,9 +117,9 @@ async function articleGet() {
                     <button type="button" class="btn btn-dark btn-sm" onclick="deleteArticle()">삭제</button>`
             $("#authorEditBtn").append(edit_btn_temp)
         }
-    }
-    )
-    articleData().then((data) => {
+        else {
+            alert("하...")
+        }
         if (data.boolean == true) {
             let temp_html = `
             <a href="javascript:void(0);" onclick="likePost();"><i class="fa-solid fa-thumbs-up"></i>
@@ -134,7 +134,9 @@ async function articleGet() {
             `
             $('#like_unlike').append(temp_html)
         }
-    })
+    }
+    )
+
 }
 
 
@@ -234,7 +236,8 @@ async function likePost() {
     window.location.reload();
 }
 
-$('document').ready(countPost());
-$('document').ready(commentGet());
-$('document').ready(articleGet());
-
+$('document').ready(function () {
+    countPost()
+    commentGet()
+    articleGet()
+});
