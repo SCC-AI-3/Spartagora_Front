@@ -196,6 +196,7 @@ async function likePost() {
         },
         method: 'GET',
     })
+    window.location.reload();
 }
 
 $('document').ready(countPost());
