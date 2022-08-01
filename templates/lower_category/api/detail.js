@@ -1,5 +1,10 @@
 const backend_base_url = "http://127.0.0.1:8000"
 const frontend_base_url = "http://127.0.0.1:5500"
+// article edit button click
+function editButtonClick() {
+    let edit_link = window.location.search.split('?')[1]
+    window.location.replace(`${frontend_base_url}/templates/board_write/put.html?${edit_link}`);
+}
 
 
 async function logout() {
@@ -32,11 +37,9 @@ async function articleGet() {
         let comment_count = article['comment_count']
         let view_count = article['count']
         let lower_category_name = article['lower_category_name']
-        let image = article['image']
         let like = article['like'].length
         let boolean = article['boolean']
         let title = article['title']
-        let author = article['author']
         let content = article['content']
         if (boolean == true) {
             let temp_html = `
@@ -98,11 +101,22 @@ async function articleGet() {
                                         <i class="fa-solid fa-arrow-pointer"></i>
                                     ${view_count}
                                 </div>
+                                <div id="authorEditBtn"></div>
                                 
         `
             $('#get_article').append(temp_html)
         }
-
+        let user = article['user']
+        const login_user = JSON.parse(localStorage.getItem("payload")).user_id
+        console.log(login_user)
+        console.log(user)
+        if (login_user == user) {
+            let edit_btn_temp = `
+                    <span class="text-secondary fs-6 me-2">이 게시글을</span>
+                    <button type="button" class="btn btn-secondary btn-sm me-2" onclick="editButtonClick()">수정</button>
+                    <button type="button" class="btn btn-dark btn-sm" onclick="deleteArticle()">삭제</button>`
+            $("#authorEditBtn").append(edit_btn_temp)
+        }
     }
     )
     articleData().then((data) => {
