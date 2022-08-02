@@ -40,68 +40,77 @@ async function articleGet() {
         let boolean = article['boolean']
         let title = article['title']
         let content = article['content']
+        let title_temp_html = `
+                <p class="Category">취업후기 > ${assignment}</p>
+                <p class="Title">${title}</p>
+        `
+        $('#recruit_assignment').append(title_temp_html)
         if (boolean == true) {
             let temp_html = `
-                        <div class="ProfileInfo">
-                                    <div class="Profile-Rtan">
-                                        <img src="/image/0.png" alt="">
-                                        <div class="User">
-                                            <div>
-                                                <a href="#" class="Anonymous">${assignment}</a>
-                                                <span class="Anonymous">- ${nickname}</span>
-                                            </div>
-                                            <p class="UploadTime">${created_at}</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="Article-Title">
-                                    <p class="Title">${title}</p>
-                                    <p class="Category">게시판 > ${lower_category_name}</p>
-                                </div>
-                                <div class="Content">${content}
-                                </div>
-                                <div class="Count">
-                                        <i class="fa-solid fa-thumbs-up"></i>
-                                    ${like}
-                                        <i class="fa-regular fa-comments"></i>
-                                    ${comment_count}
-                                        <i class="fa-solid fa-arrow-pointer"></i>
-                                    ${view_count}
-                                </div>
-                                <div id=authorEditBtn></div>
+            <div class="ProfileInfo">
+            <div class="Profile-Rtan">
+                <img src="/image/0.png" alt="">
+                <div class="User">
+                    <div>
+                        <a href="#" class="Anonymous">${assignment}</a>
+                        <span class="Anonymous">- ${nickname}</span>
+                    </div>
+                    <p class="UploadTime">${created_at}</p>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="RecruitInfo">
+            <div class="RecruitInfoTable">
+                <ul class="RIT">
+                    ${content}
+                </ul>
+            </div>
+        </div>
+        <div class="Count">
+            <i class="fa-solid fa-thumbs-up"></i>
+            ${like}
+            <i class="fa-regular fa-comments"></i>
+            ${comment_count}
+            <i class="fa-solid fa-arrow-pointer"></i>
+            ${view_count}
+        </div>
+        <div id=authorEditBtn></div>
                                 
         `
             $('#get_article').append(temp_html)
         }
         else {
             let temp_html = `
-                        <div class="ProfileInfo">
-                                    <div class="Profile-Rtan">
-                                        <img src="/image/0.png" alt="">
-                                        <div class="User">
-                                            <div>
-                                                <a href="#" class="Anonymous">${assignment}</a>
-                                                <span class="Anonymous">- ${nickname}</span>
-                                            </div>
-                                            <p class="UploadTime">${created_at}</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="Article-Title">
-                                    <p class="Title">${title}</p>
-                                    <p class="Category">게시판 > ${lower_category_name}</p>
-                                </div>
-                                <div class="Content">${content}
-                                </div>
-                                <div class="Count">
-                                        <i class="fa-regular fa-thumbs-up"></i>
-                                    ${like}
-                                        <i class="fa-regular fa-comments"></i>
-                                    ${comment_count}
-                                        <i class="fa-solid fa-arrow-pointer"></i>
-                                    ${view_count}
-                                </div>
-                                <div id=authorEditBtn></div>
+            <div class="ProfileInfo">
+            <div class="Profile-Rtan">
+                <img src="/image/0.png" alt="">
+                <div class="User">
+                    <div>
+                        <a href="#" class="Anonymous">${assignment}</a>
+                        <span class="Anonymous">- ${nickname}</span>
+                    </div>
+                    <p class="UploadTime">${created_at}</p>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="RecruitInfo">
+            <div class="RecruitInfoTable">
+                <ul class="RIT">
+                    ${content}
+                </ul>
+            </div>
+        </div>
+        <div class="Count">
+            <i class="fa-solid fa-thumbs-up"></i>
+            ${like}
+            <i class="fa-regular fa-comments"></i>
+            ${comment_count}
+            <i class="fa-solid fa-arrow-pointer"></i>
+            ${view_count}
+        </div>
+        <div id=authorEditBtn></div>
         `
             $('#get_article').append(temp_html)
         }

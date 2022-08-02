@@ -1,7 +1,10 @@
 const backend_base_url = "http://127.0.0.1:8000"
 const frontend_base_url = "http://127.0.0.1:5500"
 
-
+async function logout() {
+    window.localStorage.clear(); //로컬스토리지에 저장된 토큰 삭제해줌.
+    window.location.replace(`${frontend_base_url}/templates/user/login.html`)
+}
 
 async function postArticles() {
     if (out_result == "일반글") {
@@ -22,10 +25,10 @@ async function postArticles() {
         formData.append("nickname", nickname)
 
         const response = await fetch(`${backend_base_url}/article/`, {
-                headers: {"Authorization": "Bearer " + localStorage.getItem("access"),},
-                method: 'POST',
-                body: formData
-            }
+            headers: { "Authorization": "Bearer " + localStorage.getItem("access"), },
+            method: 'POST',
+            body: formData
+        }
         )
         if (response.status == 200) {
             alert("업로드 완료!")
@@ -93,7 +96,7 @@ async function putArticle() {
 
         const response = await fetch(`${backend_base_url}/article/put/${obj_id}/`, {
             method: 'PUT',
-            headers: {Authorization: "Bearer " + localStorage.getItem("access"),},
+            headers: { Authorization: "Bearer " + localStorage.getItem("access"), },
             body: formData
         })
         if (response.status == 200) {

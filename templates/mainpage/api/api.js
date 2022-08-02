@@ -18,6 +18,7 @@ async function topicbestGet() {
         return response.json();
     }
     topicbestData().then((data) => {
+        console.log(data)
         if (data['code'] == 'token_not_valid') {
             logout()
         }
