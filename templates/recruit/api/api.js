@@ -7,7 +7,7 @@ async function logout() {
 }
 
 
-async function userarticleget() {
+async function recruitGet() {
     const category_id = location.href.split("?")[1]
     const categoryData = async () => {
         const response = await fetch(`${backend_base_url}/article/${category_id}/`, {
@@ -20,6 +20,7 @@ async function userarticleget() {
         return response.json();
     }
     categoryData().then((data) => {
+        console.log(data)
         article = data
         if (data['code'] == 'token_not_valid') {
             logout()
@@ -61,8 +62,8 @@ async function userarticleget() {
                         </div>
                     </div>
                     <div class="Article-Title">
-                        <a href="/templates/lower_category/qna.html?${id}" class="Title">${title}</a>
-                        <p class="Category">게시판 > ${lower_category_name}</p>
+                        <a href="/templates/recruit/recruit_article.html?${id}" class="Title">${title}</a>
+                        <p class="Category">취업후기 > ${assignment}</p>
                     </div>
                     <div class="Count">
                             <i class="fa-solid fa-thumbs-up"></i>${like}
@@ -89,8 +90,8 @@ async function userarticleget() {
                         </div>
                     </div>
                     <div class="Article-Title">
-                        <a href="/templates/lower_category/qna.html?${id}" class="Title">${title}</a>
-                        <p class="Category">게시판 > ${lower_category_name}</p>
+                        <a href="/templates/recruit/recruit_article.html?${id}" class="Title">${title}</a>
+                        <p class="Category">취업후기 > ${assignment}</p>
                     </div>
                     <div class="Count">
                             <i class="fa-regular fa-thumbs-up"></i>${like}
@@ -107,5 +108,4 @@ async function userarticleget() {
 
 
 
-$('document').ready(userarticleget());
-
+$('document').ready(recruitGet());

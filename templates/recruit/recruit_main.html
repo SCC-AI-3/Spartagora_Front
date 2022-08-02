@@ -33,7 +33,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.js"></script>
 
     <!-- jsAPI -->
-    <script src="api/detail.js"></script>
+    <script src="api/api.js"></script>
 
     <title>Spartagora | 취업후기</title>
 
@@ -60,7 +60,7 @@
                     <a href="#">채용정보</a>
                 </li>
                 <li>
-                    <a class="active" href="/templates/recruit/recruit_main.html">취업후기</a>
+                    <a href="/templates/recruit/recruit_main.html?12">취업후기</a>
                 </li>
                 <li>
                     <a href="javascript:void(0);" onclick="logout();">로그아웃</a>
@@ -107,41 +107,10 @@
 
             <!-- 게시물 리스트 -->
             <div class="Wrap">
-                <div id="ADateList article_list">
-
-                    <!-- 게시물 리스트 1번 -->
-                    <div class="List">
-                        <div class="ProfileInfo">
-                            <div class="Profile-Rtan">
-                                <img src="/image/0.png" alt="">
-                                <div class="User">
-                                    <div>
-                                        <a href="#" class="Anonymous">내일배움캠프</a>
-                                        <span class="Anonymous">- 익명</span>
-                                    </div>
-                                    <p class="UploadTime">2022년 7월 20일 오후 4:23</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="Article-Title">
-                            <a href="/templates/recruit/recruit_article.html" class="Title">교보 취업후기 남깁니다.</a>
-                            <p class="Category">취업후기 > 내일배움캠프</p>
-                        </div>
-                        <div class="Count">
-                            <a href="" class="like">
-                                <i class="fa-regular fa-thumbs-up"></i>0
-                            </a>
-                            <a href="" class="cmt">
-                                <i class="fa-regular fa-comments"></i>0
-                            </a>
-                            <a href="" class="views">
-                                <i class="fa-solid fa-arrow-pointer"></i>0
-                            </a>
-                        </div>
-                    </div>
+                <div id="article_list">
                 </div>
             </div>
-            
+
             <div type="button" class="ReCategory">
                 <a href="/templates/recruit/recruit_write.html">취업후기 작성하기</a>
             </div>

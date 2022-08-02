@@ -27,7 +27,7 @@
 
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/993c2cba92.js" crossorigin="anonymous"></script>
-    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css'/>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css' />
 
     <!-- include libraries(jQuery, bootstrap) -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet">
@@ -37,61 +37,61 @@
     <!-- include summernote css/js -->
     <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
-        
+
     <title>Spartagora | 글 작성하기</title>
 </head>
-    <script type="text/javascript">
-        let time_obj = undefined;
-        let flag = undefined;
-        let chars = undefined;
-        let out_result = undefined;
+<script type="text/javascript">
+    let time_obj = undefined;
+    let flag = undefined;
+    let chars = undefined;
+    let out_result = undefined;
 
 
-        window.onload = () => {
-            time_obj = document.getElementById("timer");
-            flag = false;       // 더블 클릭 체크
+    window.onload = () => {
+        time_obj = document.getElementById("timer");
+        flag = false;       // 더블 클릭 체크
+    }
+
+
+    function double_submit_check() {
+        if (flag) {
+            console.log("double");
+            return true;
+        }
+        else {
+            flag = true;
+
+            return false;
+        }
+    }
+
+    //키보드에서 손이 떨어졌을때 실행
+    function send_req() {
+        if (double_submit_check()) {
+            return;
         }
 
-
-        function double_submit_check() {
-            if (flag) {
-                console.log("double");
-                return true;
-            }
-            else {
-                flag = true;
-
-                return false;
-            }
-        }
-
-        //키보드에서 손이 떨어졌을때 실행
-        function send_req() {
-            if (double_submit_check()){
-                return ;
-            }
-
-            let text = document.getElementById("summernote").value;
-            // let category = document.getElementById("category").value;
-            // let length = document.getElementById("length").value;
-            //let types = 'dpclass';
+        let text = document.getElementById("summernote").value;
+        // let category = document.getElementById("category").value;
+        // let length = document.getElementById("length").value;
+        //let types = 'dpclass';
 
 
-            const formData = new FormData();
-            const url = "http://127.0.0.1:5000/predict/dpclass";
-            let start = 0;
+        const formData = new FormData();
+        const url = "http://127.0.0.1:5000/predict/dpclass";
+        let start = 0;
 
-            formData.append('text', text);
-            // formData.append('category', category);
+        formData.append('text', text);
+        // formData.append('category', category);
 
-            // timer
-            timer = setInterval(() => {
-                start += 1;
-                time_obj.innerText = `${start / 10} 's`;
-            }, 100);
+        // timer
+        timer = setInterval(() => {
+            start += 1;
+            time_obj.innerText = `${start / 10} 's`;
+        }, 100);
 
 
-            fetch (url, { method: 'POST', body: formData, })
+        fetch(url, { method: 'POST', body: formData, })
             .then(response => {
                 if (response.status === 200) {
                     return response.json();
@@ -117,12 +117,12 @@
             });
 
 
-        }
+    }
 
-        //0.5초 마다 실행
-        setInterval(send_req, 500);
+    //0.5초 마다 실행
+    setInterval(send_req, 500);
 
-    </script>
+</script>
 
 <body>
     <!-- Header -->
@@ -145,7 +145,7 @@
                     <a href="#">채용정보</a>
                 </li>
                 <li>
-                    <a href="/templates/recruit/recruit_main.html">취업후기</a>
+                    <a href="/templates/recruit/recruit_main.html?12">취업후기</a>
                 </li>
                 <li>
                     <a href="javascript:void(0);" onclick="logout();">로그아웃</a>
