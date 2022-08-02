@@ -29,7 +29,6 @@ async function articleGet() {
             window.location.replace(`${frontend_base_url}/templates/user/login.html`)
         }
         article = data
-        console.log(article)
         let nickname = article['nickname']
         let id = article['id']
         let created_at = article['created_at']
@@ -108,8 +107,6 @@ async function articleGet() {
         }
         let user = article['user']
         const login_user = JSON.parse(localStorage.getItem("payload")).user_id
-        console.log(login_user)
-        console.log(user)
         if (login_user == user) {
             let edit_btn_temp = `
                     <span class="text-secondary fs-6 me-2">이 게시글을</span>
@@ -152,7 +149,6 @@ async function commentGet() {
     }
     commentData().then((data) => {
         comment = data
-        console.log(comment)
         for (let i = 0; i < comment.length; i++) {
             let id = comment[i]['id']
             let user = comment[i]['user']

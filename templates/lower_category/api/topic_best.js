@@ -1,15 +1,15 @@
 const backend_base_url = "http://127.0.0.1:8000"
 const frontend_base_url = "http://127.0.0.1:5500"
 
+
 async function logout() {
     window.localStorage.clear(); //로컬스토리지에 저장된 토큰 삭제해줌.
 }
 
 
-async function userarticleget() {
-    const category_id = location.href.split("?")[1]
+async function topicbestGet() {
     const categoryData = async () => {
-        const response = await fetch(`${backend_base_url}/article/${category_id}/`, {
+        const response = await fetch(`${backend_base_url}/article/topicbest/`, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
@@ -20,6 +20,7 @@ async function userarticleget() {
     }
     categoryData().then((data) => {
         article = data
+        console.log(article)
         if (data['code'] == 'token_not_valid') {
             logout()
             window.location.replace(`${frontend_base_url}/templates/user/login.html`)
@@ -68,5 +69,4 @@ async function userarticleget() {
 
 
 
-$('document').ready(userarticleget());
-
+$('document').ready(topicbestGet());
