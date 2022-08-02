@@ -177,7 +177,7 @@ async function commentGet() {
             const login_user = JSON.parse(localStorage.getItem("payload")).user_id
             if (login_user == user) {
                 let button_temp_html = `
-                    <button type="button" class="btn btn-dark btn-sm" onclick="deleteArticle()">삭제</button>
+                    <button type="button" class="btn btn-dark btn-sm" onclick="deleteComment(${id})">삭제</button>
             `
                 $(`#comment_delete${id}`).append(button_temp_html)
             }//삭제 버튼 위치 옮겨야댐
@@ -245,6 +245,18 @@ async function likePost() {
 async function deleteArticle() {
     const article_id = location.href.split("?")[1]
     const response = await fetch(`${backend_base_url}/article/${article_id}`, {
+        headers: {
+            Accept: "application/json",
+            'Content-type': 'application/json',
+            'Authorization': 'Bearer ' + localStorage.getItem("access"),
+        },
+        method: 'DELETE',
+    })
+    window.location.replace(`${frontend_base_url}/templates/mainpage/main.html`)
+}
+
+async function deleteComment(obj) {
+    const response = await fetch(`${backend_base_url}/article/comment/${obj}/`, {
         headers: {
             Accept: "application/json",
             'Content-type': 'application/json',
