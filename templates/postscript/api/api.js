@@ -1,8 +1,10 @@
 const backend_base_url = "http://127.0.0.1:8000"
 const frontend_base_url = "http://127.0.0.1:5500"
 
+
 async function logout() {
     window.localStorage.clear(); //로컬스토리지에 저장된 토큰 삭제해줌.
+    window.location.replace(`${frontend_base_url}/templates/user/login.html`)
 }
 
 function change_category() {
@@ -32,7 +34,7 @@ async function postscriptGet() {
     categoryData().then((data) => {
         article = data
         if (data['code'] == 'token_not_valid') {
-            logout()
+            window.localStorage.clear(); //로컬스토리지에 저장된 토큰 삭제해줌.
             window.location.replace(`${frontend_base_url}/templates/user/login.html`)
         }
         let lower_category_name = data[0]['lower_category_name']
