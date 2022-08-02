@@ -29,6 +29,7 @@ async function articleGet() {
             window.location.replace(`${frontend_base_url}/templates/user/login.html`)
         }
         article = data
+        console.log(data)
         let nickname = article['nickname']
         let id = article['id']
         let created_at = article['created_at']
