@@ -21,12 +21,12 @@ jobs:
       - name: Checkout source code.
         uses: actions/checkout@master
 
-      - name: Upload binary to S3 bucket
-        uses: jakejarvis/s3-sync-action@master
-        with:
-          args: --acl public-read --exclude '*' --include 'index.html'
-        env:
-          AWS_S3_BUCKET: ${{ secrets.spartagora }}
+      # - name: Upload binary to S3 bucket
+      #   uses: jakejarvis/s3-sync-action@master
+      #   with:
+      #     args: --acl public-read --exclude '*' --include 'index.html'
+      #   env:
+      #     AWS_S3_BUCKET: ${{ secrets.spartagora }}
 
       - name: Invalidate cache CloudFront
         uses: chetan/invalidate-cloudfront-action@master
