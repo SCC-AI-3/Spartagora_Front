@@ -1,5 +1,3 @@
-# Git Action에 관한 파일
-
 # 위 사진 노란색 박스 action name이 될 것임.
 name: my-front
 
@@ -9,7 +7,8 @@ on:
     branches:
       - main
 
-# 아래 주황색 글씨 부분을 git action secrets key로 등록해야 함.
+
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -22,12 +21,12 @@ jobs:
       - name: Checkout source code.
         uses: actions/checkout@master
 
-      - name: Upload binary to S3 bucket
-        uses: jakejarvis/s3-sync-action@master
-        with:
-          args: --acl public-read --exclude '*' --include 'index.html'
-        env:
-          AWS_S3_BUCKET: ${{ secrets.spartagora }}
+      # - name: Upload binary to S3 bucket
+      #   uses: jakejarvis/s3-sync-action@master
+      #   with:
+      #     args: --acl public-read --exclude '*' --include 'index.html'
+      #   env:
+      #     AWS_S3_BUCKET: ${{ secrets.spartagora }}
 
       - name: Invalidate cache CloudFront
         uses: chetan/invalidate-cloudfront-action@master
