@@ -21,6 +21,79 @@ async function topicbestGet() {
         if (data['code'] == 'token_not_valid') {
             logout()
         }
+        let max_length = 0
+        if (data.length < 5) {
+            max_length = data.length
+        }
+        else {
+            max_length = 5
+        }
+        for (let i = 0; i < max_length; i++) {
+            let id = data[i]['id']
+            let title = data[i]['title']
+            let comment_count = data[i]['comment_count']
+            let like = data[i]['like'].length
+            let like_id = data[i]['like']
+            let view_count = data[i]['count']
+            let assignment = data[i]['assignment']
+            const login_user = JSON.parse(localStorage.getItem("payload")).user_id
+            function contains(login_user) {
+                for (let i = 0; i < like_id.length; i++) {
+                    if (like_id[i] == login_user) {
+                        return true;
+                    }
+                }
+                return false;
+            }
+            if (contains(login_user) == true) {
+                let temp_html = `
+                <li class="List">
+                            <div class="Article">
+                                <span>
+                                    <a href="" class="ArticleCategory">${assignment}</a>
+                                </span>
+                                <a href="${frontend_base_url}/templates/lower_category/qna.html?${id}" class="tit">${title}</a>
+                                <div class="ArticleInfo">
+                                    <a href="" class="like">
+                                        <i class="fa-solid fa-thumbs-up"></i>${like}
+                                    </a>
+                                    <a href="" class="cmt">
+                                        <i class="fa-regular fa-comments"></i>${comment_count}
+                                    </a>
+                                    <a href="" class="views">
+                                        <i class="fa-solid fa-arrow-pointer"></i>${view_count}
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        `
+                $('#list0').append(temp_html)
+            }
+            else {
+                let temp_html = `
+                <li class="List">
+                            <div class="Article">
+                                <span>
+                                    <a href="" class="ArticleCategory">${assignment}</a>
+                                </span>
+                                <a href="${frontend_base_url}/templates/lower_category/qna.html?${id}" class="tit">${title}</a>
+                                <div class="ArticleInfo">
+                                    <a href="" class="like">
+                                        <i class="fa-regular fa-thumbs-up"></i>${like}
+                                    </a>
+                                    <a href="" class="cmt">
+                                        <i class="fa-regular fa-comments"></i>${comment_count}
+                                    </a>
+                                    <a href="" class="views">
+                                        <i class="fa-solid fa-arrow-pointer"></i>${view_count}
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+        `
+                $('#list0').append(temp_html)
+            }
+        }
     })
 }
 
@@ -49,9 +122,44 @@ async function gominpageGet() {
             let title = data[i]['title']
             let comment_count = data[i]['comment_count']
             let like = data[i]['like'].length
+            let like_id = data[i]['like']
             let view_count = data[i]['count']
             let assignment = data[i]['assignment']
-            let temp_html = `
+            const login_user = JSON.parse(localStorage.getItem("payload")).user_id
+            function contains(login_user) {
+                for (let i = 0; i < like_id.length; i++) {
+                    if (like_id[i] == login_user) {
+                        return true;
+                    }
+                }
+                return false;
+            }
+            if (contains(login_user) == true) {
+                let temp_html = `
+                <li class="List">
+                            <div class="Article">
+                                <span>
+                                    <a href="" class="ArticleCategory">${assignment}</a>
+                                </span>
+                                <a href="${frontend_base_url}/templates/lower_category/qna.html?${id}" class="tit">${title}</a>
+                                <div class="ArticleInfo">
+                                    <a href="" class="like">
+                                        <i class="fa-solid fa-thumbs-up"></i>${like}
+                                    </a>
+                                    <a href="" class="cmt">
+                                        <i class="fa-regular fa-comments"></i>${comment_count}
+                                    </a>
+                                    <a href="" class="views">
+                                        <i class="fa-solid fa-arrow-pointer"></i>${view_count}
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        `
+                $('#list1').append(temp_html)
+            }
+            else {
+                let temp_html = `
                 <li class="List">
                             <div class="Article">
                                 <span>
@@ -72,7 +180,8 @@ async function gominpageGet() {
                             </div>
                         </li>
         `
-            $('#list1').append(temp_html)
+                $('#list1').append(temp_html)
+            }
         }
     })
 }
@@ -101,15 +210,50 @@ async function studypageGet() {
             let title = data[i]['title']
             let comment_count = data[i]['comment_count']
             let like = data[i]['like'].length
+            let like_id = data[i]['like']
             let view_count = data[i]['count']
             let assignment = data[i]['assignment']
-            let temp_html = `
+            const login_user = JSON.parse(localStorage.getItem("payload")).user_id
+            function contains(login_user) {
+                for (let i = 0; i < like_id.length; i++) {
+                    if (like_id[i] == login_user) {
+                        return true;
+                    }
+                }
+                return false;
+            }
+            if (contains(login_user) == true) {
+                let temp_html = `
                 <li class="List">
                             <div class="Article">
                                 <span>
                                     <a href="" class="ArticleCategory">${assignment}</a>
                                 </span>
-                                <a href="${frontend_base_url}/templates/lower_category/team_recruit.html?${id}" class="tit">${title}</a>
+                                <a href="${frontend_base_url}/templates/lower_category/qna.html?${id}" class="tit">${title}</a>
+                                <div class="ArticleInfo">
+                                    <a href="" class="like">
+                                        <i class="fa-solid fa-thumbs-up"></i>${like}
+                                    </a>
+                                    <a href="" class="cmt">
+                                        <i class="fa-regular fa-comments"></i>${comment_count}
+                                    </a>
+                                    <a href="" class="views">
+                                        <i class="fa-solid fa-arrow-pointer"></i>${view_count}
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        `
+                $('#list2').append(temp_html)
+            }
+            else {
+                let temp_html = `
+                <li class="List">
+                            <div class="Article">
+                                <span>
+                                    <a href="" class="ArticleCategory">${assignment}</a>
+                                </span>
+                                <a href="${frontend_base_url}/templates/lower_category/qna.html?${id}" class="tit">${title}</a>
                                 <div class="ArticleInfo">
                                     <a href="" class="like">
                                         <i class="fa-regular fa-thumbs-up"></i>${like}
@@ -124,7 +268,8 @@ async function studypageGet() {
                             </div>
                         </li>
         `
-            $('#list2').append(temp_html)
+                $('#list2').append(temp_html)
+            }
         }
     })
 }
@@ -153,15 +298,50 @@ async function somepageGet() {
             let title = data[i]['title']
             let comment_count = data[i]['comment_count']
             let like = data[i]['like'].length
+            let like_id = data[i]['like']
             let view_count = data[i]['count']
             let assignment = data[i]['assignment']
-            let temp_html = `
+            const login_user = JSON.parse(localStorage.getItem("payload")).user_id
+            function contains(login_user) {
+                for (let i = 0; i < like_id.length; i++) {
+                    if (like_id[i] == login_user) {
+                        return true;
+                    }
+                }
+                return false;
+            }
+            if (contains(login_user) == true) {
+                let temp_html = `
                 <li class="List">
                             <div class="Article">
                                 <span>
                                     <a href="" class="ArticleCategory">${assignment}</a>
                                 </span>
-                                <a href="${frontend_base_url}/templates/lower_category/greenlight.html?${id}" class="tit">${title}</a>
+                                <a href="${frontend_base_url}/templates/lower_category/qna.html?${id}" class="tit">${title}</a>
+                                <div class="ArticleInfo">
+                                    <a href="" class="like">
+                                        <i class="fa-solid fa-thumbs-up"></i>${like}
+                                    </a>
+                                    <a href="" class="cmt">
+                                        <i class="fa-regular fa-comments"></i>${comment_count}
+                                    </a>
+                                    <a href="" class="views">
+                                        <i class="fa-solid fa-arrow-pointer"></i>${view_count}
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        `
+                $('#list3').append(temp_html)
+            }
+            else {
+                let temp_html = `
+                <li class="List">
+                            <div class="Article">
+                                <span>
+                                    <a href="" class="ArticleCategory">${assignment}</a>
+                                </span>
+                                <a href="${frontend_base_url}/templates/lower_category/qna.html?${id}" class="tit">${title}</a>
                                 <div class="ArticleInfo">
                                     <a href="" class="like">
                                         <i class="fa-regular fa-thumbs-up"></i>${like}
@@ -176,7 +356,8 @@ async function somepageGet() {
                             </div>
                         </li>
         `
-            $('#list3').append(temp_html)
+                $('#list3').append(temp_html)
+            }
         }
     })
 }
@@ -205,15 +386,50 @@ async function petpageGet() {
             let title = data[i]['title']
             let comment_count = data[i]['comment_count']
             let like = data[i]['like'].length
+            let like_id = data[i]['like']
             let view_count = data[i]['count']
             let assignment = data[i]['assignment']
-            let temp_html = `
+            const login_user = JSON.parse(localStorage.getItem("payload")).user_id
+            function contains(login_user) {
+                for (let i = 0; i < like_id.length; i++) {
+                    if (like_id[i] == login_user) {
+                        return true;
+                    }
+                }
+                return false;
+            }
+            if (contains(login_user) == true) {
+                let temp_html = `
                 <li class="List">
                             <div class="Article">
                                 <span>
                                     <a href="" class="ArticleCategory">${assignment}</a>
                                 </span>
-                                <a href="${frontend_base_url}/templates/lower_category/pet.html?${id}" class="tit">${title}</a>
+                                <a href="${frontend_base_url}/templates/lower_category/qna.html?${id}" class="tit">${title}</a>
+                                <div class="ArticleInfo">
+                                    <a href="" class="like">
+                                        <i class="fa-solid fa-thumbs-up"></i>${like}
+                                    </a>
+                                    <a href="" class="cmt">
+                                        <i class="fa-regular fa-comments"></i>${comment_count}
+                                    </a>
+                                    <a href="" class="views">
+                                        <i class="fa-solid fa-arrow-pointer"></i>${view_count}
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        `
+                $('#list4').append(temp_html)
+            }
+            else {
+                let temp_html = `
+                <li class="List">
+                            <div class="Article">
+                                <span>
+                                    <a href="" class="ArticleCategory">${assignment}</a>
+                                </span>
+                                <a href="${frontend_base_url}/templates/lower_category/qna.html?${id}" class="tit">${title}</a>
                                 <div class="ArticleInfo">
                                     <a href="" class="like">
                                         <i class="fa-regular fa-thumbs-up"></i>${like}
@@ -228,7 +444,8 @@ async function petpageGet() {
                             </div>
                         </li>
         `
-            $('#list4').append(temp_html)
+                $('#list4').append(temp_html)
+            }
         }
     })
 }
@@ -257,15 +474,50 @@ async function travelpageGet() {
             let title = data[i]['title']
             let comment_count = data[i]['comment_count']
             let like = data[i]['like'].length
+            let like_id = data[i]['like']
             let view_count = data[i]['count']
             let assignment = data[i]['assignment']
-            let temp_html = `
+            const login_user = JSON.parse(localStorage.getItem("payload")).user_id
+            function contains(login_user) {
+                for (let i = 0; i < like_id.length; i++) {
+                    if (like_id[i] == login_user) {
+                        return true;
+                    }
+                }
+                return false;
+            }
+            if (contains(login_user) == true) {
+                let temp_html = `
                 <li class="List">
                             <div class="Article">
                                 <span>
                                     <a href="" class="ArticleCategory">${assignment}</a>
                                 </span>
-                                <a href="${frontend_base_url}/templates/lower_category/travel.html?${id}" class="tit">${title}</a>
+                                <a href="${frontend_base_url}/templates/lower_category/qna.html?${id}" class="tit">${title}</a>
+                                <div class="ArticleInfo">
+                                    <a href="" class="like">
+                                        <i class="fa-solid fa-thumbs-up"></i>${like}
+                                    </a>
+                                    <a href="" class="cmt">
+                                        <i class="fa-regular fa-comments"></i>${comment_count}
+                                    </a>
+                                    <a href="" class="views">
+                                        <i class="fa-solid fa-arrow-pointer"></i>${view_count}
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        `
+                $('#list5').append(temp_html)
+            }
+            else {
+                let temp_html = `
+                <li class="List">
+                            <div class="Article">
+                                <span>
+                                    <a href="" class="ArticleCategory">${assignment}</a>
+                                </span>
+                                <a href="${frontend_base_url}/templates/lower_category/qna.html?${id}" class="tit">${title}</a>
                                 <div class="ArticleInfo">
                                     <a href="" class="like">
                                         <i class="fa-regular fa-thumbs-up"></i>${like}
@@ -280,7 +532,8 @@ async function travelpageGet() {
                             </div>
                         </li>
         `
-            $('#list5').append(temp_html)
+                $('#list5').append(temp_html)
+            }
         }
     })
 }

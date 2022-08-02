@@ -8,7 +8,6 @@ async function logout() {
 
 
 async function recruitGet() {
-    const category_id = location.href.split("?")[1]
     const categoryData = async () => {
         const response = await fetch(`${backend_base_url}/article/${category_id}/`, {
             method: 'GET',
@@ -68,4 +67,4 @@ async function recruitGet() {
 
 
 
-$('document').ready(userarticleget());
+$('document').ready(recruitGet());
