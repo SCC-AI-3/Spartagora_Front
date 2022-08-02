@@ -20,7 +20,6 @@ async function userarticleget() {
     }
     categoryData().then((data) => {
         article = data
-        console.log(data)
         if (data['code'] == 'token_not_valid') {
             logout()
             window.location.replace(`${frontend_base_url}/templates/user/login.html`)
