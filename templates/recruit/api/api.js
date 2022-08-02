@@ -37,6 +37,7 @@ async function recruitGet() {
             let comment_count = article[i]['comment_count']
             let lower_category_name = article[i]['lower_category_name']
             let nickname = article[i]['nickname']
+            let lower_category_url = data[i]['lower_category_url']
             const login_user = JSON.parse(localStorage.getItem("payload")).user_id
             function contains(login_user) {
                 for (let i = 0; i < like_id.length; i++) {
@@ -62,7 +63,7 @@ async function recruitGet() {
                         </div>
                     </div>
                     <div class="Article-Title">
-                        <a href="/templates/recruit/recruit_article.html?${id}" class="Title">${title}</a>
+                        <a href="/templates/${lower_category_url}?${id}" class="Title">${title}</a>
                         <p class="Category">취업후기 > ${assignment}</p>
                     </div>
                     <div class="Count">
@@ -90,7 +91,7 @@ async function recruitGet() {
                         </div>
                     </div>
                     <div class="Article-Title">
-                        <a href="/templates/recruit/recruit_article.html?${id}" class="Title">${title}</a>
+                        <a href="/templates/${lower_category_url}?${id}" class="Title">${title}</a>
                         <p class="Category">취업후기 > ${assignment}</p>
                     </div>
                     <div class="Count">

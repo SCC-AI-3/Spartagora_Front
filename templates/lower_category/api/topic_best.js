@@ -35,6 +35,7 @@ async function topicbestGet() {
             let like_id = article[i]['like']
             let comment_count = article[i]['comment_count']
             let lower_category_name = article[i]['lower_category_name']
+            let lower_category_url = article[i]['lower_category_url']
             let nickname = article[i]['nickname']
             const login_user = JSON.parse(localStorage.getItem("payload")).user_id
             function contains(login_user) {
@@ -61,7 +62,7 @@ async function topicbestGet() {
                         </div>
                     </div>
                     <div class="Article-Title">
-                        <a href="/templates/lower_category/qna.html?${id}" class="Title">${title}</a>
+                        <a href="/templates/${lower_category_url}?${id}" class="Title">${title}</a>
                         <p class="Category">게시판 > ${lower_category_name}</p>
                     </div>
                     <div class="Count">
@@ -89,7 +90,7 @@ async function topicbestGet() {
                         </div>
                     </div>
                     <div class="Article-Title">
-                        <a href="/templates/lower_category/qna.html?${id}" class="Title">${title}</a>
+                        <a href="/templates/${lower_category_url}?${id}" class="Title">${title}</a>
                         <p class="Category">게시판 > ${lower_category_name}</p>
                     </div>
                     <div class="Count">

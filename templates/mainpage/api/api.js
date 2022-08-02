@@ -37,6 +37,7 @@ async function topicbestGet() {
             let like_id = data[i]['like']
             let view_count = data[i]['count']
             let assignment = data[i]['assignment']
+            let lower_category_url = data[i]['lower_category_url']
             const login_user = JSON.parse(localStorage.getItem("payload")).user_id
             function contains(login_user) {
                 for (let i = 0; i < like_id.length; i++) {
@@ -53,7 +54,7 @@ async function topicbestGet() {
                                 <span>
                                     <a href="" class="ArticleCategory">${assignment}</a>
                                 </span>
-                                <a href="${frontend_base_url}/templates/lower_category/qna.html?${id}" class="tit">${title}</a>
+                                <a href="${frontend_base_url}/templates/${lower_category_url}?${id}" class="tit">${title}</a>
                                 <div class="ArticleInfo">
                                     <a href="" class="like">
                                         <i class="fa-solid fa-thumbs-up"></i>${like}
@@ -77,7 +78,7 @@ async function topicbestGet() {
                                 <span>
                                     <a href="" class="ArticleCategory">${assignment}</a>
                                 </span>
-                                <a href="${frontend_base_url}/templates/lower_category/qna.html?${id}" class="tit">${title}</a>
+                                <a href="${frontend_base_url}/templates/${lower_category_url}?${id}" class="tit">${title}</a>
                                 <div class="ArticleInfo">
                                     <a href="" class="like">
                                         <i class="fa-regular fa-thumbs-up"></i>${like}
@@ -126,6 +127,7 @@ async function gominpageGet() {
             let like_id = data[i]['like']
             let view_count = data[i]['count']
             let assignment = data[i]['assignment']
+            let lower_category_url = data[i]['lower_category_url']
             const login_user = JSON.parse(localStorage.getItem("payload")).user_id
             function contains(login_user) {
                 for (let i = 0; i < like_id.length; i++) {
@@ -142,7 +144,7 @@ async function gominpageGet() {
                                 <span>
                                     <a href="" class="ArticleCategory">${assignment}</a>
                                 </span>
-                                <a href="${frontend_base_url}/templates/lower_category/qna.html?${id}" class="tit">${title}</a>
+                                <a href="${frontend_base_url}/templates/${lower_category_url}?${id}" class="tit">${title}</a>
                                 <div class="ArticleInfo">
                                     <a href="" class="like">
                                         <i class="fa-solid fa-thumbs-up"></i>${like}
@@ -166,7 +168,7 @@ async function gominpageGet() {
                                 <span>
                                     <a href="" class="ArticleCategory">${assignment}</a>
                                 </span>
-                                <a href="${frontend_base_url}/templates/lower_category/qna.html?${id}" class="tit">${title}</a>
+                                <a href="${frontend_base_url}/templates/${lower_category_url}?${id}" class="tit">${title}</a>
                                 <div class="ArticleInfo">
                                     <a href="" class="like">
                                         <i class="fa-regular fa-thumbs-up"></i>${like}
@@ -214,6 +216,7 @@ async function studypageGet() {
             let like_id = data[i]['like']
             let view_count = data[i]['count']
             let assignment = data[i]['assignment']
+            let lower_category_url = data[i]['lower_category_url']
             const login_user = JSON.parse(localStorage.getItem("payload")).user_id
             function contains(login_user) {
                 for (let i = 0; i < like_id.length; i++) {
@@ -230,7 +233,7 @@ async function studypageGet() {
                                 <span>
                                     <a href="" class="ArticleCategory">${assignment}</a>
                                 </span>
-                                <a href="${frontend_base_url}/templates/lower_category/qna.html?${id}" class="tit">${title}</a>
+                                <a href="${frontend_base_url}/templates/${lower_category_url}?${id}" class="tit">${title}</a>
                                 <div class="ArticleInfo">
                                     <a href="" class="like">
                                         <i class="fa-solid fa-thumbs-up"></i>${like}
@@ -254,7 +257,7 @@ async function studypageGet() {
                                 <span>
                                     <a href="" class="ArticleCategory">${assignment}</a>
                                 </span>
-                                <a href="${frontend_base_url}/templates/lower_category/qna.html?${id}" class="tit">${title}</a>
+                                <a href="${frontend_base_url}/templates/${lower_category_url}?${id}" class="tit">${title}</a>
                                 <div class="ArticleInfo">
                                     <a href="" class="like">
                                         <i class="fa-regular fa-thumbs-up"></i>${like}
@@ -302,6 +305,7 @@ async function somepageGet() {
             let like_id = data[i]['like']
             let view_count = data[i]['count']
             let assignment = data[i]['assignment']
+            let lower_category_url = data[i]['lower_category_url']
             const login_user = JSON.parse(localStorage.getItem("payload")).user_id
             function contains(login_user) {
                 for (let i = 0; i < like_id.length; i++) {
@@ -318,7 +322,7 @@ async function somepageGet() {
                                 <span>
                                     <a href="" class="ArticleCategory">${assignment}</a>
                                 </span>
-                                <a href="${frontend_base_url}/templates/lower_category/qna.html?${id}" class="tit">${title}</a>
+                                <a href="${frontend_base_url}/templates/${lower_category_url}?${id}" class="tit">${title}</a>
                                 <div class="ArticleInfo">
                                     <a href="" class="like">
                                         <i class="fa-solid fa-thumbs-up"></i>${like}
@@ -342,7 +346,7 @@ async function somepageGet() {
                                 <span>
                                     <a href="" class="ArticleCategory">${assignment}</a>
                                 </span>
-                                <a href="${frontend_base_url}/templates/lower_category/qna.html?${id}" class="tit">${title}</a>
+                                <a href="${frontend_base_url}/templates/${lower_category_url}?${id}" class="tit">${title}</a>
                                 <div class="ArticleInfo">
                                     <a href="" class="like">
                                         <i class="fa-regular fa-thumbs-up"></i>${like}
@@ -390,6 +394,7 @@ async function petpageGet() {
             let like_id = data[i]['like']
             let view_count = data[i]['count']
             let assignment = data[i]['assignment']
+            let lower_category_url = data[i]['lower_category_url']
             const login_user = JSON.parse(localStorage.getItem("payload")).user_id
             function contains(login_user) {
                 for (let i = 0; i < like_id.length; i++) {
@@ -406,7 +411,7 @@ async function petpageGet() {
                                 <span>
                                     <a href="" class="ArticleCategory">${assignment}</a>
                                 </span>
-                                <a href="${frontend_base_url}/templates/lower_category/qna.html?${id}" class="tit">${title}</a>
+                                <a href="${frontend_base_url}/templates/${lower_category_url}?${id}" class="tit">${title}</a>
                                 <div class="ArticleInfo">
                                     <a href="" class="like">
                                         <i class="fa-solid fa-thumbs-up"></i>${like}
@@ -430,7 +435,7 @@ async function petpageGet() {
                                 <span>
                                     <a href="" class="ArticleCategory">${assignment}</a>
                                 </span>
-                                <a href="${frontend_base_url}/templates/lower_category/qna.html?${id}" class="tit">${title}</a>
+                                <a href="${frontend_base_url}/templates/${lower_category_url}?${id}" class="tit">${title}</a>
                                 <div class="ArticleInfo">
                                     <a href="" class="like">
                                         <i class="fa-regular fa-thumbs-up"></i>${like}
@@ -478,6 +483,7 @@ async function travelpageGet() {
             let like_id = data[i]['like']
             let view_count = data[i]['count']
             let assignment = data[i]['assignment']
+            let lower_category_url = data[i]['lower_category_url']
             const login_user = JSON.parse(localStorage.getItem("payload")).user_id
             function contains(login_user) {
                 for (let i = 0; i < like_id.length; i++) {
@@ -494,7 +500,7 @@ async function travelpageGet() {
                                 <span>
                                     <a href="" class="ArticleCategory">${assignment}</a>
                                 </span>
-                                <a href="${frontend_base_url}/templates/lower_category/qna.html?${id}" class="tit">${title}</a>
+                                <a href="${frontend_base_url}/templates/${lower_category_url}?${id}" class="tit">${title}</a>
                                 <div class="ArticleInfo">
                                     <a href="" class="like">
                                         <i class="fa-solid fa-thumbs-up"></i>${like}
@@ -518,7 +524,7 @@ async function travelpageGet() {
                                 <span>
                                     <a href="" class="ArticleCategory">${assignment}</a>
                                 </span>
-                                <a href="${frontend_base_url}/templates/lower_category/qna.html?${id}" class="tit">${title}</a>
+                                <a href="${frontend_base_url}/templates/${lower_category_url}?${id}" class="tit">${title}</a>
                                 <div class="ArticleInfo">
                                     <a href="" class="like">
                                         <i class="fa-regular fa-thumbs-up"></i>${like}
