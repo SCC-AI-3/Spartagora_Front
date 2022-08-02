@@ -152,7 +152,10 @@ async function commentGet() {
     }
     commentData().then((data) => {
         comment = data
+        console.log(comment)
         for (let i = 0; i < comment.length; i++) {
+            let id = comment[i]['id']
+            let user = comment[i]['user']
             let name = i + 1
             let content = comment[i]['content']
             let created_at = comment[i]['created_at']
@@ -165,21 +168,26 @@ async function commentGet() {
                         </div>
                         <p class="content">${content}</p>
                     </div>
+                    <div id="comment_delete${id}"></div>
                     </div>
+                   
             `
             $('#comment_list').append(temp_html)
+            //만약 내가 작성한 댓글이면 삭제 버튼
+            const login_user = JSON.parse(localStorage.getItem("payload")).user_id
+            if (login_user == user) {
+                let button_temp_html = `
+                    <button type="button" class="btn btn-dark btn-sm" onclick="deleteArticle()">삭제</button>
+            `
+                $(`#comment_delete${id}`).append(button_temp_html)
+            }//삭제 버튼 위치 옮겨야댐
         }
-    })
-    commentData().then((data) => {
-        comment = data
-        let temp_html = `
+        //댓글 개수
+        let length_temp_html = `
         댓글 ${comment.length}
         `
-        $('#comment_counter').append(temp_html)
-    }
-
-
-    )
+        $('#comment_counter').append(length_temp_html)
+    })
 }
 
 
