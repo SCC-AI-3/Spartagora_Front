@@ -1,5 +1,3 @@
-# Git Action에 관한 파일
-
 # 위 사진 노란색 박스 action name이 될 것임.
 name: my-front
 
@@ -9,7 +7,8 @@ on:
     branches:
       - main
 
-# 아래 주황색 글씨 부분을 git action secrets key로 등록해야 함.
+
+
 jobs:
   build:
     runs-on: ubuntu-latest
