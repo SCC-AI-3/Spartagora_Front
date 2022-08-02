@@ -9,6 +9,7 @@ function editButtonClick() {
 
 async function logout() {
     window.localStorage.clear(); //로컬스토리지에 저장된 토큰 삭제해줌.
+    window.location.replace(`${frontend_base_url}/templates/user/login.html`)
 }
 
 async function articleGet() {
@@ -26,7 +27,6 @@ async function articleGet() {
     articleData().then((data) => {
         if (data['code'] == 'token_not_valid') {
             logout()
-            window.location.replace(`${frontend_base_url}/templates/user/login.html`)
         }
         article = data
         let nickname = article['nickname']

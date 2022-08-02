@@ -4,6 +4,7 @@ const frontend_base_url = "http://127.0.0.1:5500"
 
 async function logout() {
     window.localStorage.clear(); //로컬스토리지에 저장된 토큰 삭제해줌.
+    window.location.replace(`${frontend_base_url}/templates/user/login.html`)
 }
 
 
@@ -22,7 +23,6 @@ async function topicbestGet() {
         article = data
         if (data['code'] == 'token_not_valid') {
             logout()
-            window.location.replace(`${frontend_base_url}/templates/user/login.html`)
         }
         for (let i = 0; i < article.length; i++) {
             let id = article[i]['id']
