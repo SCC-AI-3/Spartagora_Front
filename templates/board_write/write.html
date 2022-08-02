@@ -40,6 +40,89 @@
         
     <title>Spartagora | 글 작성하기</title>
 </head>
+    <script type="text/javascript">
+        let time_obj = undefined;
+        let flag = undefined;
+        let chars = undefined;
+        let out_result = undefined;
+
+
+        window.onload = () => {
+            time_obj = document.getElementById("timer");
+            flag = false;       // 더블 클릭 체크
+        }
+
+
+        function double_submit_check() {
+            if (flag) {
+                console.log("double");
+                return true;
+            }
+            else {
+                flag = true;
+
+                return false;
+            }
+        }
+
+        //키보드에서 손이 떨어졌을때 실행
+        function send_req() {
+            if (double_submit_check()){
+                return ;
+            }
+
+            let text = document.getElementById("summernote").value;
+            // let category = document.getElementById("category").value;
+            // let length = document.getElementById("length").value;
+            //let types = 'dpclass';
+
+
+            const formData = new FormData();
+            const url = "http://127.0.0.1:5000/predict/dpclass";
+            let start = 0;
+
+            formData.append('text', text);
+            // formData.append('category', category);
+
+            // timer
+            timer = setInterval(() => {
+                start += 1;
+                time_obj.innerText = `${start / 10} 's`;
+            }, 100);
+
+
+            fetch (url, { method: 'POST', body: formData, })
+            .then(response => {
+                if (response.status === 200) {
+                    return response.json();
+                } else {
+                    clearInterval(timer);
+                    flag = false;
+                }
+            }).catch(err => {
+                clearInterval(timer);
+                flag = false;
+                document.getElementById('warning').innerText = err;
+            }).then(data => {
+                const result = document.getElementById('result');
+                out_result = data[0];
+                result.innerHTML = '&nbsp;&nbsp; 결과 - ' + data[0];
+                clearInterval(timer);
+                time_obj.innerText = 'Done!';
+                flag = false;
+            }).catch(err => {
+                clearInterval(timer);
+                flag = false;
+                document.getElementById('warning').innerText = err;
+            });
+
+
+        }
+
+        //0.5초 마다 실행
+        setInterval(send_req, 500);
+
+    </script>
 
 <body>
     <!-- Header -->
@@ -132,6 +215,7 @@
                     <button type="button" class="Cancel" onclick="goBack()">취소</button>
                 </div>
             </form>
+            <!-- 결과값 <label id="result"></label> -->
         </div>
     </div>
 
