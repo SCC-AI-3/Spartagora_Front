@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def main():
-    return render_template('login.html')
+    return render_template('/templates/main.html')
 
 @app.route('/fileupload', methods=['POST'])
 def file_upload():
@@ -14,7 +14,7 @@ def file_upload():
     s3 = boto3.client('s3')
     s3.put_object(
         ACL="public-read",
-        Bucket="spartagora",
+        Bucket="{버킷이름}",
         Body=file,
         Key=file.filename,
         ContentType=file.content_type)
