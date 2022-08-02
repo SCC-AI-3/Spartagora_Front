@@ -252,7 +252,12 @@ async function deleteArticle() {
         },
         method: 'DELETE',
     })
-    window.location.replace(`${frontend_base_url}/templates/mainpage/main.html`)
+    if (response.status == 200) {
+        window.location.replace(`${frontend_base_url}/templates/mainpage/main.html`)
+    }
+    else {
+        alert(response.status)
+    }
 }
 
 async function deleteComment(obj) {
@@ -264,7 +269,13 @@ async function deleteComment(obj) {
         },
         method: 'DELETE',
     })
-    window.location.replace(`${frontend_base_url}/templates/mainpage/main.html`)
+    if (response.status == 200) {
+        alert("삭제 완료")
+        window.location.reload()
+    }
+    else (
+        alert(response.status)
+    )
 }
 
 
