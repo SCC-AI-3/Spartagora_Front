@@ -40,6 +40,9 @@ def file_upload():
         ContentType=file.content_type)
     return jsonify({'result': 'success'})
 
+if __name__ == '__main__':
+    app.run()
+
 
 # # 머신러닝 부분
 # category_map = {
