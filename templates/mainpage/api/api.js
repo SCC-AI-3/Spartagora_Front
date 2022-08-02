@@ -38,6 +38,7 @@ async function topicbestGet() {
             let view_count = data[i]['count']
             let assignment = data[i]['assignment']
             let lower_category_url = data[i]['lower_category_url']
+            let lower_category_id = data[i]['lower_category']
             const login_user = JSON.parse(localStorage.getItem("payload")).user_id
             function contains(login_user) {
                 for (let i = 0; i < like_id.length; i++) {
@@ -48,7 +49,32 @@ async function topicbestGet() {
                 return false;
             }
             if (contains(login_user) == true) {
-                let temp_html = `
+                if (lower_category_url == "postscript/postscript_main.html") {
+                    let temp_html = `
+                <li class="List">
+                            <div class="Article">
+                                <span>
+                                    <a href="" class="ArticleCategory">${assignment}</a>
+                                </span>
+                                <a href="${frontend_base_url}/templates/${lower_category_url}?${lower_category_id}" class="tit">${title}</a>
+                                <div class="ArticleInfo">
+                                    <a href="" class="like">
+                                        <i class="fa-solid fa-thumbs-up"></i>${like}
+                                    </a>
+                                    <a href="" class="cmt">
+                                        <i class="fa-regular fa-comments"></i>${comment_count}
+                                    </a>
+                                    <a href="" class="views">
+                                        <i class="fa-solid fa-arrow-pointer"></i>${view_count}
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        `
+                    $('#list0').append(temp_html)
+                }
+                else {
+                    let temp_html = `
                 <li class="List">
                             <div class="Article">
                                 <span>
@@ -69,10 +95,37 @@ async function topicbestGet() {
                             </div>
                         </li>
                         `
-                $('#list0').append(temp_html)
+                    $('#list0').append(temp_html)
+                }
+
             }
             else {
-                let temp_html = `
+                if (lower_category_url == "postscript/postscript_main.html") {
+                    let temp_html = `
+                <li class="List">
+                            <div class="Article">
+                                <span>
+                                    <a href="" class="ArticleCategory">${assignment}</a>
+                                </span>
+                                <a href="${frontend_base_url}/templates/${lower_category_url}?${lower_category_id}" class="tit">${title}</a>
+                                <div class="ArticleInfo">
+                                    <a href="" class="like">
+                                        <i class="fa-regular fa-thumbs-up"></i>${like}
+                                    </a>
+                                    <a href="" class="cmt">
+                                        <i class="fa-regular fa-comments"></i>${comment_count}
+                                    </a>
+                                    <a href="" class="views">
+                                        <i class="fa-solid fa-arrow-pointer"></i>${view_count}
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        `
+                    $('#list0').append(temp_html)
+                }
+                else {
+                    let temp_html = `
                 <li class="List">
                             <div class="Article">
                                 <span>
@@ -93,7 +146,9 @@ async function topicbestGet() {
                             </div>
                         </li>
         `
-                $('#list0').append(temp_html)
+                    $('#list0').append(temp_html)
+                }
+
             }
         }
     })
