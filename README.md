@@ -1,6 +1,15 @@
-# Spartagora_Front
-## 최종프로젝트 스파르타고라 프론트 GitHub
+
+------------
+# Spartagora
+#####  < spartagora : 스파르타 코딩클럽 수강생들의 익명 커뮤니티 >
+------------
 </br>
+### 1. 프로젝트 계획 이유
+------------
+Code
+
+------------
+
 { Sparta 3Team Members }
 </br>
 </br>

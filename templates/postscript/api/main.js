@@ -79,9 +79,6 @@ async function postscriptGet() {
                                 ${like}</a>
                         </div>
                     </div>
-                    <div type="button" class="ReCategory">
-                        <a href="/templates/postscript/postscript_write.html">과정후기 작성하기</a>
-                    </div>
             `
                 $('#article_list').append(temp_html)
             }
@@ -107,9 +104,6 @@ async function postscriptGet() {
                             <a href="javascript:void(0);" onclick="likePost(${id});"><i class="fa-regular fa-thumbs-up"></i>
                                 ${like}</a>
                         </div>
-                    </div>
-                    <div type="button" class="ReCategory">
-                        <a href="/templates/postscript/postscript_write.html">과정후기 작성하기</a>
                     </div>
             `
                 $('#article_list').append(temp_html)
