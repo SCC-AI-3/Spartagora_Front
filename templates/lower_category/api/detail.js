@@ -68,7 +68,7 @@ async function articleGet() {
                                         <i class="fa-solid fa-arrow-pointer"></i>
                                     ${view_count}
                                 </div>
-                                <div id=authorEditBtn></div>
+                                <div class="ArticleDeleteBtn" id=authorEditBtn></div>
                                 
         `
             $('#get_article').append(temp_html)
@@ -109,7 +109,6 @@ async function articleGet() {
         const login_user = JSON.parse(localStorage.getItem("payload")).user_id
         if (login_user == user) {
             let edit_btn_temp = `
-                    
                     <button type="button" class="btn btn-secondary btn-sm me-2" onclick="editButtonClick()">수정</button>
                     <button type="button" class="btn btn-dark btn-sm" onclick="deleteArticle()">삭제</button>`
             $("#authorEditBtn").append(edit_btn_temp)

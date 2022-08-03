@@ -75,7 +75,7 @@ async function articleGet() {
             <i class="fa-solid fa-arrow-pointer"></i>
             ${view_count}
         </div>
-        <div id=authorEditBtn></div>
+        <div class="ArticleDeleteBtn" id=authorEditBtn></div>
                                 
         `
             $('#get_article').append(temp_html)
