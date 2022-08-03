@@ -257,7 +257,7 @@ async function deleteArticle() {
         method: 'DELETE',
     })
     if (response.status == 200) {
-        window.location.replace(`${frontend_base_url}/templates/mainpage/main.html`)
+        window.location.replace(`${frontend_base_url}/templates/recruit/recruit_main.html?36`)
     }
     else {
         alert(response.status)

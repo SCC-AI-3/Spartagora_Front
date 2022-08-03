@@ -137,7 +137,7 @@
                     <a href="/templates/mainpage/main.html">게시판</a>
                 </li>
                 <li>
-                    <a href="#">과정후기</a>
+                    <a href="/templates/postscript/postscript_main.html">과정후기</a>
                 </li>
                 <li>
                     <a href="#">채용정보</a>
@@ -146,7 +146,7 @@
                     <a href="/templates/recruit/recruit_main.html?36">취업후기</a>
                 </li>
                 <li>
-                    <a href="/templates/board_write/write.html" class="NavWrite active">글작성</a>
+                    <a href="javascript:void(0);" onclick="logout();">로그아웃</a>
                 </li>
             </ul>
         </nav>
@@ -155,19 +155,17 @@
     <div class="LowerCategory">
         <div class="CategoryName">
             <a href="/templates/lower_category/list_topicbest.html">토픽 베스트</a>
-            <a href="/templates/lower_category/list_qna.html">고민을 말해봐</a>
-            <a href="/templates/lower_category/list_team_recruit.html">스터디/팀원모집</a>
-            <a href="/templates/lower_category/list_greenlight.html">썸, 연애</a>
-            <a href="/templates/lower_category/list_health.html">헬스, 다이어트</a>
-            <a href="/templates/lower_category/list_pet.html">반려동물</a>
-            <a href="/templates/lower_category/list_travel.html">여행, 맛집</a>
+            <a href="/templates/lower_category/list_qna.html?1">고민을 말해봐</a>
+            <a href="/templates/lower_category/list_team_recruit.html?2">스터디/팀원모집</a>
+            <a href="/templates/lower_category/list_greenlight.html?3">썸, 연애</a>
+            <a href="/templates/lower_category/list_pet.html?4">반려동물</a>
+            <a href="/templates/lower_category/list_travel.html?6">여행, 맛집</a>
         </div>
     </div>
 
     <div class="Topic">
         <select name="" id="" onchange="window.open(value,'_self');">
             <option value="/templates/lower_category/list_pet.html?4">반려동물</option>
-            <option value="/templates/lower_category/list_health.html?5">헬스, 다이어트</option>
             <option value="/templates/lower_category/list_travel.html?6">여행, 맛집</option>
             <option value="/templates/lower_category/list_topicbest.html">토픽베스트</option>
             <option value="/templates/lower_category/list_qna.html?1">고민을 말해봐</option>
