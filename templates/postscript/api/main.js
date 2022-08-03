@@ -48,7 +48,6 @@ async function postscriptGet() {
             let comment_count = article[i]['comment_count']
             let nickname = article[i]['nickname']
             let content = article[i]['content']
-            let star_name = article[i]['star_name']
             const login_user = JSON.parse(localStorage.getItem("payload")).user_id
             function contains(login_user) {
                 for (let i = 0; i < like_id.length; i++) {
@@ -80,7 +79,6 @@ async function postscriptGet() {
                             <a href="javascript:void(0);" onclick="likePost(${id});"><i class="fa-solid fa-thumbs-up"></i>
                                 ${like}</a>
                         </div>
-                        <div>${star_name}</div>
                     </div>
             `
                 $('#article_list').append(temp_html)
@@ -107,7 +105,6 @@ async function postscriptGet() {
                             <a href="javascript:void(0);" onclick="likePost(${id});"><i class="fa-regular fa-thumbs-up"></i>
                                 ${like}</a>
                         </div>
-                        <div>${star_name}</div>
                     </div>
             `
                 $('#article_list').append(temp_html)
