@@ -3,7 +3,7 @@ const frontend_base_url = "http://127.0.0.1:5500"
 // article edit button click
 function editButtonClick() {
     let edit_link = window.location.search.split('?')[1]
-    window.location.replace(`${frontend_base_url}/templates/board_write/put.html?${edit_link}`);
+    window.location.replace(`${frontend_base_url}/templates/recruit/put.html?${edit_link}`);
 }
 
 
@@ -103,7 +103,7 @@ async function articleGet() {
             </div>
         </div>
         <div class="Count">
-            <i class="fa-solid fa-thumbs-up"></i>
+            <i class="fa-regular fa-thumbs-up"></i>
             ${like}
             <i class="fa-regular fa-comments"></i>
             ${comment_count}
