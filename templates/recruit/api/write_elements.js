@@ -34,10 +34,10 @@ async function postArticles() {
         }
         )
         if (response.status == 200) {
-            alert("업로드 완료!")
-            window.location.replace(`${frontend_base_url}/templates/mainpage/main.html`);
-        } else {
-            alert(response.status)
+        alert("업로드 완료!")
+        window.location.replace(`${frontend_base_url}/templates/recruit/recruit_main.html?36`);
+    } else {
+        alert(response.status)
         }
 
         return response.json()
@@ -97,15 +97,10 @@ async function putArticle() {
         body: formData
     })
     if (response.status == 200) {
-        window.location.replace(`${frontend_base_url}/templates/mainpage/main.html`);
+        window.location.replace(`${frontend_base_url}/templates/recruit/recruit_main.html?36`);
     } else {
         alert("작성 실패")
     }
 }
 
-
-
 $('document').ready(loadArticleData());
-
-
-

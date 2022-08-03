@@ -90,8 +90,3 @@
 .List .Count i {
     padding: 0 calc(var(--padding) / 2);
 }
-
-.List .Content {
-    padding: calc(var(--padding) * 2);
-    line-height: 2.0;
-}

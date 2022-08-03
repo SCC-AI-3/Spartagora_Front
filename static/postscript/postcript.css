@@ -9,3 +9,13 @@
 .List .Post button {
     font-size: var(--font-medium);
 }
+
+.PostscriptTitle {
+    display: flex;
+    justify-content: center;
+    max-width: 1130;
+    width: 100%;
+    color: var(--accent-color);
+    font-size: var(--font-large);
+}
+

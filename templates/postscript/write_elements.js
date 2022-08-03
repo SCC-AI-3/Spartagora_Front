@@ -4,6 +4,7 @@ const frontend_base_url = "http://127.0.0.1:5500"
 
 
 async function postArticles() {
+
     let random_emotion = ['미운', '고마운', '사랑하는', '증오하는', '끔찍한', '무서운']
     let random_nature = ['숲', '나무', '꽃', '풀', '바다', '절벽']
     let random_name = random_emotion[Math.floor(Math.random() * random_emotion.length)] + " 나의 " + random_nature[Math.floor(Math.random() * random_nature.length)]
@@ -34,6 +35,7 @@ async function postArticles() {
     }
 
     return response.json()
+
 }
 
 function goBack() {

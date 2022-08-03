@@ -12,3 +12,24 @@
 .Article .RecruitInfo .RecruitInfoTable .RIT {
     line-height: 1.8;
 }
+
+.Article .ArticleDeleteBtn {
+    display: flex;
+    justify-content: right;
+    padding-right: var(--padding);
+    padding-bottom: var(--padding);
+}
+
+.Article .ArticleDeleteBtn .btn-sm {
+    padding-right: var(--padding);
+}
+
+.Article .ArticleDeleteBtn button:hover{
+    cursor: pointer;
+    color: var(--acccent-color);
+}
+
+.Comment .CommentSpanTag .List .CommentDeleteBtn {
+    display: flex;
+    justify-content: right;
+}
