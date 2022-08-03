@@ -37,16 +37,18 @@ async function postscriptGet() {
         `
         $('#lower_category_name').append(temp_html)
         for (let i = 0; i < article.length; i++) {
+            console.log(article)
             let id = article[i]['id']
             let lower_id = article[i]['category_name']
             let assignment = article[i]['assignment']
-            let title = article[i]['title']
             let create_at = article[i]['created_at']
             let count = article[i]['count']
             let like = article[i]['like'].length
             let like_id = article[i]['like']
             let comment_count = article[i]['comment_count']
             let nickname = article[i]['nickname']
+            let content = article[i]['content']
+            let star_name = article[i]['star_name']
             const login_user = JSON.parse(localStorage.getItem("payload")).user_id
             function contains(login_user) {
                 for (let i = 0; i < like_id.length; i++) {
@@ -72,12 +74,13 @@ async function postscriptGet() {
                             </div>
                         </div>
                         <div class="Article-Title">
-                            <a class="Title">${title}</a>
+                            <a class="Title">${content}</a>
                         </div>
                         <div class="Count" id="if_liked">
                             <a href="javascript:void(0);" onclick="likePost(${id});"><i class="fa-solid fa-thumbs-up"></i>
                                 ${like}</a>
                         </div>
+                        <div>${star_name}</div>
                     </div>
             `
                 $('#article_list').append(temp_html)
@@ -98,12 +101,13 @@ async function postscriptGet() {
                             </div>
                         </div>
                         <div class="Article-Title">
-                            <a class="Title">${title}</a>
+                            <a class="Title">${content}</a>
                         </div>
                         <div class="Count" id="if_liked">
                             <a href="javascript:void(0);" onclick="likePost(${id});"><i class="fa-regular fa-thumbs-up"></i>
                                 ${like}</a>
                         </div>
+                        <div>${star_name}</div>
                     </div>
             `
                 $('#article_list').append(temp_html)
