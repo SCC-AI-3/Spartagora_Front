@@ -64,16 +64,18 @@
     }
 
     //키보드에서 손이 떨어졌을때 실행
-    function send_req() {
+    window.onkeyup = function send_req() {
         if (double_submit_check()) {
             return;
         }
 
-        let text = document.getElementById("summernote").value;
+        let content = document.getElementById("summernote").value;
+        let title = document.getElementById("title").value;
         // let category = document.getElementById("category").value;
         // let length = document.getElementById("length").value;
         //let types = 'dpclass';
 
+        let text = title + content;
 
         const formData = new FormData();
         const url = "http://127.0.0.1:5000/predict/dpclass";
@@ -118,7 +120,7 @@
     }
 
     //0.5초 마다 실행
-    setInterval(send_req, 500);
+   // setInterval(send_req, 500);
 
 </script>
 
@@ -208,7 +210,6 @@
                     <button type="button" class="Cancel" onclick="goBack()">취소</button>
                 </div>
             </form>
-            <!-- 결과값 <label id="result"></label> -->
         </div>
     </div>
 
