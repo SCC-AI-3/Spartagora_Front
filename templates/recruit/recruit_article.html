@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="wi<li=device-wi<li, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- stylesheet -->
     <link rel="stylesheet" href="/static/root.css" />
@@ -22,7 +22,7 @@
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="crossorigin" />
-    <link href="https://fonts.googleapis.com/css2?family=G<liic+A1:wght@500&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@500&display=swap" rel="stylesheet" />
 
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/993c2cba92.js" crossorigin="anonymous"></script>
@@ -32,7 +32,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.js"></script>
 
     <!-- jsAPI -->
-    <script src="api/lower_category.js"></script>
+    <script src="api/detail.js"></script>
 
     <title>Spartagora | 취업후기</title>
 
@@ -59,7 +59,7 @@
                     <a href="#">채용정보</a>
                 </li>
                 <li>
-                    <a class="active" href="/templates/recruit/recruit_main.html">취업후기</a>
+                    <a href="/templates/recruit/recruit_main.html?12">취업후기</a>
                 </li>
                 <li>
                     <a href="javascript:void(0);" onclick="logout();">로그아웃</a>
@@ -72,51 +72,11 @@
     <div class="Container">
         <div class="Main">
             <div class="Caution">
-                <div class="CautionInfo">
-                    <p class="Category">취업후기 > 내일배움캠프</p>
-                    <p class="Title">교보 취업후기 남깁니다</p>
+                <div class="CautionInfo" id="recruit_assignment">
                 </div>
             </div>
             <div class="Article" id="get_article">
-                <div class="ProfileInfo">
-                    <div class="Profile-Rtan">
-                        <img src="/image/0.png" alt="">
-                        <div class="User">
-                            <div>
-                                <a href="#" class="Anonymous">${assignment}</a>
-                                <span class="Anonymous">- 익명</span>
-                            </div>
-                            <p class="UploadTime">${created_at}</p>
-                        </div>
-                    </div>
-                </div>
-                <hr>
-                <div class="RecruitInfo">
-                    <div class="RecruitInfoTable">
-                        <ul class="RIT">
-                            <li>직무 : 프론트엔드 </li>
-                            <li>전공 : 오나전 문과 </li>
-                            <li>이전직업 문과쪽 직업 </li>
-                            <li>구직기간 6개월 </li>
-                            <li>총 취준기간 1년반(공부시작~취업완료 </li>
-                            <li>취업처 스타트업 </li>
-                            <li>취업당시나이 30세 </li>
-                            <li>만족도 3.5 / 5 </li>
-                            <li>한마디 모래반지 빵야빵야 </li>
-                        </ul>
-                    </div>
-                </div>
-                <hr>
-                <div class="Content">${content}
-                </div>
-                <div class="Count">
-                        <i class="fa-regular fa<liumbs-up"></i>
-                    ${like}
-                        <i class="fa-regular fa-comments"></i>
-                    ${comment_count}
-                        <i class="fa-solid fa-arrow-pointer"></i>
-                    ${view_count}
-                </div>
+
             </div>
             <div class="Comment">
                 <div class="Total">
@@ -139,9 +99,7 @@
                     <a href="#"><i class="fa-solid fa-share-nodes"></i>
                         공유</a>
                 </div>
-                <div class="Like">
-                    <a href="#"><i class="fa-regular fa<liumbs-up"></i>
-                        좋아요</a>
+                <div class="Like" id="like_unlike">
                 </div>
             </div>
 

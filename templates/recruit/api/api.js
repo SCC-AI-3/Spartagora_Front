@@ -7,7 +7,7 @@ async function logout() {
 }
 
 
-async function userarticleget() {
+async function recruitGet() {
     const category_id = location.href.split("?")[1]
     const categoryData = async () => {
         const response = await fetch(`${backend_base_url}/article/${category_id}/`, {
@@ -20,6 +20,7 @@ async function userarticleget() {
         return response.json();
     }
     categoryData().then((data) => {
+        console.log(data)
         article = data
         if (data['code'] == 'token_not_valid') {
             logout()
@@ -35,8 +36,8 @@ async function userarticleget() {
             let like_id = article[i]['like']
             let comment_count = article[i]['comment_count']
             let lower_category_name = article[i]['lower_category_name']
-            let lower_category_url = article[i]['lower_category_url']
             let nickname = article[i]['nickname']
+            let lower_category_url = data[i]['lower_category_url']
             const login_user = JSON.parse(localStorage.getItem("payload")).user_id
             function contains(login_user) {
                 for (let i = 0; i < like_id.length; i++) {
@@ -63,7 +64,7 @@ async function userarticleget() {
                     </div>
                     <div class="Article-Title">
                         <a href="/templates/${lower_category_url}?${id}" class="Title">${title}</a>
-                        <p class="Category">게시판 > ${lower_category_name}</p>
+                        <p class="Category">취업후기 > ${assignment}</p>
                     </div>
                     <div class="Count">
                             <i class="fa-solid fa-thumbs-up"></i>${like}
@@ -91,7 +92,7 @@ async function userarticleget() {
                     </div>
                     <div class="Article-Title">
                         <a href="/templates/${lower_category_url}?${id}" class="Title">${title}</a>
-                        <p class="Category">게시판 > ${lower_category_name}</p>
+                        <p class="Category">취업후기 > ${assignment}</p>
                     </div>
                     <div class="Count">
                             <i class="fa-regular fa-thumbs-up"></i>${like}
@@ -108,5 +109,4 @@ async function userarticleget() {
 
 
 
-$('document').ready(userarticleget());
-
+$('document').ready(recruitGet());
