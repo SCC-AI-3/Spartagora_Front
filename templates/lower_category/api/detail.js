@@ -101,7 +101,7 @@ async function articleGet() {
                                         <i class="fa-solid fa-arrow-pointer"></i>
                                     ${view_count}
                                 </div>
-                                <div id=authorEditBtn></div>
+                                <div class="ArticleDeleteBtn" id=authorEditBtn></div>
         `
             $('#get_article').append(temp_html)
         }
@@ -109,7 +109,7 @@ async function articleGet() {
         const login_user = JSON.parse(localStorage.getItem("payload")).user_id
         if (login_user == user) {
             let edit_btn_temp = `
-                    <span class="text-secondary fs-6 me-2">이 게시글을</span>
+                    
                     <button type="button" class="btn btn-secondary btn-sm me-2" onclick="editButtonClick()">수정</button>
                     <button type="button" class="btn btn-dark btn-sm" onclick="deleteArticle()">삭제</button>`
             $("#authorEditBtn").append(edit_btn_temp)
@@ -164,9 +164,8 @@ async function commentGet() {
                         </div>
                         <p class="content">${content}</p>
                     </div>
-                    <div id="comment_delete${id}"></div>
+                    <div class="CommentDeleteBtn" id="comment_delete${id}"></div>
                     </div>
-                   
             `
             $('#comment_list').append(temp_html)
             //만약 내가 작성한 댓글이면 삭제 버튼
