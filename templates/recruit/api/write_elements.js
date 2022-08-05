@@ -3,7 +3,7 @@ const frontend_base_url = "http://127.0.0.1:5500"
 
 async function logout() {
     window.localStorage.clear(); //로컬스토리지에 저장된 토큰 삭제해줌.
-    window.location.replace(`${frontend_base_url}/templates/user/login.html`)
+    window.location.replace(`${frontend_base_url}/login.html`)
 }
 
 async function postArticles() {
@@ -35,7 +35,7 @@ async function postArticles() {
             )
             if (response.status == 200) {
                 alert("업로드 완료!")
-                window.location.replace(`${frontend_base_url}/templates/recruit/recruit_main.html?36`);
+                window.location.replace(`${frontend_base_url}recruits.html?36`);
             } else {
                 alert(response.status)
             }

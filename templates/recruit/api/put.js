@@ -52,7 +52,7 @@ async function putArticle() {
             body: formData
         })
         if (response.status == 200) {
-            window.location.replace(`${frontend_base_url}/templates/recruit/recruit_main.html?36`);
+            window.location.replace(`${frontend_base_url}recruits.html?36`);
         } else {
             alert("작성 실패")
         }

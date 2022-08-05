@@ -1,18 +1,16 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- stylesheet -->
+    <!-- Stylesheet -->
     <link rel="stylesheet" href="/static/root.css" />
     <link rel="stylesheet" href="/static/main/main_navbar.css" />
-    <link rel="stylesheet" href="/static/board/lower_article.css" />
-    <link rel="stylesheet" href="/static/board/media.css">
+    <link rel="stylesheet" href="/static/main/container.css" />
     <link rel="stylesheet" href="/static/footer.css" />
-    <link rel="stylesheet" href="/static/board/list.css">
 
     <!-- Media Query -->
     <link rel="stylesheet" href="/static/main/media.css" />
@@ -31,9 +29,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.js"></script>
 
     <!-- jsAPI -->
-    <script src="api/lower_category.js"></script>
-
-    <title>Spartagora | 여행, 먹방</title>
+    <script src="api/api.js"></script>
+    <title>Spartagora | 게시판</title>
 </head>
 
 <body>
@@ -42,22 +39,22 @@
         <nav class="Navbar">
             <!-- 네비게이션바 로고 -->
             <div class="Navbar_logo">
-                <a href="/templates/mainpage/main.html">Spartagora</a>
+                <a href="main.html">Spartagora</a>
             </div>
 
             <!-- 네비게이션바 Uppor Category -->
             <ul class="Navbar_upper">
                 <li>
-                    <a class="active" href="/templates/lower_category/list_topicbest.html">게시판</a>
+                    <a class="active" href="main.html">게시판</a>
                 </li>
                 <li>
-                    <a href="/templates/postscript/postscript_main.html">과정후기</a>
+                    <a href="postscripts.html">과정후기</a>
                 </li>
                 <li>
                     <a href="#">채용정보</a>
                 </li>
                 <li>
-                    <a href="/templates/recruit/recruit_main.html?36">취업후기</a>
+                    <a href="recruits.html?36">취업후기</a>
                 </li>
                 <li>
                     <a href="javascript:void(0);" onclick="logout();">로그아웃</a>
@@ -66,55 +63,92 @@
         </nav>
     </div>
 
-    <div class="LowerCategory">
-        <div class="CategoryName">
-            <a href="/templates/lower_category/list_topicbest.html">토픽 베스트</a>
-            <a href="/templates/lower_category/list_qna.html?1">고민을 말해봐</a>
-            <a href="/templates/lower_category/list_team_recruit.html?2">스터디/팀원모집</a>
-            <a href="/templates/lower_category/list_greenlight.html?3">썸, 연애</a>
-            <a href="/templates/lower_category/list_pet.html?4">반려동물</a>
-            <a href="/templates/lower_category/list_travel.html?5" class="active">여행, 맛집</a>
-        </div>
-    </div>
-
-    <div class="Topic">
-        <select name="" id="" onchange="window.open(value,'_self');">
-            <option value="/templates/lower_category/list_travel.html?5">여행, 맛집</option>
-            <option value="/templates/lower_category/list_topicbest.html">토픽베스트</option>
-            <option value="/templates/lower_category/list_qna.html?1">고민을 말해봐</option>
-            <option value="/templates/lower_category/list_team_recruit.html?2">스터디/팀원모집</option>
-            <option value="/templates/lower_category/list_greenlight.html?3">썸, 연애</option>
-            <option value="/templates/lower_category/list_pet.html?4">반려동물</option>
-        </select>
-    </div>
-
     <!-- 게시판 메인화면 -->
     <div class="Container">
         <div class="Main">
-            <div class="Caution">
-                <div class="CautionInfo">
-                    <p class="Title">스파르타고라 익명게시판</p>
-                    <p>--- 주의사항 안내 ---</p>
-                    <p>
-                        <br>우선적으로 Spartagora는 스파르타 코딩클럽을 수강하는 학생들을 대상으로 만든 커뮤니티 홈페이지이며 익명의 홈페이지임을 안내드립니다.
-                        <br>수업 관련 질문 외 다양한 주제의 글을 작성할 수 있습니다.
-                        <br>다만, 게시판 특성에 맞지 않는 내용 작성은 자제해 주세요 !!
-                        <br>(홍보성, 정치적, 분란성 글 및 댓글)
-                        <br>위반 시 별도의 통보 없이 활동 정지, 글 이동 및 삭제 될 수 있습니다.
-                    </p>
+            <!-- 토픽베스트 -->
+            <div class="BoardBlock">
+                <div>
+                    <div class="BoardTitle">토픽 베스트<a href="topicsbest.html"
+                            class="MoreArticle">더보기</a></div>
+                    <ul class="BestList" id="list0">
+
+                    </ul>
                 </div>
             </div>
 
-            <!-- 게시물 리스트 -->
-            <div class="Wrap" id="article_list">
+            <!-- 고민을 말해봐 -->
+            <div class="BoardBlock">
+                <div>
+                    <div class="BoardTitle">
+                        고민을 말해봐
+                        <a href="qnas.html?1" class="MoreArticle">더보기</a>
+                    </div>
+                    <ul class="BestList" id="list1">
+
+                    </ul>
+                </div>
             </div>
-            <div type="button" class="ReCategory">
-                <a href="/templates/board_write/write.html">게시판 글 작성하기</a>
+
+            <!-- 스터디 팀원 모집 -->
+            <div class="BoardBlock">
+                <div>
+                    <div class="BoardTitle">
+                        스터디/팀원모집
+                        <a href="teasm_recruits.html?2" class="MoreArticle">더보기</a>
+                    </div>
+                    <ul class="BestList" id="list2">
+
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 연애 -->
+            <div class="BoardBlock">
+                <div>
+                    <div class="BoardTitle">
+                        썸, 연애
+                        <a href="greenlights.html?3" class="MoreArticle">더보기</a>
+                    </div>
+                    <ul class="BestList" id="list3">
+
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 반려동물 -->
+            <div class="BoardBlock">
+                <div>
+                    <div class="BoardTitle">
+                        반려동물
+                        <a href="pets.html?4" class="MoreArticle">더보기</a>
+                    </div>
+                    <ul class="BestList" id="list4">
+
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 여행 먹방 -->
+            <div class="BoardBlock">
+                <div>
+                    <div class="BoardTitle">
+                        여행, 맛집
+                        <a href="trasvels.html?5" class="MoreArticle">더보기</a>
+                    </div>
+                    <ul class="BestList" id="list5">
+                    </ul>
+                </div>
             </div>
         </div>
+
+        <!-- 사이드바 -->
+        <div class="Side">
+            <div class="ad1">ad1</div>
+            <div class="blank">blank</div>
+            <div class="ad2">ad2</div>
+        </div>
     </div>
-
-
 
     <!-- Footer -->
     <footer class="Footer">
@@ -189,10 +223,11 @@
         <!-- 팀스파르타 사업자 정보 -->
         <section class="Company">
             <div class="Info">
-                <h4>팀스파르타(주) 사업자 정보
-                </h4>
-                <p>대표자: 이범규 사업자 등록번호: 783-86-01715 통신판매업 신고번호: 2020-서울강남-02300 평생교육시설<br>신고번호: 제
-                    661호 주소: 서울특별시 강남구 테헤란로44길 8 12층 이메일: contact@teamsparta.co 전화 1522-8016</p>
+                <h4>팀스파르타(주) 사업자 정보</h4>
+                <p>
+                    대표자: 이범규 사업자 등록번호: 783-86-01715 통신판매업 신고번호: 2020-서울강남-02300 평생교육시설<br />신고번호: 제 661호 주소: 서울특별시 강남구
+                    테헤란로44길 8 12층 이메일: contact@teamsparta.co 전화 1522-8016
+                </p>
             </div>
             <div class="TEAMSPARTA">
                 <p>Copyright ©2022 TEAMSPARTA. All rights reserved.</p>

@@ -29,7 +29,7 @@ async function postArticles() {
     )
     if (response.status == 200) {
         alert("업로드 완료!")
-        window.location.replace(`${frontend_base_url}/templates/postscript/postscript_main.html`);
+        window.location.replace(`${frontend_base_url}/postscripts.html`);
     } else {
         alert(response.status)
     }
@@ -94,7 +94,7 @@ async function putArticle() {
             body: formData
         })
         if (response.status == 200) {
-            window.location.replace(`${frontend_base_url}/templates/postscript/postscript_main.html`);
+            window.location.replace(`${frontend_base_url}/postscripts.html`);
         } else {
             alert("작성 실패")
         }

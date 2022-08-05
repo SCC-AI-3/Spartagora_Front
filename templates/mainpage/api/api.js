@@ -3,7 +3,7 @@ const frontend_base_url = "http://127.0.0.1:5500"
 
 async function logout() {
     window.localStorage.clear(); //로컬스토리지에 저장된 토큰 삭제해줌.
-    window.location.replace(`${frontend_base_url}/templates/user/login.html`)
+    window.location.replace(`${frontend_base_url}/login.html`)
 }
 
 async function topicbestGet() {
@@ -48,7 +48,7 @@ async function topicbestGet() {
                 return false;
             }
             if (contains(login_user) == true) {
-                if (lower_category_url == "postscript/postscript_main.html") {
+                if (lower_category_url == "postscripts.html") {
                     let temp_html = `
                 <li class="List">
                             <div class="Article">
@@ -99,7 +99,7 @@ async function topicbestGet() {
 
             }
             else {
-                if (lower_category_url == "postscript/postscript_main.html") {
+                if (lower_category_url == "postscripts.html") {
                     let temp_html = `
                 <li class="List">
                             <div class="Article">

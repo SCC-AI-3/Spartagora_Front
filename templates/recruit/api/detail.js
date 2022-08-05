@@ -3,13 +3,13 @@ const frontend_base_url = "http://127.0.0.1:5500"
 // article edit button click
 function editButtonClick() {
     let edit_link = window.location.search.split('?')[1]
-    window.location.replace(`${frontend_base_url}/templates/recruit/put.html?${edit_link}`);
+    window.location.replace(`${frontend_base_url}modify.html?${edit_link}`);
 }
 
 
 async function logout() {
     window.localStorage.clear(); //로컬스토리지에 저장된 토큰 삭제해줌.
-    window.location.replace(`${frontend_base_url}/templates/user/login.html`)
+    window.location.replace(`${frontend_base_url}/login.html`)
 }
 
 async function articleGet() {
@@ -257,7 +257,7 @@ async function deleteArticle() {
         method: 'DELETE',
     })
     if (response.status == 200) {
-        window.location.replace(`${frontend_base_url}/templates/recruit/recruit_main.html?36`)
+        window.location.replace(`${frontend_base_url}recruits.html?36`)
     }
     else {
         alert(response.status)

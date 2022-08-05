@@ -32,7 +32,7 @@ async function postArticles() {
             )
             if (response.status == 200) {
                 alert("업로드 완료!")
-                window.location.replace(`${frontend_base_url}/templates/lower_category/list_topicbest.html`);
+                window.location.replace(`${frontend_base_url}topicsbest.html`);
             } else {
                 alert(response.status)
             }
