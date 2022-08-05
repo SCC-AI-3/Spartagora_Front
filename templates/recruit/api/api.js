@@ -20,7 +20,6 @@ async function recruitGet() {
         return response.json();
     }
     categoryData().then((data) => {
-        console.log(data)
         article = data
         if (data['code'] == 'token_not_valid') {
             logout()

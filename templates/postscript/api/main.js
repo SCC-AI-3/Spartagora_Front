@@ -37,7 +37,6 @@ async function postscriptGet() {
         `
         $('#lower_category_name').append(temp_html)
         for (let i = 0; i < article.length; i++) {
-            console.log(article)
             let id = article[i]['id']
             let lower_id = article[i]['category_name']
             let assignment = article[i]['assignment']

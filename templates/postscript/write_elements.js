@@ -59,7 +59,6 @@ async function loadArticleData() {
     })
         .then(response => response.json())
         .then(data => {
-            console.log(data)
             document.getElementById("title").setAttribute('value', data.title)
             document.getElementById("lowercategory").setAttribute('value', data.lowercategory)
             document.getElementById("summernote").innerHTML = data.content
