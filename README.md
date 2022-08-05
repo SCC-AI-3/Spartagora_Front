@@ -28,12 +28,12 @@
 
 # 2. 비키니시티 TEAM 소개
 
-| 팀원 | 이름 | 역할 |
-|:----------:|:----------:|:----------:|
-| **서크라테스** | 서정인 | 팀장 & 백엔드 |
-| **안리스토텔리스** | 안정환 | 딥러닝 & 프론트엔드 |
-| **후라톤** | 김정후 | 백엔드 |
-| **혁피스트** | 김혁진 | 프론트엔드 |
+| 팀원 | 이름 | 역할 | 깃허브 |
+|:----------:|:----------:|:----------:|:----------:|
+| **서크라테스** | 서정인 | 팀장 & 백엔드 |<a href="https://github.com/Jeong1n"><img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=GitHub&logoColor=white"><a>|
+| **안리스토텔리스** | 안정환 | 딥러닝 & 프론트엔드 |<a href="https://github.com/fattysphinxx"><img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=GitHub&logoColor=white"><a>|
+| **후라톤** | 김정후 | 백엔드 |<a href="https://github.com/ajh1531"><img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=GitHub&logoColor=white"><a>|
+| **혁피스트** | 김혁진 | 프론트엔드 |<a href="https://github.com/5aim"><img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=GitHub&logoColor=white"><a>|
 
 ---
 
@@ -68,18 +68,20 @@
 <summary>게시글 페이지</summary>
 <div markdown="1">
 </br>- 게시판 메인화면
-
-![스크린샷 2022-08-03 12 38 04](https://user-images.githubusercontent.com/102138834/182538456-cde1671f-832d-4697-a71f-945c9ca29306.png)
+  
+![스크린샷 2022-08-04 01 49 21](https://user-images.githubusercontent.com/102138834/182665530-533fa39c-98db-4add-a179-d3a9f211e0f5.png)
 
 </br>- 각각 게시판 카테고리 리스트
 
-![스크린샷 2022-08-03 15 46 55](https://user-images.githubusercontent.com/102138834/182542476-503592ff-548f-4d8b-bd9f-58234d3fd46a.png)
+![스크린샷 2022-08-04 01 50 03](https://user-images.githubusercontent.com/102138834/182665570-564c5b4e-eaf3-429f-88d5-7bdc4f25ee47.png)
 
 </br>- 상세 게시글
 
-![스크린샷 2022-08-03 15 46 24](https://user-images.githubusercontent.com/102138834/182542502-62c3c7ef-4e7d-4814-b311-a012992cdec5.png)
+![스크린샷 2022-08-04 01 50 19](https://user-images.githubusercontent.com/102138834/182665606-ffc0ed52-76e1-4e58-be39-5803cea67139.png)
 
 </br>- 게시판 글 작성
+
+![스크린샷 2022-08-04 01 50 54](https://user-images.githubusercontent.com/102138834/182665642-e03b0b83-0157-464d-ba61-b5bd1823f63b.png)
 
 </br>
 </div>
@@ -91,7 +93,11 @@
 <div markdown="1">
 </br>- 과정후기 메인화면
 
+![스크린샷 2022-08-04 01 51 14](https://user-images.githubusercontent.com/102138834/182665699-00f39b39-10f1-4a06-b91b-dbbaf96911d6.png)
+
 </br>- 과정후기 작성 페이지
+
+![스크린샷 2022-08-04 01 51 31](https://user-images.githubusercontent.com/102138834/182665733-6bb05388-9e3b-4ec8-8678-1a4525d4f03d.png)
 
 </br>
 </div>
@@ -110,9 +116,13 @@
 <details>
 <summary>취업후기 페이지</summary>
 <div markdown="1">
-</br>- 과정후기 메인화면
+</br>- 취업후기 메인화면
+
+![스크린샷 2022-08-04 01 51 52](https://user-images.githubusercontent.com/102138834/182665813-eb14e2e1-d4ba-445b-bd38-47a58e5132da.png)
 
 </br>- 취업후기 상세 게시글
+
+![스크린샷 2022-08-04 01 52 07](https://user-images.githubusercontent.com/102138834/182665828-209e4937-b0e7-48a2-a264-ec046235319f.png)
 
 </br>
 </div>
