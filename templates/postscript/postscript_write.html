@@ -73,12 +73,11 @@
         }
 
         let content = document.getElementById("summernote").value;
-        let title = document.getElementById("title").value;
         // let category = document.getElementById("category").value;
         // let length = document.getElementById("length").value;
         //let types = 'dpclass';
 
-        let text = title + content;
+        let text = content;
 
         const formData = new FormData();
         const url = "http://127.0.0.1:5000/predict/dpclass";
@@ -126,6 +125,7 @@
    // setInterval(send_req, 500);
 
 </script>
+
 <body>
     <!-- Header -->
     <div class="Header">
@@ -203,8 +203,17 @@
                             </optgroup>
                         </select>
                     </div>
-                    <div class="TitleBox">
-                        <input id="title" type="text" placeholder="게시글 제목" class="Title" name="subject">
+                    <div class="Select">
+                        <select name="" id="article_star">
+                            <optgroup label="카테고리를 선택하세요">
+                                <option>평점을 매겨주세요!</option>
+                                <option value="1">⭐️</option>
+                                <option value="2">⭐️⭐️</option>
+                                <option value="3">⭐️⭐️⭐️</option>
+                                <option value="4">⭐️⭐️⭐️⭐️</option>
+                                <option value="5">⭐️⭐️⭐️⭐️⭐️</option>
+                            </optgroup>
+                        </select>
                     </div>
                 </div>
                 <div class="WriteArea">

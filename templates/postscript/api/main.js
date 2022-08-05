@@ -26,6 +26,7 @@ async function postscriptGet() {
         return response.json();
     }
     categoryData().then((data) => {
+        console.log(data)
         article = data
         if (data['code'] == 'token_not_valid') {
             window.localStorage.clear(); //로컬스토리지에 저장된 토큰 삭제해줌.
@@ -47,6 +48,7 @@ async function postscriptGet() {
             let comment_count = article[i]['comment_count']
             let nickname = article[i]['nickname']
             let content = article[i]['content']
+            let star = article[i]['article_star']
             const login_user = JSON.parse(localStorage.getItem("payload")).user_id
             function contains(login_user) {
                 for (let i = 0; i < like_id.length; i++) {
@@ -77,6 +79,7 @@ async function postscriptGet() {
                         <div class="Count" id="if_liked">
                             <a href="javascript:void(0);" onclick="likePost(${id});"><i class="fa-solid fa-thumbs-up"></i>
                                 ${like}</a>
+                            <div>${star}</div>
                         </div>
                     </div>
             `
@@ -103,6 +106,7 @@ async function postscriptGet() {
                         <div class="Count" id="if_liked">
                             <a href="javascript:void(0);" onclick="likePost(${id});"><i class="fa-regular fa-thumbs-up"></i>
                                 ${like}</a>
+                                <div>${star}</div>
                         </div>
                     </div>
             `

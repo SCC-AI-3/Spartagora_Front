@@ -25,10 +25,10 @@ async function postArticles() {
             formData.append("nickname", nickname)
 
             const response = await fetch(`${backend_base_url}/article/`, {
-                    headers: {"Authorization": "Bearer " + localStorage.getItem("access"),},
-                    method: 'POST',
-                    body: formData
-                }
+                headers: { "Authorization": "Bearer " + localStorage.getItem("access"), },
+                method: 'POST',
+                body: formData
+            }
             )
             if (response.status == 200) {
                 alert("업로드 완료!")
