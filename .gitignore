@@ -21,5 +21,4 @@ pip-selfcheck.json
 
 .vscode
 .idea
-.github
 # End of https://www.toptal.com/developers/gitignore/api/venv
