@@ -55,7 +55,7 @@ async function topicbestGet() {
                                 <span>
                                     <a href="" class="ArticleCategory">${assignment}</a>
                                 </span>
-                                <a href="${frontend_base_url}/templates/${lower_category_url}?${lower_category_id}" class="tit">${title}</a>
+                                <a href="${frontend_base_url}/details/${lower_category_url}?${lower_category_id}" class="tit">${title}</a>
                                 <div class="ArticleInfo">
                                     <a href="" class="like">
                                         <i class="fa-solid fa-thumbs-up"></i>${like}
@@ -79,7 +79,7 @@ async function topicbestGet() {
                                 <span>
                                     <a href="" class="ArticleCategory">${assignment}</a>
                                 </span>
-                                <a href="${frontend_base_url}/templates/${lower_category_url}?${id}" class="tit">${title}</a>
+                                <a href="${frontend_base_url}/details/${lower_category_url}?${id}" class="tit">${title}</a>
                                 <div class="ArticleInfo">
                                     <a href="" class="like">
                                         <i class="fa-solid fa-thumbs-up"></i>${like}
@@ -106,7 +106,7 @@ async function topicbestGet() {
                                 <span>
                                     <a href="" class="ArticleCategory">${assignment}</a>
                                 </span>
-                                <a href="${frontend_base_url}/templates/${lower_category_url}?${lower_category_id}" class="tit">${title}</a>
+                                <a href="${frontend_base_url}/details/${lower_category_url}?${lower_category_id}" class="tit">${title}</a>
                                 <div class="ArticleInfo">
                                     <a href="" class="like">
                                         <i class="fa-regular fa-thumbs-up"></i>${like}
@@ -130,7 +130,7 @@ async function topicbestGet() {
                                 <span>
                                     <a href="" class="ArticleCategory">${assignment}</a>
                                 </span>
-                                <a href="${frontend_base_url}/templates/${lower_category_url}?${id}" class="tit">${title}</a>
+                                <a href="${frontend_base_url}/details/${lower_category_url}?${id}" class="tit">${title}</a>
                                 <div class="ArticleInfo">
                                     <a href="" class="like">
                                         <i class="fa-regular fa-thumbs-up"></i>${like}
@@ -198,7 +198,7 @@ async function gominpageGet() {
                                 <span>
                                     <a href="" class="ArticleCategory">${assignment}</a>
                                 </span>
-                                <a href="${frontend_base_url}/templates/${lower_category_url}?${id}" class="tit">${title}</a>
+                                <a href="${frontend_base_url}/details/${lower_category_url}?${id}" class="tit">${title}</a>
                                 <div class="ArticleInfo">
                                     <a href="" class="like">
                                         <i class="fa-solid fa-thumbs-up"></i>${like}
@@ -222,7 +222,7 @@ async function gominpageGet() {
                                 <span>
                                     <a href="" class="ArticleCategory">${assignment}</a>
                                 </span>
-                                <a href="${frontend_base_url}/templates/${lower_category_url}?${id}" class="tit">${title}</a>
+                                <a href="${frontend_base_url}/details/${lower_category_url}?${id}" class="tit">${title}</a>
                                 <div class="ArticleInfo">
                                     <a href="" class="like">
                                         <i class="fa-regular fa-thumbs-up"></i>${like}
@@ -287,7 +287,7 @@ async function studypageGet() {
                                 <span>
                                     <a href="" class="ArticleCategory">${assignment}</a>
                                 </span>
-                                <a href="${frontend_base_url}/templates/${lower_category_url}?${id}" class="tit">${title}</a>
+                                <a href="${frontend_base_url}/details/${lower_category_url}?${id}" class="tit">${title}</a>
                                 <div class="ArticleInfo">
                                     <a href="" class="like">
                                         <i class="fa-solid fa-thumbs-up"></i>${like}
@@ -311,7 +311,7 @@ async function studypageGet() {
                                 <span>
                                     <a href="" class="ArticleCategory">${assignment}</a>
                                 </span>
-                                <a href="${frontend_base_url}/templates/${lower_category_url}?${id}" class="tit">${title}</a>
+                                <a href="${frontend_base_url}/details/${lower_category_url}?${id}" class="tit">${title}</a>
                                 <div class="ArticleInfo">
                                     <a href="" class="like">
                                         <i class="fa-regular fa-thumbs-up"></i>${like}
@@ -376,7 +376,7 @@ async function somepageGet() {
                                 <span>
                                     <a href="" class="ArticleCategory">${assignment}</a>
                                 </span>
-                                <a href="${frontend_base_url}/templates/${lower_category_url}?${id}" class="tit">${title}</a>
+                                <a href="${frontend_base_url}/details/${lower_category_url}?${id}" class="tit">${title}</a>
                                 <div class="ArticleInfo">
                                     <a href="" class="like">
                                         <i class="fa-solid fa-thumbs-up"></i>${like}
@@ -400,7 +400,7 @@ async function somepageGet() {
                                 <span>
                                     <a href="" class="ArticleCategory">${assignment}</a>
                                 </span>
-                                <a href="${frontend_base_url}/templates/${lower_category_url}?${id}" class="tit">${title}</a>
+                                <a href="${frontend_base_url}/details/${lower_category_url}?${id}" class="tit">${title}</a>
                                 <div class="ArticleInfo">
                                     <a href="" class="like">
                                         <i class="fa-regular fa-thumbs-up"></i>${like}
@@ -465,7 +465,7 @@ async function petpageGet() {
                                 <span>
                                     <a href="" class="ArticleCategory">${assignment}</a>
                                 </span>
-                                <a href="${frontend_base_url}/templates/${lower_category_url}?${id}" class="tit">${title}</a>
+                                <a href="${frontend_base_url}/details/${lower_category_url}?${id}" class="tit">${title}</a>
                                 <div class="ArticleInfo">
                                     <a href="" class="like">
                                         <i class="fa-solid fa-thumbs-up"></i>${like}
@@ -489,7 +489,7 @@ async function petpageGet() {
                                 <span>
                                     <a href="" class="ArticleCategory">${assignment}</a>
                                 </span>
-                                <a href="${frontend_base_url}/templates/${lower_category_url}?${id}" class="tit">${title}</a>
+                                <a href="${frontend_base_url}/details/${lower_category_url}?${id}" class="tit">${title}</a>
                                 <div class="ArticleInfo">
                                     <a href="" class="like">
                                         <i class="fa-regular fa-thumbs-up"></i>${like}
@@ -554,7 +554,7 @@ async function travelpageGet() {
                                 <span>
                                     <a href="" class="ArticleCategory">${assignment}</a>
                                 </span>
-                                <a href="${frontend_base_url}/templates/${lower_category_url}?${id}" class="tit">${title}</a>
+                                <a href="${frontend_base_url}/details/${lower_category_url}?${id}" class="tit">${title}</a>
                                 <div class="ArticleInfo">
                                     <a href="" class="like">
                                         <i class="fa-solid fa-thumbs-up"></i>${like}
@@ -578,7 +578,7 @@ async function travelpageGet() {
                                 <span>
                                     <a href="" class="ArticleCategory">${assignment}</a>
                                 </span>
-                                <a href="${frontend_base_url}/templates/${lower_category_url}?${id}" class="tit">${title}</a>
+                                <a href="${frontend_base_url}/details/${lower_category_url}?${id}" class="tit">${title}</a>
                                 <div class="ArticleInfo">
                                     <a href="" class="like">
                                         <i class="fa-regular fa-thumbs-up"></i>${like}
