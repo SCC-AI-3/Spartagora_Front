@@ -175,7 +175,9 @@ async function handleLogin() {
         localStorage.setItem("payload", jsonPayload);
         // window.location.replace(`${frontend_base_url}/`);
     } else {
-        alert("아이디 및 비밀번호가 틀렸습니다")
+        $('#login_check').empty();
+        temp_html = `아이디 및 비밀번호가 틀립니다`
+        $('#login_check').append(temp_html);
     }
     if (response.status == 200) {
         window.location.replace(`${frontend_base_url}/main.html`);
