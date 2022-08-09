@@ -79,7 +79,7 @@ async function postscriptGet() {
                         <div class="Count" id="if_liked">
                             <a href="javascript:void(0);" onclick="likePost(${id});"><i class="fa-solid fa-thumbs-up"></i>
                                 ${like}</a>
-                            <div>${star}</div>
+                            <div class="Stars">${star}</div>
                         </div>
                     </div>
             `
