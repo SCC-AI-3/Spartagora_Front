@@ -54,7 +54,7 @@ async function topicbestGet() {
                             <img src="/image/0.png" alt="">
                             <div class="User">
                                 <div>
-                                    <a href="#" class="Anonymous">${assignment}</a>
+                                    <span class="Anonymous">${assignment}</span>
                                     <span class="Anonymous">- ${nickname}</span>
                                 </div>
                                 <p class="UploadTime">${create_at}</p>
@@ -62,7 +62,7 @@ async function topicbestGet() {
                         </div>
                     </div>
                     <div class="Article-Title">
-                        <a href="/details/?${id}" class="Title">${title}</a>
+                        <a href="/${lower_category_url}?${id}" class="Title">${title}</a>
                         <p class="Category">게시판 > ${lower_category_name}</p>
                     </div>
                     <div class="Count">
@@ -82,7 +82,7 @@ async function topicbestGet() {
                             <img src="/image/0.png" alt="">
                             <div class="User">
                                 <div>
-                                    <a href="#" class="Anonymous">${assignment}</a>
+                                    <span class="Anonymous">${assignment}</span>
                                     <span class="Anonymous">- ${nickname}</span>
                                 </div>
                                 <p class="UploadTime">${create_at}</p>
@@ -90,7 +90,7 @@ async function topicbestGet() {
                         </div>
                     </div>
                     <div class="Article-Title">
-                        <a href="/details/?${id}" class="Title">${title}</a>
+                        <a href="/${lower_category_url}?${id}" class="Title">${title}</a>
                         <p class="Category">게시판 > ${lower_category_name}</p>
                     </div>
                     <div class="Count">

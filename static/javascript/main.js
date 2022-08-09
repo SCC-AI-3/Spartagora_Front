@@ -53,17 +53,17 @@ async function topicbestGet() {
                 <li class="List">
                             <div class="Article">
                                 <span>
-                                    <a href="" class="ArticleCategory">${assignment}</a>
+                                <p class="ArticleCategory">${assignment}</p>
                                 </span>
-                                <a href="${frontend_base_url}/details/${lower_category_url}?${lower_category_id}" class="tit">${title}</a>
+                                <a href="${frontend_base_url}/${lower_category_url}?${lower_category_id}" class="tit">${title}</a>
                                 <div class="ArticleInfo">
-                                    <a href="" class="like">
+                                <a href="${frontend_base_url}/${lower_category_url}?${id}" class="like">
                                         <i class="fa-solid fa-thumbs-up"></i>${like}
                                     </a>
-                                    <a href="" class="cmt">
+                                    <a href="${frontend_base_url}/${lower_category_url}?${id}" class="cmt">
                                         <i class="fa-regular fa-comments"></i>${comment_count}
                                     </a>
-                                    <a href="" class="views">
+                                    <a href="${frontend_base_url}/${lower_category_url}?${id}" class="views">
                                         <i class="fa-solid fa-arrow-pointer"></i>${view_count}
                                     </a>
                                 </div>
@@ -77,17 +77,17 @@ async function topicbestGet() {
                 <li class="List">
                             <div class="Article">
                                 <span>
-                                    <a href="" class="ArticleCategory">${assignment}</a>
+                                    <p class="ArticleCategory">${assignment}</p>
                                 </span>
-                                <a href="${frontend_base_url}/details/${lower_category_url}?${id}" class="tit">${title}</a>
+                                <a href="${frontend_base_url}/${lower_category_url}?${id}" class="tit">${title}</a>
                                 <div class="ArticleInfo">
-                                    <a href="" class="like">
+                                <a href="${frontend_base_url}/${lower_category_url}?${id}" class="like">
                                         <i class="fa-solid fa-thumbs-up"></i>${like}
                                     </a>
-                                    <a href="" class="cmt">
+                                    <a href="${frontend_base_url}/${lower_category_url}?${id}" class="cmt">
                                         <i class="fa-regular fa-comments"></i>${comment_count}
                                     </a>
-                                    <a href="" class="views">
+                                    <a href="${frontend_base_url}/${lower_category_url}?${id}" class="views">
                                         <i class="fa-solid fa-arrow-pointer"></i>${view_count}
                                     </a>
                                 </div>
@@ -104,17 +104,17 @@ async function topicbestGet() {
                 <li class="List">
                             <div class="Article">
                                 <span>
-                                    <a href="" class="ArticleCategory">${assignment}</a>
+                                <p class="ArticleCategory">${assignment}</p>
                                 </span>
-                                <a href="${frontend_base_url}/details/${lower_category_url}?${lower_category_id}" class="tit">${title}</a>
+                                <a href="${frontend_base_url}/${lower_category_url}?${lower_category_id}" class="tit">${title}</a>
                                 <div class="ArticleInfo">
-                                    <a href="" class="like">
+                                <a href="${frontend_base_url}/${lower_category_url}?${id}" class="like">
                                         <i class="fa-regular fa-thumbs-up"></i>${like}
                                     </a>
-                                    <a href="" class="cmt">
+                                    <a href="${frontend_base_url}/${lower_category_url}?${id}" class="cmt">
                                         <i class="fa-regular fa-comments"></i>${comment_count}
                                     </a>
-                                    <a href="" class="views">
+                                    <a href="${frontend_base_url}/${lower_category_url}?${id}" class="views">
                                         <i class="fa-solid fa-arrow-pointer"></i>${view_count}
                                     </a>
                                 </div>
@@ -128,17 +128,17 @@ async function topicbestGet() {
                 <li class="List">
                             <div class="Article">
                                 <span>
-                                    <a href="" class="ArticleCategory">${assignment}</a>
+                                <p class="ArticleCategory">${assignment}</p>
                                 </span>
-                                <a href="${frontend_base_url}/details/${lower_category_url}?${id}" class="tit">${title}</a>
+                                <a href="${frontend_base_url}/${lower_category_url}?${id}" class="tit">${title}</a>
                                 <div class="ArticleInfo">
-                                    <a href="" class="like">
+                                <a href="${frontend_base_url}/${lower_category_url}?${id}" class="like">
                                         <i class="fa-regular fa-thumbs-up"></i>${like}
                                     </a>
-                                    <a href="" class="cmt">
+                                    <a href="${frontend_base_url}/${lower_category_url}?${id}" class="cmt">
                                         <i class="fa-regular fa-comments"></i>${comment_count}
                                     </a>
-                                    <a href="" class="views">
+                                    <a href="${frontend_base_url}/${lower_category_url}?${id}" class="views">
                                         <i class="fa-solid fa-arrow-pointer"></i>${view_count}
                                     </a>
                                 </div>
@@ -196,17 +196,17 @@ async function gominpageGet() {
                 <li class="List">
                             <div class="Article">
                                 <span>
-                                    <a href="" class="ArticleCategory">${assignment}</a>
+                                <p class="ArticleCategory">${assignment}</p>
                                 </span>
-                                <a href="${frontend_base_url}/details/${lower_category_url}?${id}" class="tit">${title}</a>
+                                <a href="${frontend_base_url}/${lower_category_url}?${id}" class="tit">${title}</a>
                                 <div class="ArticleInfo">
-                                    <a href="" class="like">
+                                <a href="${frontend_base_url}/${lower_category_url}?${id}" class="like">
                                         <i class="fa-solid fa-thumbs-up"></i>${like}
                                     </a>
-                                    <a href="" class="cmt">
+                                    <a href="${frontend_base_url}/${lower_category_url}?${id}" class="cmt">
                                         <i class="fa-regular fa-comments"></i>${comment_count}
                                     </a>
-                                    <a href="" class="views">
+                                    <a href="${frontend_base_url}/${lower_category_url}?${id}" class="views">
                                         <i class="fa-solid fa-arrow-pointer"></i>${view_count}
                                     </a>
                                 </div>
@@ -220,17 +220,17 @@ async function gominpageGet() {
                 <li class="List">
                             <div class="Article">
                                 <span>
-                                    <a href="" class="ArticleCategory">${assignment}</a>
+                                <p class="ArticleCategory">${assignment}</p>
                                 </span>
-                                <a href="${frontend_base_url}/details/${lower_category_url}?${id}" class="tit">${title}</a>
+                                <a href="${frontend_base_url}/${lower_category_url}?${id}" class="tit">${title}</a>
                                 <div class="ArticleInfo">
-                                    <a href="" class="like">
+                                <a href="${frontend_base_url}/${lower_category_url}?${id}" class="like">
                                         <i class="fa-regular fa-thumbs-up"></i>${like}
                                     </a>
-                                    <a href="" class="cmt">
+                                    <a href="${frontend_base_url}/${lower_category_url}?${id}" class="cmt">
                                         <i class="fa-regular fa-comments"></i>${comment_count}
                                     </a>
-                                    <a href="" class="views">
+                                    <a href="${frontend_base_url}/${lower_category_url}?${id}" class="views">
                                         <i class="fa-solid fa-arrow-pointer"></i>${view_count}
                                     </a>
                                 </div>
@@ -285,17 +285,17 @@ async function studypageGet() {
                 <li class="List">
                             <div class="Article">
                                 <span>
-                                    <a href="" class="ArticleCategory">${assignment}</a>
+                                <p class="ArticleCategory">${assignment}</p>
                                 </span>
-                                <a href="${frontend_base_url}/details/${lower_category_url}?${id}" class="tit">${title}</a>
+                                <a href="${frontend_base_url}/${lower_category_url}?${id}" class="tit">${title}</a>
                                 <div class="ArticleInfo">
-                                    <a href="" class="like">
+                                <a href="${frontend_base_url}/${lower_category_url}?${id}" class="like">
                                         <i class="fa-solid fa-thumbs-up"></i>${like}
                                     </a>
-                                    <a href="" class="cmt">
+                                    <a href="${frontend_base_url}/${lower_category_url}?${id}" class="cmt">
                                         <i class="fa-regular fa-comments"></i>${comment_count}
                                     </a>
-                                    <a href="" class="views">
+                                    <a href="${frontend_base_url}/${lower_category_url}?${id}" class="views">
                                         <i class="fa-solid fa-arrow-pointer"></i>${view_count}
                                     </a>
                                 </div>
@@ -309,17 +309,17 @@ async function studypageGet() {
                 <li class="List">
                             <div class="Article">
                                 <span>
-                                    <a href="" class="ArticleCategory">${assignment}</a>
+                                <p class="ArticleCategory">${assignment}</p>
                                 </span>
-                                <a href="${frontend_base_url}/details/${lower_category_url}?${id}" class="tit">${title}</a>
+                                <a href="${frontend_base_url}/${lower_category_url}?${id}" class="tit">${title}</a>
                                 <div class="ArticleInfo">
-                                    <a href="" class="like">
+                                <a href="${frontend_base_url}/${lower_category_url}?${id}" class="like">
                                         <i class="fa-regular fa-thumbs-up"></i>${like}
                                     </a>
-                                    <a href="" class="cmt">
+                                    <a href="${frontend_base_url}/${lower_category_url}?${id}" class="cmt">
                                         <i class="fa-regular fa-comments"></i>${comment_count}
                                     </a>
-                                    <a href="" class="views">
+                                    <a href="${frontend_base_url}/${lower_category_url}?${id}" class="views">
                                         <i class="fa-solid fa-arrow-pointer"></i>${view_count}
                                     </a>
                                 </div>
@@ -374,17 +374,17 @@ async function somepageGet() {
                 <li class="List">
                             <div class="Article">
                                 <span>
-                                    <a href="" class="ArticleCategory">${assignment}</a>
+                                <p class="ArticleCategory">${assignment}</p>
                                 </span>
-                                <a href="${frontend_base_url}/details/${lower_category_url}?${id}" class="tit">${title}</a>
+                                <a href="${frontend_base_url}/${lower_category_url}?${id}" class="tit">${title}</a>
                                 <div class="ArticleInfo">
-                                    <a href="" class="like">
+                                <a href="${frontend_base_url}/${lower_category_url}?${id}" class="like">
                                         <i class="fa-solid fa-thumbs-up"></i>${like}
                                     </a>
-                                    <a href="" class="cmt">
+                                    <a href="${frontend_base_url}/${lower_category_url}?${id}" class="cmt">
                                         <i class="fa-regular fa-comments"></i>${comment_count}
                                     </a>
-                                    <a href="" class="views">
+                                    <a href="${frontend_base_url}/${lower_category_url}?${id}" class="views">
                                         <i class="fa-solid fa-arrow-pointer"></i>${view_count}
                                     </a>
                                 </div>
@@ -398,17 +398,17 @@ async function somepageGet() {
                 <li class="List">
                             <div class="Article">
                                 <span>
-                                    <a href="" class="ArticleCategory">${assignment}</a>
+                                <p class="ArticleCategory">${assignment}</p>
                                 </span>
-                                <a href="${frontend_base_url}/details/${lower_category_url}?${id}" class="tit">${title}</a>
+                                <a href="${frontend_base_url}/${lower_category_url}?${id}" class="tit">${title}</a>
                                 <div class="ArticleInfo">
-                                    <a href="" class="like">
+                                <a href="${frontend_base_url}/${lower_category_url}?${id}" class="like">
                                         <i class="fa-regular fa-thumbs-up"></i>${like}
                                     </a>
-                                    <a href="" class="cmt">
+                                    <a href="${frontend_base_url}/${lower_category_url}?${id}" class="cmt">
                                         <i class="fa-regular fa-comments"></i>${comment_count}
                                     </a>
-                                    <a href="" class="views">
+                                    <a href="${frontend_base_url}/${lower_category_url}?${id}" class="views">
                                         <i class="fa-solid fa-arrow-pointer"></i>${view_count}
                                     </a>
                                 </div>
@@ -463,17 +463,17 @@ async function petpageGet() {
                 <li class="List">
                             <div class="Article">
                                 <span>
-                                    <a href="" class="ArticleCategory">${assignment}</a>
+                                <p class="ArticleCategory">${assignment}</p>
                                 </span>
-                                <a href="${frontend_base_url}/details/${lower_category_url}?${id}" class="tit">${title}</a>
+                                <a href="${frontend_base_url}/${lower_category_url}?${id}" class="tit">${title}</a>
                                 <div class="ArticleInfo">
-                                    <a href="" class="like">
+                                <a href="${frontend_base_url}/${lower_category_url}?${id}" class="like">
                                         <i class="fa-solid fa-thumbs-up"></i>${like}
                                     </a>
-                                    <a href="" class="cmt">
+                                    <a href="${frontend_base_url}/${lower_category_url}?${id}" class="cmt">
                                         <i class="fa-regular fa-comments"></i>${comment_count}
                                     </a>
-                                    <a href="" class="views">
+                                    <a href="${frontend_base_url}/${lower_category_url}?${id}" class="views">
                                         <i class="fa-solid fa-arrow-pointer"></i>${view_count}
                                     </a>
                                 </div>
@@ -487,17 +487,17 @@ async function petpageGet() {
                 <li class="List">
                             <div class="Article">
                                 <span>
-                                    <a href="" class="ArticleCategory">${assignment}</a>
+                                <p class="ArticleCategory">${assignment}</p>
                                 </span>
-                                <a href="${frontend_base_url}/details/${lower_category_url}?${id}" class="tit">${title}</a>
+                                <a href="${frontend_base_url}/${lower_category_url}?${id}" class="tit">${title}</a>
                                 <div class="ArticleInfo">
-                                    <a href="" class="like">
+                                <a href="${frontend_base_url}/${lower_category_url}?${id}" class="like">
                                         <i class="fa-regular fa-thumbs-up"></i>${like}
                                     </a>
-                                    <a href="" class="cmt">
+                                    <a href="${frontend_base_url}/${lower_category_url}?${id}" class="cmt">
                                         <i class="fa-regular fa-comments"></i>${comment_count}
                                     </a>
-                                    <a href="" class="views">
+                                    <a href="${frontend_base_url}/${lower_category_url}?${id}" class="views">
                                         <i class="fa-solid fa-arrow-pointer"></i>${view_count}
                                     </a>
                                 </div>
@@ -552,17 +552,17 @@ async function travelpageGet() {
                 <li class="List">
                             <div class="Article">
                                 <span>
-                                    <a href="" class="ArticleCategory">${assignment}</a>
+                                <p class="ArticleCategory">${assignment}</p>
                                 </span>
-                                <a href="${frontend_base_url}/details/${lower_category_url}?${id}" class="tit">${title}</a>
+                                <a href="${frontend_base_url}/${lower_category_url}?${id}" class="tit">${title}</a>
                                 <div class="ArticleInfo">
-                                    <a href="" class="like">
+                                <a href="${frontend_base_url}/${lower_category_url}?${id}" class="like">
                                         <i class="fa-solid fa-thumbs-up"></i>${like}
                                     </a>
-                                    <a href="" class="cmt">
+                                    <a href="${frontend_base_url}/${lower_category_url}?${id}" class="cmt">
                                         <i class="fa-regular fa-comments"></i>${comment_count}
                                     </a>
-                                    <a href="" class="views">
+                                    <a href="${frontend_base_url}/${lower_category_url}?${id}" class="views">
                                         <i class="fa-solid fa-arrow-pointer"></i>${view_count}
                                     </a>
                                 </div>
@@ -576,17 +576,17 @@ async function travelpageGet() {
                 <li class="List">
                             <div class="Article">
                                 <span>
-                                    <a href="" class="ArticleCategory">${assignment}</a>
+                                <p class="ArticleCategory">${assignment}</p>
                                 </span>
-                                <a href="${frontend_base_url}/details/${lower_category_url}?${id}" class="tit">${title}</a>
+                                <a href="${frontend_base_url}/${lower_category_url}?${id}" class="tit">${title}</a>
                                 <div class="ArticleInfo">
-                                    <a href="" class="like">
+                                <a href="${frontend_base_url}/${lower_category_url}?${id}" class="like">
                                         <i class="fa-regular fa-thumbs-up"></i>${like}
                                     </a>
-                                    <a href="" class="cmt">
+                                    <a href="${frontend_base_url}/${lower_category_url}?${id}" class="cmt">
                                         <i class="fa-regular fa-comments"></i>${comment_count}
                                     </a>
-                                    <a href="" class="views">
+                                    <a href="${frontend_base_url}/${lower_category_url}?${id}" class="views">
                                         <i class="fa-solid fa-arrow-pointer"></i>${view_count}
                                     </a>
                                 </div>

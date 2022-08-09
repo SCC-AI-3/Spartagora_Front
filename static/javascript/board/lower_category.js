@@ -54,7 +54,7 @@ async function userarticleget() {
                             <img src="/image/0.png" alt="">
                             <div class="User">
                                 <div>
-                                    <a href="#" class="Anonymous">${assignment}</a>
+                                    <span class="Anonymous">${assignment}</span>
                                     <span class="Anonymous">- ${nickname}</span>
                                 </div>
                                 <p class="UploadTime">${create_at}</p>
