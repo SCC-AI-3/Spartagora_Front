@@ -48,16 +48,20 @@
                 <div class="input_form">
                     <label for="assignment" class="label">소속</label>
                     <select id="assignment" class="select">
+                        <option value="0">소속</option>
                         <option value="1">내일배움캠프</option>
-                        <option value="2">항해99</option>
-                        <option value="3">이노베이션 캠프</option>
-                        <option value="4">내일배움단</option>
+                        <option value="2">내일배움단</option>
+                        <option value="3">항해99</option>
+                        <option value="4">창</option>
+                        <option value="5">이노베이션 캠프</option>
                     </select>
                 </div>
+                <p id="assignment_check"></p>
                 <div class="input_form">
                     <label for="id" class="label">아이디</label>
                     <input type="text" id="id">
                 </div>
+                <p id="id_check"></p>
                 <div class="input_form">
                     <label for="PW" class="label">비밀번호</label>
                     <input type="password" id="pw">
@@ -66,7 +70,7 @@
                     <label for="PW2" class="label">비밀번호 확인</label>
                     <input type="password" id="pw2">
                 </div>
-                <p id="password_check"></P>
+                <p id="pw_check"></p>
             </section>
 
             <!-- 비방, 명예훼손, 모욕에 관한 주의 안내문 -->
@@ -116,10 +120,11 @@
             <section class="form caution-form">
                 <div class="cautions">
                     <p>위 필독사항에 대하여 숙지하였으며 밝고 건강한 스파르타의 커뮤니티 문화를 형성하기 위해 노력함에 동의합니다.</p>
-                    <p><input class="agree-btn" type="checkbox"> Check</p>
+                    <p><input class="agree-btn" type="checkbox" id="caution_box"> Check</p>
                 </div>
-            </section>
 
+            </section>
+            <p style="color: red;" id="caution_check"></p>
             <!-- 로그인 회원가입 버튼 -->
             <ul class="btn">
                 <li>
