@@ -126,7 +126,7 @@ async function articleGet() {
         else {
             let temp_html = `
             <a href="javascript:void(0);" onclick="likePost();"><i class="fa-regular fa-thumbs-up"></i>
-                        좋아요</a>
+            좋아요</a>
             `
             $('#like_unlike').append(temp_html)
         }

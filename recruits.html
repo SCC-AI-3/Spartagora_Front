@@ -33,7 +33,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.js"></script>
 
     <!-- jsAPI -->
-    <script src="api/api.js"></script>
+    <script src="/static/javascript/recruits/recruit.js"></script>
 
     <title>Spartagora | 취업후기</title>
 
@@ -45,22 +45,22 @@
         <nav class="Navbar">
             <!-- 네비게이션바 로고 -->
             <div class="Navbar_logo">
-                <a href="main.html">Spartagora</a>
+                <a href="/main.html">Spartagora</a>
             </div>
 
             <!-- 네비게이션바 Uppor Category -->
             <ul class="Navbar_upper">
                 <li>
-                    <a href="topicsbest.html">게시판</a>
+                    <a href="/topicsbest.html">게시판</a>
                 </li>
                 <li>
-                    <a href="postscripts.html">과정후기</a>
+                    <a href="/postscripts.html">과정후기</a>
                 </li>
                 <li>
                     <a href="#">채용정보</a>
                 </li>
                 <li>
-                    <a class="active" href="recruits.html?36">취업후기</a>
+                    <a class="active" href="/recruits.html?36">취업후기</a>
                 </li>
                 <li>
                     <a href="javascript:void(0);" onclick="logout();">로그아웃</a>
@@ -100,7 +100,7 @@
                         <br> 6. [ 취업처 ] 스타트업
                         <br> 7. [ 취업당시나이 ] 30세
                         <br> 8. [ 만족도 ] 5점 만점 3.5
-                        <br> 9. [ 한마디 ] 모래반지 빵야 빵야
+                        <br> 9. [ 한마디 ] 끝나도 끝난게 아니야..
                     </p>
                 </div>
             </div>
@@ -108,13 +108,13 @@
             <!-- 게시물 리스트 -->
             <div class="Wrap">
                 <div id="article_list">
+                    <div type="button" class="ReCategory">
+                        <a href="/recruit/write.html">취업후기 작성하기</a>
+                    </div>
 
                 </div>
             </div>
 
-            <div type="button" class="ReCategory">
-                <a href="/recruit/write.html">취업후기 작성하기</a>
-            </div>
         </div>
     </div>
 

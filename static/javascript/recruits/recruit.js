@@ -62,7 +62,7 @@ async function recruitGet() {
                         </div>
                     </div>
                     <div class="Article-Title">
-                        <a href="/templates/${lower_category_url}?${id}" class="Title">${title}</a>
+                        <a href="/recruits/article.html/?${id}" class="Title">${title}</a>
                         <p class="Category">취업후기 > ${assignment}</p>
                     </div>
                     <div class="Count">
@@ -90,7 +90,7 @@ async function recruitGet() {
                         </div>
                     </div>
                     <div class="Article-Title">
-                        <a href="/templates/${lower_category_url}?${id}" class="Title">${title}</a>
+                        <a href="/recruits/article.html/?${id}" class="Title">${title}</a>
                         <p class="Category">취업후기 > ${assignment}</p>
                     </div>
                     <div class="Count">

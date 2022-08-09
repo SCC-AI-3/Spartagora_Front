@@ -62,7 +62,7 @@ async function userarticleget() {
                         </div>
                     </div>
                     <div class="Article-Title">
-                        <a href="/details/${lower_category_url}?${id}" class="Title">${title}</a>
+                        <a href="/details/?${id}" class="Title">${title}</a>
                         <p class="Category">게시판 > ${lower_category_name}</p>
                     </div>
                     <div class="Count">
@@ -90,7 +90,7 @@ async function userarticleget() {
                         </div>
                     </div>
                     <div class="Article-Title">
-                        <a href="/details/${lower_category_url}?${id}" class="Title">${title}</a>
+                        <a href="/details/?${id}" class="Title">${title}</a>
                         <p class="Category">게시판 > ${lower_category_name}</p>
                     </div>
                     <div class="Count">
