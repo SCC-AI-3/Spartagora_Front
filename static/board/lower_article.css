@@ -33,6 +33,7 @@
 .LowerCategory a {
     padding: 0 var(--padding);
     font-size: var(--font-medium);
+    font-weight: bold;
 }
 
 .LowerCategory a:hover {

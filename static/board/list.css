@@ -87,6 +87,16 @@
     font-size: var(--font-small);
 }
 
+.List .Count {
+    display: flex;
+    flex-direction: row;
+}
+
+.List .Count a {
+    padding-top: 6px;
+    padding-right: var(--padding);
+}
+
 .List .Count i {
     padding: 0 calc(var(--padding) / 2);
 }

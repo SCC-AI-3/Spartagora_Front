@@ -62,13 +62,13 @@ async function userarticleget() {
                         </div>
                     </div>
                     <div class="Article-Title">
-                        <a href="/details/?${id}" class="Title">${title}</a>
+                        <a href="/${lower_category_url}?${id}" class="Title">${title}</a>
                         <p class="Category">게시판 > ${lower_category_name}</p>
                     </div>
                     <div class="Count">
-                            <i class="fa-solid fa-thumbs-up"></i>${like}
-                            <i class="fa-regular fa-comments"></i>${comment_count}
-                            <i class="fa-solid fa-arrow-pointer"></i>${count}
+                            <i href="/${lower_category_url}?${id}" class="fa-solid fa-thumbs-up"></i>${like}
+                            <i href="/${lower_category_url}?${id}" class="fa-regular fa-comments"></i>${comment_count}
+                            <i href="/${lower_category_url}?${id}" class="fa-solid fa-arrow-pointer"></i>${count}
                     </div>
                 </div>
             `
@@ -90,13 +90,13 @@ async function userarticleget() {
                         </div>
                     </div>
                     <div class="Article-Title">
-                        <a href="/details/?${id}" class="Title">${title}</a>
+                        <a href="/${lower_category_url}?${id}" class="Title">${title}</a>
                         <p class="Category">게시판 > ${lower_category_name}</p>
                     </div>
                     <div class="Count">
-                            <i class="fa-regular fa-thumbs-up"></i>${like}
-                            <i class="fa-regular fa-comments"></i>${comment_count}
-                            <i class="fa-solid fa-arrow-pointer"></i>${count}
+                            <i href="/${lower_category_url}?${id}" class="fa-regular fa-thumbs-up"></i>${like}
+                            <i href="/${lower_category_url}?${id}" class="fa-regular fa-comments"></i>${comment_count}
+                            <i href="/${lower_category_url}?${id}" class="fa-solid fa-arrow-pointer"></i>${count}
                     </div>
                 </div>
             `
