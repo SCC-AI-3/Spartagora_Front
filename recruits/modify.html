@@ -78,7 +78,7 @@
         let text = title + content;
 
         const formData = new FormData();
-        const url = "http://127.0.0.1:5000/predict/dpclass";
+        const url = "http://127.0.0.1:8000/filtering/predict/dpclass";
         let start = 0;
 
         formData.append('text', text);
@@ -209,6 +209,7 @@
                     <button class="Post" type="button" onclick="putArticle()">게시글 수정하기</button>
                     <button type="button" class="Cancel" onclick="goBack()">취소</button>
                 </div>
+                <p style="font-size: 20px; color: red;" id="alert_note"></p> 
             </form>
         </div>
     </div>

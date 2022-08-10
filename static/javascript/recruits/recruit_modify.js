@@ -34,6 +34,7 @@ async function loadArticleData() {
 
 
 async function putArticle() {
+    $("#alert_note").empty()
     if (out_result == "일반글") {
         const obj_id = location.href.split("?")[1]
         const title = document.getElementById('title').value
@@ -58,7 +59,9 @@ async function putArticle() {
         }
     }
     else {
-        alert('공격발언 및 차별발언 입니다!')
+        let temp_html = `공격 및 차별적인 단어가 감지되었습니다.`
+        $("#alert_note").append(temp_html)
+        return false
     }
 }
 

@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="/static/board/media.css">
     <link rel="stylesheet" href="/static/footer.css" />
     <link rel="stylesheet" href="/static/board/write.css">
+    
 
     <!-- Media Query -->
     <link rel="stylesheet" href="/static/main/media.css" />
@@ -80,7 +81,7 @@
         let text = title + content;
 
         const formData = new FormData();
-        const url = `http://127.0.0.1:8000/filtering/predict/dpclass`;
+        const url = "http://127.0.0.1:8000/filtering/predict/dpclass";
         let start = 0;
 
         formData.append('text', text);
@@ -215,6 +216,7 @@
                     <button class="Post" type="button" onclick="postArticles()">게시글 등록하기</button>
                     <button type="button" class="Cancel" onclick="goBack()">취소</button>
                 </div>
+                <p style="font-size: 20px; color: red;" id="alert_note"></p>
             </form>
         </div>
     </div>

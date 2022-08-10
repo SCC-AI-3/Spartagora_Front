@@ -83,7 +83,7 @@
         let text = title + content;
 
         const formData = new FormData();
-        const url = "http://127.0.0.1:5000/predict/dpclass";
+        const url = "http://127.0.0.1:8000/filtering/predict/dpclass";
         let start = 0;
 
         formData.append('text', text);
@@ -190,6 +190,7 @@
                     <button class="Post" type="button" onclick="postArticles()">취업후기 등록하기</button>
                     <button class="Cancel" type="button" onclick="location.href='/recruits.html?36'">취소</button>
                 </div>
+                <p style="font-size: 20px; color: red;" id="alert_note"></p>
             </form>
         </div>
     </div>
