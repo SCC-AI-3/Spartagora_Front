@@ -49,6 +49,7 @@ async function postscriptGet() {
             let nickname = article[i]['nickname']
             let content = article[i]['content']
             let star = article[i]['article_star']
+            let user = article[i]['user']
             const login_user = JSON.parse(localStorage.getItem("payload")).user_id
             function contains(login_user) {
                 for (let i = 0; i < like_id.length; i++) {
@@ -79,7 +80,10 @@ async function postscriptGet() {
                         <div class="Count" id="if_liked">
                             <a href="javascript:void(0);" onclick="likePost(${id});"><i class="fa-solid fa-thumbs-up"></i>
                                 ${like}</a>
+
                             <div class="Stars">${star}</div>
+                            <div class="articleDeleteBtn" id="articleDelete${id}"></div>
+
                         </div>
                     </div>
             `
@@ -107,13 +111,20 @@ async function postscriptGet() {
                             <a href="javascript:void(0);" onclick="likePost(${id});"><i class="fa-regular fa-thumbs-up"></i>
                                 ${like}</a>
                                 <div>${star}</div>
+                                <div class="articleDeleteBtn" id="articleDelete${id}"></div>
                         </div>
                     </div>
             `
                 $('#article_list').append(temp_html)
 
             }
-
+            //만약 내가 작성한 댓글이면 삭제 버튼
+            if (login_user == user) {
+                let button_temp_html = `
+                <button type="button" class="btn btn-dark btn-sm" onclick="deleteArticle(${id})">삭제</button>
+        `
+                $(`#articleDelete${id}`).append(button_temp_html)
+            }//삭제 버튼 위치 옮겨야댐
         }
     })
 }
@@ -129,6 +140,26 @@ async function likePost(id) {
     })
     window.location.reload();
 }
+
+async function deleteArticle(obj) {
+    const article_id = location.href.split("?")[1]
+    const response = await fetch(`${backend_base_url}/article/${obj}`, {
+        headers: {
+            Accept: "application/json",
+            'Content-type': 'application/json',
+            'Authorization': 'Bearer ' + localStorage.getItem("access"),
+        },
+        method: 'DELETE',
+    })
+    if (response.status == 200) {
+        window.location.replace(`${frontend_base_url}/postscripts.html?${article_id}`)
+    }
+    else {
+        alert(response.status)
+    }
+}
+
+
 
 $('document').ready(postscriptGet());
 
