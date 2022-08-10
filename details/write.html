@@ -80,7 +80,7 @@
         let text = title + content;
 
         const formData = new FormData();
-        const url = "http://127.0.0.1:5000/predict/dpclass";
+        const url = `http://127.0.0.1:8000/filtering/predict/dpclass`;
         let start = 0;
 
         formData.append('text', text);
@@ -125,6 +125,7 @@
    // setInterval(send_req, 500);
 
 </script>
+
 
 <body>
     <!-- Header -->
@@ -305,6 +306,7 @@
 
 <!-- Write Elements Javascript -->
 <script src="/static/javascript/board/board_write.js"></script>
+
 
 <script>
     $(document).ready(function () {

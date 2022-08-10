@@ -1,7 +1,10 @@
 const backend_base_url = "http://127.0.0.1:8000"
 const frontend_base_url = "http://127.0.0.1:5500"
 
-
+async function logout() {
+    window.localStorage.clear(); //로컬스토리지에 저장된 토큰 삭제해줌.
+    window.location.replace(`${frontend_base_url}/login.html`)
+}
 
 async function postArticles() {
     if (out_result == "일반글") {
@@ -32,7 +35,7 @@ async function postArticles() {
             )
             if (response.status == 200) {
                 alert("업로드 완료!")
-                window.location.replace(`${frontend_base_url}topicsbest.html`);
+                window.location.replace(`${frontend_base_url}/topicsbest.html`);
             } else {
                 alert(response.status)
             }
