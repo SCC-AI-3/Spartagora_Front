@@ -1,5 +1,5 @@
-const backend_base_url = "https://spartagora.com/"
-const frontend_base_url = "https://d2b1lm00cp7z1g.cloudfront.net/"
+const backend_base_url = "https://spartagora.com"
+const frontend_base_url = "https://to.spartagora.com"
 // article edit button click
 function editButtonClick() {
     let edit_link = window.location.search.split('?')[1]

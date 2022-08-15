@@ -1,5 +1,5 @@
-const backend_base_url = "https://spartagora.com/"
-const frontend_base_url = "https://d2b1lm00cp7z1g.cloudfront.net/"
+const backend_base_url = "https://spartagora.com"
+const frontend_base_url = "https://to.spartagora.com"
 
 async function logout() {
     window.localStorage.clear(); //로컬스토리지에 저장된 토큰 삭제해줌.

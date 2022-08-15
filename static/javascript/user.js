@@ -1,5 +1,5 @@
-const backend_base_url = "https://spartagora.com/"
-const frontend_base_url = "https://d2b1lm00cp7z1g.cloudfront.net/"
+const backend_base_url = "https://spartagora.com"
+const frontend_base_url = "https://to.spartagora.com"
 
 function ifLoggedIn() {
     if (localStorage.getItem("access")) {
