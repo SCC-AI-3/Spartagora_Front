@@ -1,4 +1,4 @@
-const backend_base_url = "https://13.124.20.151"
+const backend_base_url = "https://spartagora.com/"
 const frontend_base_url = "https://d2b1lm00cp7z1g.cloudfront.net/"
 // article edit button click
 function editButtonClick() {
